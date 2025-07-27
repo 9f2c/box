@@ -1,4 +1,7 @@
 {
+  "ShowAddressesInCurrentBox": false,
+  "Seed": "",
+  "ShowControlsTooltip": false,
   "Player": {
     "BoxAddress": "",
     "Address": "e",
@@ -12,9 +15,24 @@
     },
     "CreatedAt": "2025-07-27T22:42:03.4111269+02:00"
   },
+  "Players": [
+    {
+      "BoxAddress": "",
+      "Address": "e",
+      "X": 4,
+      "Y": 0,
+      "Symbol": "o",
+      "Color": {
+        "Item1": 255,
+        "Item2": 100,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-27T22:42:03.4111269+02:00"
+    }
+  ],
   "Signs": [
     {
-      "Text": "",
+      "Text": "Welcome!",
       "IsBeingEdited": false,
       "Address": "m",
       "X": 2,
@@ -25,10 +43,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T20:44:51.5620565Z"
+      "CreatedAt": "2025-07-27T20:52:28.6334459Z"
     }
   ],
-  "ShowAddressesInCurrentBox": false,
-  "ShowControlsTooltip": false,
-  "Seed": ""
+  "Vortexes": []
 }

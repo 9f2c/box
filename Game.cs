@@ -26,7 +26,6 @@ public class Game
     [JsonIgnore]
     private bool _isSelectingCreationType = false;
     [JsonIgnore]
-    [JsonIgnore]
     private bool _isSpecifyingVortexTarget = false;
     [JsonIgnore]
     private bool _isSpecifyingVortexDirection = false;
