@@ -2,39 +2,28 @@ namespace box;
 
 public class Vortex : Thing
 {
-    public string EntryAddress { get; set; } = "";
-    public string ExitAddress { get; set; } = "";
-    public bool IsOneWay { get; set; } = false;
-    
-    public Vortex(string entryAddress, string exitAddress, bool isOneWay = false)
+    public string TargetAddress { get; set; } = "";
+    public Vortex? PairedVortex { get; set; } = null;
+    public bool IsEntry { get; set; } = true;
+
+    public Vortex(string address, string targetAddress, bool isEntry = true)
     {
-        EntryAddress = entryAddress;
-        ExitAddress = exitAddress;
-        IsOneWay = isOneWay;
+        Address = address;
+        TargetAddress = targetAddress;
+        IsEntry = isEntry;
         Symbol = '@';
-        Address = entryAddress; // Set Address to entry point for compatibility
-        Color = (30, 144, 255); // Default to blue for entry vortex
-    }
-    
-    public void SetColorForAddress(string address)
-    {
-        if (address == EntryAddress)
-            Color = (30, 144, 255); // Blue for entry vortex
-        else if (address == ExitAddress)
-            Color = (255, 165, 0); // Orange for exit vortex
+        Color = isEntry ? (30, 144, 255) : (255, 165, 0); // Blue for entry, orange for exit
     }
 
-    public string GetTargetAddress(string fromAddress)
+    public static (Vortex entry, Vortex exit) CreatePair(string entryAddress, string exitAddress, bool isOneWay = false)
     {
-        if (fromAddress == EntryAddress)
-            return ExitAddress;
-        else if (!IsOneWay && fromAddress == ExitAddress)
-            return EntryAddress;
-        return "";
-    }
-    
-    public bool HasEndpointAt(string address)
-    {
-        return address == EntryAddress || (!IsOneWay && address == ExitAddress);
+        var entry = new Vortex(entryAddress, exitAddress, true);
+        var exit = new Vortex(exitAddress, entryAddress, false);
+        
+        entry.PairedVortex = exit;
+        if (!isOneWay)
+            exit.PairedVortex = entry;
+            
+        return (entry, exit);
     }
 }
