@@ -26,7 +26,6 @@ public class Game
     [JsonIgnore]
     private bool _isSelectingCreationType = false;
     [JsonIgnore]
-    private bool _isCreatingVortex = false;
     [JsonIgnore]
     private bool _isSpecifyingVortexTarget = false;
     [JsonIgnore]
@@ -300,7 +299,6 @@ public class Game
     {
         IsInCreationMode = false;
         _isSelectingCreationType = false;
-        _isCreatingVortex = false;
         _isSpecifyingVortexTarget = false;
         _isSpecifyingVortexDirection = false;
         _creationBuffer = "";
@@ -315,7 +313,6 @@ public class Game
             {
                 // Create vortex
                 _isSelectingCreationType = false;
-                _isCreatingVortex = true;
                 _isSpecifyingVortexTarget = true;
                 _creationBuffer = "";
             }

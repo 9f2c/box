@@ -5,6 +5,7 @@ public class Vortex : Thing
     public string TargetAddress { get; set; } = "";
     public bool IsEntry { get; set; } = true;
     public string PairedVortexAddress { get; set; } = "";
+    public bool IsOneWay => string.IsNullOrEmpty(PairedVortexAddress);
 
     public Vortex(string address, string targetAddress, bool isEntry = true)
     {
