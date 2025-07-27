@@ -1,12 +1,12 @@
 {
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
-  "ShowControlsTooltip": false,
+  "ShowControlsTooltip": true,
   "Player": {
     "BoxAddress": "",
-    "Address": "e",
-    "X": 4,
-    "Y": 0,
+    "Address": "i",
+    "X": 3,
+    "Y": 1,
     "Symbol": "o",
     "Color": {
       "Item1": 255,
@@ -30,6 +30,21 @@
       "CreatedAt": "2025-07-27T21:22:59.7609823Z"
     }
   ],
-  "Signs": [],
+  "Signs": [
+    {
+      "Text": "",
+      "IsBeingEdited": false,
+      "Address": "i",
+      "X": 3,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:23:22.7449822Z"
+    }
+  ],
   "Vortexes": []
 }
