@@ -394,7 +394,7 @@ public class Game
             Signs.Any(s => s.Address == Player.Address))
             return;
             
-        var newVortex = new Vortex(Player.Address, targetAddress, true);
+        var newVortex = new Vortex(Player.Address, targetAddress, isOneWay);
         Vortexes.Add(newVortex);
         allThings.Add(newVortex);
     
