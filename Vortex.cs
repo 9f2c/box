@@ -2,17 +2,31 @@ namespace box;
 
 public class Vortex : Thing
 {
-    public string TargetAddress { get; set; } = "";
-    public bool IsEntry { get; set; } = true;
+    public string EntryAddress { get; set; } = "";
+    public string ExitAddress { get; set; } = "";
     public bool IsOneWay { get; set; } = false;
     
-    public Vortex(string address, string targetAddress, bool isEntry = true)
+    public Vortex(string entryAddress, string exitAddress, bool isOneWay = false)
     {
-        Address = address;
-        TargetAddress = targetAddress;
-        IsOneWay = false; // Default to bidirectional
+        EntryAddress = entryAddress;
+        ExitAddress = exitAddress;
+        IsOneWay = isOneWay;
         Symbol = '@';
-        Color = isEntry ? (30, 144, 255) : (255, 165, 0); // Keep color logic for now
-        
+        Color = (30, 144, 255); // Blue color for all vortexes
+        Address = entryAddress; // Set Address to entry point for compatibility
+    }
+    
+    public string GetTargetAddress(string fromAddress)
+    {
+        if (fromAddress == EntryAddress)
+            return ExitAddress;
+        else if (!IsOneWay && fromAddress == ExitAddress)
+            return EntryAddress;
+        return "";
+    }
+    
+    public bool HasEndpointAt(string address)
+    {
+        return address == EntryAddress || (!IsOneWay && address == ExitAddress);
     }
 }
