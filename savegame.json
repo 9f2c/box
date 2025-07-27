@@ -1,0 +1,19 @@
+{
+  "Player": {
+    "BoxAddress": "",
+    "Address": "d",
+    "X": 3,
+    "Y": 0,
+    "Symbol": "o",
+    "Color": {
+      "Item1": 255,
+      "Item2": 100,
+      "Item3": 255
+    },
+    "CreatedAt": "2025-07-27T22:42:03.4111269+02:00"
+  },
+  "Signs": [],
+  "ShowAddressesInCurrentBox": true,
+  "ShowControlsTooltip": false,
+  "Seed": ""
+}
