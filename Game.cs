@@ -611,20 +611,23 @@ public class Game
         
         if (thingAtPlayer != null)
         {
-            allThings.Remove(thingAtPlayer);
-            
-            // Also remove from specific lists
-            if (thingAtPlayer is Sign sign)
+            // Special handling for vortexes
+            if (thingAtPlayer is Vortex vortex)
             {
-                Signs.Remove(sign);
-            }
-            else if (thingAtPlayer is Vortex vortex)
-            {
+                // Only allow deletion of blue (entry) vortexes
+                if (!vortex.IsEntry)
+                {
+                    return; // Can't delete orange (exit) vortexes
+                }
+                
+                // Remove the blue vortex
+                allThings.Remove(vortex);
                 Vortexes.Remove(vortex);
-                // If it's a two-way vortex, remove its pair as well
+                
+                // If it has a paired vortex, remove that too
                 if (!vortex.IsOneWay)
                 {
-                    var pairedVortex = Vortexes.FirstOrDefault(v => v.PairedVortexAddress == vortex.Address);
+                    var pairedVortex = Vortexes.FirstOrDefault(v => v.Address == vortex.PairedVortexAddress);
                     if (pairedVortex != null)
                     {
                         Vortexes.Remove(pairedVortex);
@@ -632,6 +635,17 @@ public class Game
                     }
                 }
             }
+            else
+            {
+                // Handle other thing types (signs, etc.)
+                allThings.Remove(thingAtPlayer);
+                
+                if (thingAtPlayer is Sign sign)
+                {
+                    Signs.Remove(sign);
+                }
+            }
+            
             SaveGame();
         }
     }
