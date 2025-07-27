@@ -23,6 +23,28 @@ class Program
     public static string Seed = "";
     public static int PlayerX = 0; // 0-4
     public static int PlayerY = 0; // 0-4
+    public static Dictionary<string, string> Vortexes = new()
+    {
+        {"e", "ea"},
+        {"ey", "eye"}
+    };
+    
+    private static readonly Dictionary<string, string> ReverseVortexes = 
+        Vortexes.ToDictionary(kvp => kvp.Value, kvp => kvp.Key);
+    
+    private static bool _justTeleported = false;
+    
+    public static string GetVortexTarget(string vortexAddress)
+    {
+        if (Vortexes.TryGetValue(vortexAddress, out string target))
+        {
+            return target;
+        }
+        
+        ReverseVortexes.TryGetValue(vortexAddress, out string reverseTarget);
+        return reverseTarget;
+    }
+    
     public static void Main(string[] args)
     {
         Start();
@@ -83,17 +105,42 @@ class Program
                 {
                     Console.Write("o");
                 }
-                else if (ShowAddressesInCurrentBox)
+                else
                 {
                     int cellIndex = (y - 1) * 5 + (x - 1);
                     char letter = (char)('a' + cellIndex);
-                    Console.ForegroundColor = ConsoleColor.DarkGray;
-                    Console.Write(letter);
-                    Console.ForegroundColor = ConsoleColor.White;
-                }
-                else
-                {
-                    Console.Write(" ");
+                    string cellAddress = CurrentBoxAddress + letter;
+                    
+                    bool isVortex = false;
+                    bool isEntry = false;
+                    
+                    if (Vortexes.ContainsKey(cellAddress))
+                    {
+                        isVortex = true;
+                        isEntry = true;
+                    }
+                    else if (ReverseVortexes.ContainsKey(cellAddress))
+                    {
+                        isVortex = true;
+                        isEntry = false;
+                    }
+                    
+                    if (isVortex)
+                    {
+                        Console.ForegroundColor = isEntry ? ConsoleColor.Cyan : ConsoleColor.Yellow;
+                        Console.Write("@");
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else if (ShowAddressesInCurrentBox)
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                        Console.Write(letter);
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
                 }
             }
             Console.WriteLine();
@@ -104,10 +151,26 @@ class Program
 
     public static void Move(int offsetX, int offsetY)
     {
-        PlayerX += offsetX;
-        PlayerY += offsetY;
-        PlayerY = Math.Clamp(PlayerY, 0, 4);
-        PlayerX = Math.Clamp(PlayerX, 0, 4);
+        int newX = PlayerX + offsetX;
+        int newY = PlayerY + offsetY;
+        
+        if (_justTeleported)
+        {
+            _justTeleported = false;
+            PlayerX = Math.Clamp(newX, 0, 4);
+            PlayerY = Math.Clamp(newY, 0, 4);
+            return;
+        }
+        
+        PlayerX = Math.Clamp(newX, 0, 4);
+        PlayerY = Math.Clamp(newY, 0, 4);
+        
+        string vortexTarget = GetVortexTarget(PlayerAddress);
+        if (!string.IsNullOrEmpty(vortexTarget))
+        {
+            PlayerAddress = vortexTarget;
+            _justTeleported = true;
+        }
     }
     
     public static void MoveLeft() => Move(-1, 0);
