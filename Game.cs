@@ -395,15 +395,13 @@ public class Game
             return;
             
         var newVortex = new Vortex(Player.Address, targetAddress, true);
-        newVortex.IsOneWay = isOneWay;
         Vortexes.Add(newVortex);
         allThings.Add(newVortex);
-        
-        // If two-way, create the return vortex
+    
+        // If two-way, create the return vortex at the target address
         if (!isOneWay)
         {
-            var returnVortex = new Vortex(targetAddress, Player.Address, false);
-            returnVortex.IsOneWay = false;
+            var returnVortex = new Vortex(targetAddress, Player.Address, true);
             Vortexes.Add(returnVortex);
             allThings.Add(returnVortex);
         }
