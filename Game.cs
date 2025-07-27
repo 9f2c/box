@@ -225,7 +225,7 @@ public class Game
             Vortexes.ContainsKey(Player.Address))
             return;
             
-        var newSign = new Sign(Player.X, Player.Y, "New Sign", Player.BoxAddress);
+        var newSign = new Sign(Player.X, Player.Y, "", Player.BoxAddress);
         Signs.Add(newSign);
         StartEditingSign(newSign);
     }
