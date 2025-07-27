@@ -92,6 +92,12 @@ class Program
             case ConsoleKey.Delete:
                 game.DeleteNearbySign();
                 break;
+            case ConsoleKey.F5:
+                game.SaveGame();
+                break;
+            case ConsoleKey.F9:
+                game.LoadGame();
+                break;
             case ConsoleKey.Q:
                 game.End();
                 return;
