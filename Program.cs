@@ -2,8 +2,90 @@
 
 class Program
 {
-    static void Main(string[] args)
+    public static string PlayerAddress = "a";
+    public static string CurrentBoxAddress = "";
+    public static string Seed = "";
+    public static int PlayerX = 0; // 0-4
+    public static int PlayerY = 0; // 0-4
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Start();
+        Draw();
+        while (true)
+        {
+            var ki = Console.ReadKey(true);
+            var key = ki.Key;
+            switch (key)
+            {
+                case ConsoleKey.A:
+                case ConsoleKey.H:
+                    MoveLeft();
+                    break;
+                case ConsoleKey.D:
+                case ConsoleKey.L:
+                    MoveRight();
+                    break;
+                case ConsoleKey.W:
+                case ConsoleKey.K:
+                    MoveUp();
+                    break;
+                case ConsoleKey.S:
+                case ConsoleKey.J:
+                    MoveDown();
+                    break;
+            }
+            Draw();
+        }
+        End();
     }
+
+    public static void Start()
+    {
+        Console.CursorVisible = false;
+    }
+
+    public static void End()
+    {
+        Console.CursorVisible = true;
+    }
+
+    public static void Draw()
+    {
+        Console.Clear();
+        Console.SetCursorPosition(0, 0);
+        
+        for (int y = 0; y < 7; y++)
+        {
+            for (int x = 0; x < 7; x++)
+            {
+                if (y == 0 || y == 6 || x == 0 || x == 6)
+                {
+                    Console.Write("█");
+                }
+                else if (x == PlayerX + 1 && y == PlayerY + 1)
+                {
+                    Console.Write("o");
+                }
+                else
+                {
+                    Console.Write(" ");
+                }
+            }
+            Console.WriteLine();
+        }
+        Console.WriteLine($"Address: {PlayerAddress}");
+    }
+
+    public static void Move(int offsetX, int offsetY)
+    {
+        PlayerX += offsetX;
+        PlayerY += offsetY;
+        PlayerY = Math.Clamp(PlayerY, 0, 4);
+        PlayerX = Math.Clamp(PlayerX, 0, 4);
+    }
+    
+    public static void MoveLeft() => Move(-1, 0);
+    public static void MoveRight() => Move(1, 0);
+    public static void MoveUp() => Move(0, -1);
+    public static void MoveDown() => Move(0, 1);
 }
