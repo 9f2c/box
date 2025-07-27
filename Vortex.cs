@@ -3,8 +3,8 @@ namespace box;
 public class Vortex : Thing
 {
     public string TargetAddress { get; set; } = "";
-    public Vortex? PairedVortex { get; set; } = null;
     public bool IsEntry { get; set; } = true;
+    public string PairedVortexAddress { get; set; } = "";
 
     public Vortex(string address, string targetAddress, bool isEntry = true)
     {
@@ -20,8 +20,8 @@ public class Vortex : Thing
         var entry = new Vortex(entryAddress, exitAddress, true);
         var exit = new Vortex(exitAddress, entryAddress, false);
         
-        entry.PairedVortex = exit;
-        exit.PairedVortex = entry; // Always pair both directions for the objects, even if one-way
+        entry.PairedVortexAddress = exitAddress;
+        exit.PairedVortexAddress = entryAddress;
             
         return (entry, exit);
     }

@@ -635,6 +635,18 @@ public class Game
         }
     }
 
+    public Vortex? GetVortexByAddress(string address)
+    {
+        return Vortexes.FirstOrDefault(v => v.Address == address);
+    }
+
+    public Vortex? GetPairedVortex(Vortex vortex)
+    {
+        if (string.IsNullOrEmpty(vortex.PairedVortexAddress))
+            return null;
+        return GetVortexByAddress(vortex.PairedVortexAddress);
+    }
+
 
     public void SaveGame(string filePath = "savegame.json")
     {
