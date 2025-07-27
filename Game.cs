@@ -395,4 +395,68 @@ public class Game
             // Silently fail if save file is corrupted
         }
     }
+
+    public void SaveGame(string filePath = "savegame.json")
+    {
+        var gameState = new GameState
+        {
+            Player = this.Player,
+            Signs = this.Signs,
+            Vortexes = this.Vortexes,
+            ShowAddressesInCurrentBox = this.ShowAddressesInCurrentBox,
+            ShowControlsTooltip = this.ShowControlsTooltip,
+            Seed = this.Seed
+        };
+        
+        string json = JsonConvert.SerializeObject(gameState, Formatting.Indented);
+        File.WriteAllText(filePath, json);
+    }
+
+    public void LoadGame(string filePath = "savegame.json")
+    {
+        if (!File.Exists(filePath)) return;
+        
+        try
+        {
+            string json = File.ReadAllText(filePath);
+            var gameState = JsonConvert.DeserializeObject<GameState>(json);
+            
+            if (gameState != null)
+            {
+                // Remove old player from collections
+                allThings.Remove(this.Player);
+                Players.Clear();
+                
+                // Set new player
+                this.Player = gameState.Player;
+                Players.Add(this.Player);
+                allThings.Add(this.Player);
+                
+                // Clear and reload signs
+                foreach (var sign in Signs)
+                    allThings.Remove(sign);
+                Signs.Clear();
+                Signs.AddRange(gameState.Signs);
+                foreach (var sign in Signs)
+                    allThings.Add(sign);
+                
+                // Clear and reload vortexes
+                foreach (var vortex in Vortexes)
+                    allThings.Remove(vortex);
+                Vortexes.Clear();
+                Vortexes.AddRange(gameState.Vortexes);
+                foreach (var vortex in Vortexes)
+                    allThings.Add(vortex);
+                
+                // Restore other properties
+                this.ShowAddressesInCurrentBox = gameState.ShowAddressesInCurrentBox;
+                this.ShowControlsTooltip = gameState.ShowControlsTooltip;
+                this.Seed = gameState.Seed;
+            }
+        }
+        catch (Exception)
+        {
+            // Silently fail if save file is corrupted
+        }
+    }
 }
