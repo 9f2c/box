@@ -8,6 +8,11 @@ public class Game
     private bool _justTeleported = false;
     
     public List<Sign> Signs { get; private set; }
+
+    private string GetBoxAddressFromAddress(string address)
+    {
+        return address.Length > 0 ? address.Substring(0, address.Length - 1) : "";
+    }
     public Sign? CurrentlyEditingSign { get; private set; } = null;
     public bool IsEditingSign => CurrentlyEditingSign != null;
     public string EditBuffer { get; private set; } = "";
@@ -39,6 +44,8 @@ public class Game
     private void InitializeSigns()
     {
         Signs = new List<Sign>();
+        // Example: Add a sign at position (2,2) in the root box
+        Signs.Add(new Sign(2, 2, "Welcome!", ""));
     }
     
     public static void SetRgbColor(int r, int g, int b)
@@ -103,8 +110,9 @@ public class Game
                     }
                     else
                     {
-                        // Check for signs at this position
-                        var sign = Signs.FirstOrDefault(s => s.X == x - 1 && s.Y == y - 1);
+                        // Check for signs at this position that are in the current box
+                        var sign = Signs.FirstOrDefault(s => s.X == x - 1 && s.Y == y - 1 && 
+                            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
                         if (sign != null)
                         {
                             sign.Draw();
@@ -212,11 +220,12 @@ public class Game
     public void CreateSign()
     {
         // Don't create if there's already a sign or vortex here
-        if (Signs.Any(s => s.X == Player.X && s.Y == Player.Y) || 
+        if (Signs.Any(s => s.X == Player.X && s.Y == Player.Y && 
+            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress) || 
             Vortexes.ContainsKey(Player.Address))
             return;
             
-        var newSign = new Sign(Player.X, Player.Y, "New Sign");
+        var newSign = new Sign(Player.X, Player.Y, "New Sign", Player.BoxAddress);
         Signs.Add(newSign);
         StartEditingSign(newSign);
     }
@@ -244,7 +253,8 @@ public class Game
 
     public void EditNearbySign()
     {
-        var nearbySign = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y);
+        var nearbySign = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y && 
+            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
         if (nearbySign != null)
         {
             StartEditingSign(nearbySign);
@@ -253,7 +263,8 @@ public class Game
 
     public void DeleteNearbySign()
     {
-        var nearbySign = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y);
+        var nearbySign = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y && 
+            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
         if (nearbySign != null)
         {
             Signs.Remove(nearbySign);
