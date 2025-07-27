@@ -2,27 +2,69 @@
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
   "ShowControlsTooltip": true,
-  "PlayerAddress": "e",
+  "PlayerAddress": "yu",
   "Signs": [
     {
-      "Text": "Hello, welcome to my house.",
+      "Text": "Hello, and welcome.",
       "IsBeingEdited": false,
-      "Address": "w",
-      "X": 2,
-      "Y": 4,
+      "Address": "b",
+      "X": 1,
+      "Y": 0,
       "Symbol": "■",
       "Color": {
         "Item1": 200,
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:26:22.9636412Z"
+      "CreatedAt": "2025-07-27T21:31:09.5775959Z"
     },
     {
-      "Text": "This is a sign.",
+      "Text": "This is a sign. Walk on it to read it.",
       "IsBeingEdited": false,
-      "Address": "x",
+      "Address": "c",
+      "X": 2,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:31:18.3304465Z"
+    },
+    {
+      "Text": "The thing below is a vortex.",
+      "IsBeingEdited": false,
+      "Address": "d",
       "X": 3,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:31:29.7511855Z"
+    },
+    {
+      "Text": "Walk on it to teleport to another location.",
+      "IsBeingEdited": false,
+      "Address": "e",
+      "X": 4,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:31:50.4934004Z"
+    },
+    {
+      "Text": "Tutorial box",
+      "IsBeingEdited": false,
+      "Address": "u",
+      "X": 0,
       "Y": 4,
       "Symbol": "■",
       "Color": {
@@ -30,7 +72,21 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:26:31.6457725Z"
+      "CreatedAt": "2025-07-27T21:32:14.9973169Z"
+    },
+    {
+      "Text": "The Hub",
+      "IsBeingEdited": false,
+      "Address": "yh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:32:36.522711Z"
     }
   ],
   "Vortexes": [
