@@ -9,6 +9,10 @@ public class Game
     public bool ShowControlsTooltip { get; set; } = false;
     private bool _showSignTooltip = false;
     private string _signTooltipText = "";
+
+    private DateTime _lastSaveTime = DateTime.MinValue;
+    private const double SAVE_COOLDOWN_SECONDS = 3.0;
+    private bool _needsSave = false;
     public Player Player { get; private set; }
     private bool _justTeleported = false;
     
@@ -179,8 +183,25 @@ public class Game
             SetRgbColor(255, 255, 150); // Light yellow
             Console.WriteLine($"Sign: {_signTooltipText}");
         }
+
+        TryAutoSave();
     }
-    
+
+    private void TryAutoSave()
+    {
+        if (_needsSave && (DateTime.Now - _lastSaveTime).TotalSeconds >= SAVE_COOLDOWN_SECONDS)
+        {
+            SaveGame();
+            _lastSaveTime = DateTime.Now;
+            _needsSave = false;
+        }
+    }
+
+    private void MarkNeedsSave()
+    {
+        _needsSave = true;
+    }
+
     private static (int r, int g, int b) HsvToRgb(double h, double s, double v)
     {
         int i = (int)(h / 60) % 6;
@@ -217,7 +238,8 @@ public class Game
         Player.X = Math.Clamp(newX, 0, 4);
         Player.Y = Math.Clamp(newY, 0, 4);
         UpdatePlayerAddress();
-        
+        MarkNeedsSave();
+
         var vortex = Vortexes.FirstOrDefault(v => v.Address == Player.Address);
         if (vortex != null)
         {
@@ -283,6 +305,7 @@ public class Game
             Signs.Add(newSign);
             StartEditingSign(newSign);
         }
+        MarkNeedsSave();
     }
 
     public void StartEditingSign(Sign sign)
@@ -299,6 +322,7 @@ public class Game
             if (save)
             {
                 CurrentlyEditingSign.Text = EditBuffer;
+                MarkNeedsSave();
             }
             CurrentlyEditingSign.IsBeingEdited = false;
             CurrentlyEditingSign = null;
@@ -313,6 +337,7 @@ public class Game
         if (nearbySign != null)
         {
             Signs.Remove(nearbySign);
+            MarkNeedsSave();
         }
     }
 
