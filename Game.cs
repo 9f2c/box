@@ -82,10 +82,11 @@ public class Game
         
         foreach (var pair in vortexPairs)
         {
-            // Create single vortex with both endpoints
-            var vortex = new Vortex(pair.Key, pair.Value, false); // Two-way by default
-            Vortexes.Add(vortex);
-            allThings.Add(vortex);
+            var (entry, exit) = Vortex.CreatePair(pair.Key, pair.Value);
+            Vortexes.Add(entry);
+            Vortexes.Add(exit);
+            allThings.Add(entry);
+            allThings.Add(exit);
         }
     }
     
@@ -155,7 +156,7 @@ public class Game
                     char letter = (char)('a' + cellIndex);
                     string cellAddress = Player.BoxAddress + letter;
                     
-                    var vortex = Vortexes.FirstOrDefault(v => v.HasEndpointAt(cellAddress));
+                    var vortex = Vortexes.FirstOrDefault(v => v.Address == cellAddress);
                     if (vortex != null)
                     {
                         vortex.Draw();
@@ -385,13 +386,24 @@ public class Game
     private void CreateVortexAtPlayer(string targetAddress, bool isOneWay)
     {
         // Don't create if there's already a vortex or sign here
-        if (Vortexes.Any(v => v.HasEndpointAt(Player.Address)) || 
+        if (Vortexes.Any(v => v.Address == Player.Address) || 
             Signs.Any(s => s.Address == Player.Address))
             return;
             
-        var newVortex = new Vortex(Player.Address, targetAddress, isOneWay);
-        Vortexes.Add(newVortex);
-        allThings.Add(newVortex);
+        if (isOneWay)
+        {
+            var entryVortex = new Vortex(Player.Address, targetAddress, true);
+            Vortexes.Add(entryVortex);
+            allThings.Add(entryVortex);
+        }
+        else
+        {
+            var (entry, exit) = Vortex.CreatePair(Player.Address, targetAddress);
+            Vortexes.Add(entry);
+            Vortexes.Add(exit);
+            allThings.Add(entry);
+            allThings.Add(exit);
+        }
         
         ResolveDuplicateAddresses();
         SaveGame();
@@ -435,13 +447,12 @@ public class Game
                 return true;
             
             // Find vortexes that have an endpoint at this address
-            foreach (var vortex in Vortexes.Where(v => v.HasEndpointAt(current)))
+            foreach (var vortex in Vortexes.Where(v => v.Address == current))
             {
-                string target = vortex.GetTargetAddress(current);
-                if (!string.IsNullOrEmpty(target) && !visited.Contains(target))
+                if (!string.IsNullOrEmpty(vortex.TargetAddress) && !visited.Contains(vortex.TargetAddress))
                 {
-                    visited.Add(target);
-                    queue.Enqueue(target);
+                    visited.Add(vortex.TargetAddress);
+                    queue.Enqueue(vortex.TargetAddress);
                 }
             }
         }
@@ -488,15 +499,11 @@ public class Game
         UpdatePlayerAddress();
         SaveGame();
 
-        var vortex = Vortexes.FirstOrDefault(v => v.HasEndpointAt(Player.Address));
-        if (vortex != null)
+        var vortex = Vortexes.FirstOrDefault(v => v.Address == Player.Address);
+        if (vortex != null && !string.IsNullOrEmpty(vortex.TargetAddress))
         {
-            string targetAddress = vortex.GetTargetAddress(Player.Address);
-            if (!string.IsNullOrEmpty(targetAddress))
-            {
-                Player.SetFromAddress(targetAddress);
-                _justTeleported = true;
-            }
+            Player.SetFromAddress(vortex.TargetAddress);
+            _justTeleported = true;
         }
 
         // Check for sign tooltip
