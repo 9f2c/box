@@ -78,7 +78,7 @@ public class Game
                 allThings.Remove(thingToRemove);
                 
                 // Remove from specific collections
-                else if (thingToRemove is Sign sign)
+                if (thingToRemove is Sign sign)
                     Signs.Remove(sign);
                 else if (thingToRemove is Vortex vortex)
                     Vortexes.Remove(vortex);
