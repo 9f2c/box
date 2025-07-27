@@ -13,7 +13,7 @@
       "Item2": 100,
       "Item3": 255
     },
-    "CreatedAt": "2025-07-27T22:42:03.4111269+02:00"
+    "CreatedAt": "2025-07-27T21:22:59.7609823Z"
   },
   "Players": [
     {
@@ -27,24 +27,9 @@
         "Item2": 100,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-27T22:42:03.4111269+02:00"
+      "CreatedAt": "2025-07-27T21:22:59.7609823Z"
     }
   ],
-  "Signs": [
-    {
-      "Text": "Welcome!",
-      "IsBeingEdited": false,
-      "Address": "m",
-      "X": 2,
-      "Y": 2,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-27T20:52:28.6334459Z"
-    }
-  ],
+  "Signs": [],
   "Vortexes": []
 }
