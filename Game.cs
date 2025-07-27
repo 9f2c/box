@@ -7,10 +7,16 @@ public class Game
     public Dictionary<string, Vortex> Vortexes { get; private set; }
     private bool _justTeleported = false;
     
+    public List<Sign> Signs { get; private set; }
+    public Sign? CurrentlyEditingSign { get; private set; } = null;
+    public bool IsEditingSign => CurrentlyEditingSign != null;
+    public string EditBuffer { get; private set; } = "";
+    
     public Game()
     {
         Player = new Player();
         InitializeVortexes();
+        InitializeSigns();
     }
     
     private void InitializeVortexes()
@@ -28,6 +34,11 @@ public class Game
             Vortexes[pair.Key] = new Vortex(pair.Key, pair.Value, true);
             Vortexes[pair.Value] = new Vortex(pair.Value, pair.Key, false);
         }
+    }
+    
+    private void InitializeSigns()
+    {
+        Signs = new List<Sign>();
     }
     
     public static void SetRgbColor(int r, int g, int b)
@@ -90,14 +101,23 @@ public class Game
                     {
                         Vortexes[cellAddress].Draw();
                     }
-                    else if (ShowAddressesInCurrentBox)
-                    {
-                        SetRgbColor(100, 100, 100);
-                        Console.Write(letter);
-                    }
                     else
                     {
-                        Console.Write(" ");
+                        // Check for signs at this position
+                        var sign = Signs.FirstOrDefault(s => s.X == x - 1 && s.Y == y - 1);
+                        if (sign != null)
+                        {
+                            sign.Draw();
+                        }
+                        else if (ShowAddressesInCurrentBox)
+                        {
+                            SetRgbColor(100, 100, 100);
+                            Console.Write(letter);
+                        }
+                        else
+                        {
+                            Console.Write(" ");
+                        }
                     }
                 }
             }
@@ -113,6 +133,19 @@ public class Game
         SetRgbColor(255, 200, 100); // Orange
         Console.WriteLine($"Position: ({Player.X}, {Player.Y})");
         ResetColor();
+        
+        if (IsEditingSign)
+        {
+            SetRgbColor(255, 255, 100); // Bright yellow
+            Console.WriteLine($"Editing sign: {EditBuffer}_");
+            SetRgbColor(200, 200, 200); // Light gray
+            Console.WriteLine("Press Enter to save, Escape to cancel");
+        }
+        else
+        {
+            SetRgbColor(200, 200, 200); // Light gray
+            Console.WriteLine("Press S to create sign, E to edit nearby sign, Del to delete sign");
+        }
     }
     
     private static (int r, int g, int b) HsvToRgb(double h, double s, double v)
@@ -174,5 +207,72 @@ public class Game
     public void ToggleAddresses()
     {
         ShowAddressesInCurrentBox = !ShowAddressesInCurrentBox;
+    }
+    
+    public void CreateSign()
+    {
+        // Don't create if there's already a sign or vortex here
+        if (Signs.Any(s => s.X == Player.X && s.Y == Player.Y) || 
+            Vortexes.ContainsKey(Player.Address))
+            return;
+            
+        var newSign = new Sign(Player.X, Player.Y, "New Sign");
+        Signs.Add(newSign);
+        StartEditingSign(newSign);
+    }
+
+    public void StartEditingSign(Sign sign)
+    {
+        CurrentlyEditingSign = sign;
+        sign.IsBeingEdited = true;
+        EditBuffer = sign.Text;
+    }
+
+    public void StopEditingSign(bool save = false)
+    {
+        if (CurrentlyEditingSign != null)
+        {
+            if (save)
+            {
+                CurrentlyEditingSign.Text = EditBuffer;
+            }
+            CurrentlyEditingSign.IsBeingEdited = false;
+            CurrentlyEditingSign = null;
+            EditBuffer = "";
+        }
+    }
+
+    public void EditNearbySign()
+    {
+        var nearbySign = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y);
+        if (nearbySign != null)
+        {
+            StartEditingSign(nearbySign);
+        }
+    }
+
+    public void DeleteNearbySign()
+    {
+        var nearbySign = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y);
+        if (nearbySign != null)
+        {
+            Signs.Remove(nearbySign);
+        }
+    }
+
+    public void AddCharToEditBuffer(char c)
+    {
+        if (IsEditingSign && EditBuffer.Length < 50) // Limit text length
+        {
+            EditBuffer += c;
+        }
+    }
+
+    public void RemoveCharFromEditBuffer()
+    {
+        if (IsEditingSign && EditBuffer.Length > 0)
+        {
+            EditBuffer = EditBuffer.Substring(0, EditBuffer.Length - 1);
+        }
     }
 }
