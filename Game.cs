@@ -3,6 +3,7 @@ public class Game
 {
     public bool ShowAddressesInCurrentBox { get; set; } = false;
     public string Seed { get; set; } = "";
+    public bool ShowControlsTooltip { get; set; } = false;
     public Player Player { get; private set; }
     public Dictionary<string, Vortex> Vortexes { get; private set; }
     private bool _justTeleported = false;
@@ -149,10 +150,10 @@ public class Game
             SetRgbColor(200, 200, 200); // Light gray
             Console.WriteLine("Press Enter to save, Escape to cancel");
         }
-        else
+        else if (ShowControlsTooltip)
         {
             SetRgbColor(200, 200, 200); // Light gray
-            Console.WriteLine("Press T to create sign, E to edit nearby sign, Del to delete sign, G to toggle coordinates");
+            Console.WriteLine("Press T to create sign, E to edit nearby sign, Del to delete sign, G to toggle coordinates, C to toggle controls");
         }
     }
     
@@ -215,6 +216,11 @@ public class Game
     public void ToggleAddresses()
     {
         ShowAddressesInCurrentBox = !ShowAddressesInCurrentBox;
+    }
+    
+    public void ToggleControlsTooltip()
+    {
+        ShowControlsTooltip = !ShowControlsTooltip;
     }
     
     public void CreateSign()

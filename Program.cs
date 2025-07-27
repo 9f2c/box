@@ -76,6 +76,9 @@ class Program
                 case ConsoleKey.G:
                     if (!game.IsEditingSign) game.ToggleAddresses();
                     break;
+                case ConsoleKey.C:
+                    if (!game.IsEditingSign) game.ToggleControlsTooltip();
+                    break;
                 case ConsoleKey.E:
                     if (game.IsEditingSign)
                     {
