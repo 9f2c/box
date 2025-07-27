@@ -1,8 +1,8 @@
 {
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
-  "ShowControlsTooltip": true,
-  "PlayerAddress": "yu",
+  "ShowControlsTooltip": false,
+  "PlayerAddress": "yuh",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -87,6 +87,286 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-27T21:32:36.522711Z"
+    },
+    {
+      "Text": "Help",
+      "IsBeingEdited": false,
+      "Address": "yuh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:35:20.0765807Z"
+    },
+    {
+      "Text": "Go here to find out about this game's mechanics.",
+      "IsBeingEdited": false,
+      "Address": "yp",
+      "X": 0,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:35:30.3909967Z"
+    },
+    {
+      "Text": "Vortex tutorial",
+      "IsBeingEdited": false,
+      "Address": "yup",
+      "X": 0,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:35:54.1879258Z"
+    },
+    {
+      "Text": "A vortex is a portal.",
+      "IsBeingEdited": false,
+      "Address": "yuuk",
+      "X": 0,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:36:15.4848102Z"
+    },
+    {
+      "Text": "It's an @ symbol, either blue or orange.",
+      "IsBeingEdited": false,
+      "Address": "yuul",
+      "X": 1,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:36:25.4610922Z"
+    },
+    {
+      "Text": "A blue vortex is an enter vortex.",
+      "IsBeingEdited": false,
+      "Address": "yuum",
+      "X": 2,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:36:37.0887848Z"
+    },
+    {
+      "Text": "An orange vortex is an exit vortex.",
+      "IsBeingEdited": false,
+      "Address": "yuun",
+      "X": 3,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:36:44.831849Z"
+    },
+    {
+      "Text": "You can create a vortex by pressing N, then 1.",
+      "IsBeingEdited": false,
+      "Address": "yuuo",
+      "X": 4,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:36:52.7112744Z"
+    },
+    {
+      "Text": "A vortex can be either one-way, or two-way.",
+      "IsBeingEdited": false,
+      "Address": "yuup",
+      "X": 0,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:37:07.5346664Z"
+    },
+    {
+      "Text": "A one-way vortex teleports you to an address.",
+      "IsBeingEdited": false,
+      "Address": "yuuq",
+      "X": 1,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:38:13.94572Z"
+    },
+    {
+      "Text": "A two-way vortex teleports you to another vortex.",
+      "IsBeingEdited": false,
+      "Address": "yuur",
+      "X": 2,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:38:27.4132051Z"
+    },
+    {
+      "Text": "That vortex, an exit vortex, can take you back.",
+      "IsBeingEdited": false,
+      "Address": "yuus",
+      "X": 3,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:38:35.6014121Z"
+    },
+    {
+      "Text": "You can delete a vortex by standing on top of it.",
+      "IsBeingEdited": false,
+      "Address": "yuut",
+      "X": 4,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:38:48.3826431Z"
+    },
+    {
+      "Text": "Only entry vortexes (blue) can be deleted.",
+      "IsBeingEdited": false,
+      "Address": "yuuu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:39:08.3304051Z"
+    },
+    {
+      "Text": "If you create a one-way vortex, you can delete it:",
+      "IsBeingEdited": false,
+      "Address": "yuuv",
+      "X": 1,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:39:17.0702139Z"
+    },
+    {
+      "Text": "Create a two-way vortex pointing to its address,..",
+      "IsBeingEdited": false,
+      "Address": "yuuw",
+      "X": 2,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:39:31.8651904Z"
+    },
+    {
+      "Text": "Then teleport to it, delete it, and delete...",
+      "IsBeingEdited": false,
+      "Address": "yuux",
+      "X": 3,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:39:51.3088208Z"
+    },
+    {
+      "Text": "the helper two-way vortex (the entry vortex).",
+      "IsBeingEdited": false,
+      "Address": "yuuy",
+      "X": 4,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:40:01.8603722Z"
+    },
+    {
+      "Text": "Vortex tutorial",
+      "IsBeingEdited": false,
+      "Address": "yuub",
+      "X": 1,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:40:40.7261825Z"
+    },
+    {
+      "Text": "Please read from left to right like a book.",
+      "IsBeingEdited": false,
+      "Address": "yuuf",
+      "X": 0,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:42:01.7281318Z"
     }
   ],
   "Vortexes": [
@@ -121,6 +401,70 @@
         "Item3": 0
       },
       "CreatedAt": "2025-07-27T21:26:44.7907781Z"
+    },
+    {
+      "TargetAddress": "yua",
+      "IsEntry": true,
+      "PairedVortexAddress": "yua",
+      "IsOneWay": false,
+      "Address": "yu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-27T21:35:15.0778037Z"
+    },
+    {
+      "TargetAddress": "yu",
+      "IsEntry": false,
+      "PairedVortexAddress": "yu",
+      "IsOneWay": false,
+      "Address": "yua",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-27T21:35:15.0778049Z"
+    },
+    {
+      "TargetAddress": "yuua",
+      "IsEntry": true,
+      "PairedVortexAddress": "yuua",
+      "IsOneWay": false,
+      "Address": "yuu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-27T21:35:43.4555462Z"
+    },
+    {
+      "TargetAddress": "yuu",
+      "IsEntry": false,
+      "PairedVortexAddress": "yuu",
+      "IsOneWay": false,
+      "Address": "yuua",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-27T21:35:43.4555476Z"
     }
   ]
 }
