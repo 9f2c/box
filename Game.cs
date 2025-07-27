@@ -397,3 +397,13 @@ public class Game
         }
     }
 }
+
+public class GameState
+{
+    public Player Player { get; set; }
+    public List<Sign> Signs { get; set; }
+    public List<Vortex> Vortexes { get; set; }
+    public bool ShowAddressesInCurrentBox { get; set; }
+    public bool ShowControlsTooltip { get; set; }
+    public string Seed { get; set; }
+}
