@@ -67,7 +67,7 @@ public class Game
     public void Start()
     {
         Console.CursorVisible = false;
-        SetRgbBackgroundColor(20, 20, 40); // Dark blue background
+        // SetRgbBackgroundColor(20, 20, 40); // Dark blue background
         Console.Clear();
     }
     
