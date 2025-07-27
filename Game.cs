@@ -398,6 +398,7 @@ public class Game
             return;
             
         var newVortex = new Vortex(Player.Address, targetAddress, true); // Entry vortex at player location
+        newVortex.IsOneWay = isOneWay; // Set the IsOneWay property
         Vortexes.Add(newVortex);
         allThings.Add(newVortex);
 
@@ -405,6 +406,7 @@ public class Game
         if (!isOneWay)
         {
             var returnVortex = new Vortex(targetAddress, Player.Address, false); // Exit vortex at target
+            returnVortex.IsOneWay = false; // Explicitly set for clarity
             Vortexes.Add(returnVortex);
             allThings.Add(returnVortex);
         }
