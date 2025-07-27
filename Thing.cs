@@ -7,7 +7,7 @@ public class Thing
     public int Y { get; set; } = 0;
     public char Symbol { get; set; } = ' ';
     public (int r, int g, int b) Color { get; set; } = (255, 255, 255);
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     
     public virtual void Update() { }
     public virtual void Draw()
