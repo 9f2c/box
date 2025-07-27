@@ -203,7 +203,16 @@ public class Game
         else if (ShowControlsTooltip)
         {
             SetRgbColor(200, 200, 200); // Light gray
-            Console.WriteLine("Press T to create sign, Del to delete sign, G to toggle coordinates, C to toggle controls, N to create vortex/sign");
+            Console.WriteLine(
+                """
+                T - place sign
+                Del - delete thing
+                G - toggle coordinates
+                C - toggle controls
+                N - create thing
+                F - teleport to accessible address
+                """
+            );
         }
 
         if (_showSignTooltip && !IsEditingSign)

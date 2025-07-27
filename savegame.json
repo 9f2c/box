@@ -395,6 +395,34 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-27T21:43:54.0328373Z"
+    },
+    {
+      "Text": "fix teleportation, needs to work for other places",
+      "IsBeingEdited": false,
+      "Address": "yyq",
+      "X": 1,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:50:11.4793359Z"
+    },
+    {
+      "Text": ".. and not just spawn box",
+      "IsBeingEdited": false,
+      "Address": "yyr",
+      "X": 2,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:50:31.054593Z"
     }
   ],
   "Vortexes": [
