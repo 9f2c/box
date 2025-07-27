@@ -12,8 +12,12 @@ public class Vortex : Thing
         ExitAddress = exitAddress;
         IsOneWay = isOneWay;
         Symbol = '@';
-        Color = (30, 144, 255); // Blue color for all vortexes
         Address = entryAddress; // Set Address to entry point for compatibility
+        // Set color based on whether this is the entry or exit vortex
+        if (Address == EntryAddress)
+            Color = (30, 144, 255); // Blue for entry vortex
+        else
+            Color = (255, 165, 0); // Orange for exit vortex
     }
     
     public string GetTargetAddress(string fromAddress)
