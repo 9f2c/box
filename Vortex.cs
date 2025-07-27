@@ -13,13 +13,17 @@ public class Vortex : Thing
         IsOneWay = isOneWay;
         Symbol = '@';
         Address = entryAddress; // Set Address to entry point for compatibility
-        // Set color based on whether this is the entry or exit vortex
-        if (Address == EntryAddress)
-            Color = (30, 144, 255); // Blue for entry vortex
-        else
-            Color = (255, 165, 0); // Orange for exit vortex
+        Color = (30, 144, 255); // Default to blue for entry vortex
     }
     
+    public void SetColorForAddress(string address)
+    {
+        if (address == EntryAddress)
+            Color = (30, 144, 255); // Blue for entry vortex
+        else if (address == ExitAddress)
+            Color = (255, 165, 0); // Orange for exit vortex
+    }
+
     public string GetTargetAddress(string fromAddress)
     {
         if (fromAddress == EntryAddress)
