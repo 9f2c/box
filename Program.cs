@@ -26,6 +26,10 @@ class Program
                     {
                         game.ExecuteTeleport();
                     }
+                    else if (game.IsInCreationMode)
+                    {
+                        game.HandleCreationEnter();
+                    }
                     break;
                 case ConsoleKey.Escape:
                     if (game.IsEditingSign)
@@ -35,6 +39,10 @@ class Program
                     else if (game.IsInTeleportMode)
                     {
                         game.CancelTeleport();
+                    }
+                    else if (game.IsInCreationMode)
+                    {
+                        game.CancelCreation();
                     }
                     else
                     {
@@ -50,6 +58,10 @@ class Program
                     else if (game.IsInTeleportMode)
                     {
                         game.RemoveCharFromTeleportBuffer();
+                    }
+                    else if (game.IsInCreationMode)
+                    {
+                        game.HandleCreationBackspace();
                     }
                     break;
                 default:
@@ -69,9 +81,28 @@ class Program
                             game.AddCharToTeleportBuffer(ki.KeyChar);
                         }
                     }
+                    else if (game.IsInCreationMode)
+                    {
+                        // Handle creation mode input
+                        if (ki.KeyChar >= '1' && ki.KeyChar <= '2')
+                        {
+                            if (game.IsInCreationMode && ki.KeyChar == '1' || ki.KeyChar == '2')
+                            {
+                                game.HandleCreationInput(ki.KeyChar);
+                            }
+                            else
+                            {
+                                game.HandleCreationDirection(ki.KeyChar);
+                            }
+                        }
+                        else if (ki.KeyChar >= 'a' && ki.KeyChar <= 'y')
+                        {
+                            game.HandleCreationInput(ki.KeyChar);
+                        }
+                    }
                     else
                     {
-                        // When not editing or teleporting, handle normal game controls
+                        // When not editing, teleporting, or creating, handle normal game controls
                         HandleGameControls(game, key, ki.KeyChar);
                     }
                     break;
@@ -93,6 +124,7 @@ class Program
             case ConsoleKey.C: game.ToggleControlsTooltip(); break;
             case ConsoleKey.Delete: game.DeleteNearbySign(); break;
             case ConsoleKey.F: game.StartTeleportMode(); break;
+            case ConsoleKey.N: game.StartCreationMode(); break;
             case ConsoleKey.Q: game.End(); return;
         }
     }

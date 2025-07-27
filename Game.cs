@@ -15,6 +15,14 @@ public class Game
     public bool IsInTeleportMode { get; private set; } = false;
     private string _teleportBuffer = "";
 
+    public bool IsInCreationMode { get; private set; } = false;
+    private bool _isSelectingCreationType = false;
+    private bool _isCreatingVortex = false;
+    private bool _isSpecifyingVortexTarget = false;
+    private bool _isSpecifyingVortexDirection = false;
+    private string _creationBuffer = "";
+    private string _pendingVortexTarget = "";
+
     public Player Player { get; private set; }
     private bool _justTeleported = false;
     
@@ -224,6 +232,25 @@ public class Game
             Console.WriteLine("Enter valid address (a-y letters), Enter to teleport, Escape to cancel");
         }
 
+        if (IsInCreationMode)
+        {
+            SetRgbColor(255, 255, 100); // Bright yellow
+            if (_isSelectingCreationType)
+            {
+                Console.WriteLine("Create: 1=Vortex, 2=Sign, Escape to cancel");
+            }
+            else if (_isSpecifyingVortexTarget)
+            {
+                Console.WriteLine($"Vortex target address: {_creationBuffer}_");
+                SetRgbColor(200, 200, 200); // Light gray
+                Console.WriteLine("Enter valid address (a-y letters), Enter to confirm, Escape to cancel");
+            }
+            else if (_isSpecifyingVortexDirection)
+            {
+                Console.WriteLine($"Target: {_pendingVortexTarget} | 1=One-way, 2=Two-way, Escape to cancel");
+            }
+        }
+
         SaveGame();
     }
 
@@ -261,6 +288,124 @@ public class Game
         {
             _teleportBuffer += c;
         }
+    }
+
+    public void StartCreationMode()
+    {
+        IsInCreationMode = true;
+        _isSelectingCreationType = true;
+        _creationBuffer = "";
+    }
+
+    public void CancelCreation()
+    {
+        IsInCreationMode = false;
+        _isSelectingCreationType = false;
+        _isCreatingVortex = false;
+        _isSpecifyingVortexTarget = false;
+        _isSpecifyingVortexDirection = false;
+        _creationBuffer = "";
+        _pendingVortexTarget = "";
+    }
+
+    public void HandleCreationInput(char c)
+    {
+        if (_isSelectingCreationType)
+        {
+            if (c == '1')
+            {
+                // Create vortex
+                _isSelectingCreationType = false;
+                _isCreatingVortex = true;
+                _isSpecifyingVortexTarget = true;
+                _creationBuffer = "";
+            }
+            else if (c == '2')
+            {
+                // Create sign
+                CreateSignAtPlayerForCreation();
+                CancelCreation();
+            }
+        }
+        else if (_isSpecifyingVortexTarget && c >= 'a' && c <= 'y')
+        {
+            _creationBuffer += c;
+        }
+    }
+
+    public void HandleCreationEnter()
+    {
+        if (_isSpecifyingVortexTarget && _creationBuffer.Length > 0)
+        {
+            _pendingVortexTarget = _creationBuffer;
+            _isSpecifyingVortexTarget = false;
+            _isSpecifyingVortexDirection = true;
+            _creationBuffer = "";
+        }
+    }
+
+    public void HandleCreationBackspace()
+    {
+        if (_isSpecifyingVortexTarget && _creationBuffer.Length > 0)
+        {
+            _creationBuffer = _creationBuffer.Substring(0, _creationBuffer.Length - 1);
+        }
+    }
+
+    public void HandleCreationDirection(char c)
+    {
+        if (_isSpecifyingVortexDirection)
+        {
+            if (c == '1') // One-way
+            {
+                CreateVortexAtPlayer(_pendingVortexTarget, true);
+                CancelCreation();
+            }
+            else if (c == '2') // Two-way
+            {
+                CreateVortexAtPlayer(_pendingVortexTarget, false);
+                CancelCreation();
+            }
+        }
+    }
+
+    private void CreateSignAtPlayerForCreation()
+    {
+        // Don't create if there's already a vortex here
+        if (Vortexes.Any(v => v.Address == Player.Address))
+            return;
+            
+        var newSign = new Sign(Player.X, Player.Y, "", Player.BoxAddress);
+        Signs.Add(newSign);
+        allThings.Add(newSign);
+        StartEditingSign(newSign);
+        ResolveDuplicateAddresses();
+        SaveGame();
+    }
+
+    private void CreateVortexAtPlayer(string targetAddress, bool isOneWay)
+    {
+        // Don't create if there's already a vortex or sign here
+        if (Vortexes.Any(v => v.Address == Player.Address) || 
+            Signs.Any(s => s.Address == Player.Address))
+            return;
+            
+        var newVortex = new Vortex(Player.Address, targetAddress, true);
+        newVortex.IsOneWay = isOneWay;
+        Vortexes.Add(newVortex);
+        allThings.Add(newVortex);
+        
+        // If two-way, create the return vortex
+        if (!isOneWay)
+        {
+            var returnVortex = new Vortex(targetAddress, Player.Address, false);
+            returnVortex.IsOneWay = false;
+            Vortexes.Add(returnVortex);
+            allThings.Add(returnVortex);
+        }
+        
+        ResolveDuplicateAddresses();
+        SaveGame();
     }
 
     public void RemoveCharFromTeleportBuffer()
