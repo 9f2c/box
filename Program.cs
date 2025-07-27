@@ -64,43 +64,15 @@ class Program
     {
         switch (key)
         {
-            case ConsoleKey.A:
-            case ConsoleKey.H:
-                game.MoveLeft();
-                break;
-            case ConsoleKey.D:
-            case ConsoleKey.L:
-                game.MoveRight();
-                break;
-            case ConsoleKey.W:
-            case ConsoleKey.K:
-                game.MoveUp();
-                break;
-            case ConsoleKey.S:
-            case ConsoleKey.J:
-                game.MoveDown();
-                break;
-            case ConsoleKey.T:
-                game.CreateOrEditSignAtPlayer();
-                break;
-            case ConsoleKey.G:
-                game.ToggleAddresses();
-                break;
-            case ConsoleKey.C:
-                game.ToggleControlsTooltip();
-                break;
-            case ConsoleKey.Delete:
-                game.DeleteNearbySign();
-                break;
-            case ConsoleKey.F5:
-                game.SaveGame();
-                break;
-            case ConsoleKey.F9:
-                game.LoadGame();
-                break;
-            case ConsoleKey.Q:
-                game.End();
-                return;
+            case ConsoleKey.A: case ConsoleKey.H: game.MoveLeft(); break;
+            case ConsoleKey.D: case ConsoleKey.L: game.MoveRight(); break;
+            case ConsoleKey.W: case ConsoleKey.K: game.MoveUp(); break;
+            case ConsoleKey.S: case ConsoleKey.J: game.MoveDown(); break;
+            case ConsoleKey.T: game.CreateOrEditSignAtPlayer(); break;
+            case ConsoleKey.G: game.ToggleAddresses(); break;
+            case ConsoleKey.C: game.ToggleControlsTooltip(); break;
+            case ConsoleKey.Delete: game.DeleteNearbySign(); break;
+            case ConsoleKey.Q: game.End(); return;
         }
     }
 }

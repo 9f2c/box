@@ -198,7 +198,7 @@ public class Game
         else if (ShowControlsTooltip)
         {
             SetRgbColor(200, 200, 200); // Light gray
-            Console.WriteLine("Press T to create sign, E to edit nearby sign, Del to delete sign, G to toggle coordinates, C to toggle controls, F5 to save, F9 to load");
+            Console.WriteLine("Press T to create sign, E to edit nearby sign, Del to delete sign, G to toggle coordinates, C to toggle controls");
         }
 
         if (_showSignTooltip && !IsEditingSign)
