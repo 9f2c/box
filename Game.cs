@@ -60,9 +60,7 @@ public class Game
         Player = new Player();
         Players.Add(Player);
         allThings.Add(Player);
-        InitializeVortexes();
-        InitializeSigns();
-        ResolveDuplicateAddresses(); // Add this line
+        ResolveDuplicateAddresses();
     }
 
     private void ResolveDuplicateAddresses()
@@ -687,7 +685,13 @@ public class Game
 
     public void LoadGame(string filePath = "savegame.json")
     {
-        if (!File.Exists(filePath)) return;
+        if (!File.Exists(filePath)) 
+        {
+            // No save file exists, start with empty world
+            // Player is already initialized in constructor
+            // All collections are already empty
+            return;
+        }
         
         try
         {
