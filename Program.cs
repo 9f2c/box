@@ -71,23 +71,13 @@ class Program
                     }
                     break;
                 case ConsoleKey.T:
-                    if (!game.IsEditingSign) game.CreateSign();
+                    if (!game.IsEditingSign) game.CreateOrEditSignAtPlayer();
                     break;
                 case ConsoleKey.G:
                     if (!game.IsEditingSign) game.ToggleAddresses();
                     break;
                 case ConsoleKey.C:
                     if (!game.IsEditingSign) game.ToggleControlsTooltip();
-                    break;
-                case ConsoleKey.E:
-                    if (game.IsEditingSign)
-                    {
-                        game.AddCharToEditBuffer('e');
-                    }
-                    else
-                    {
-                        game.EditNearbySign();
-                    }
                     break;
                 case ConsoleKey.Delete:
                     if (game.IsEditingSign)

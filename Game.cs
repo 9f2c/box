@@ -4,6 +4,8 @@ public class Game
     public bool ShowAddressesInCurrentBox { get; set; } = false;
     public string Seed { get; set; } = "";
     public bool ShowControlsTooltip { get; set; } = false;
+    private bool _showSignTooltip = false;
+    private string _signTooltipText = "";
     public Player Player { get; private set; }
     public Dictionary<string, Vortex> Vortexes { get; private set; }
     private bool _justTeleported = false;
@@ -155,6 +157,12 @@ public class Game
             SetRgbColor(200, 200, 200); // Light gray
             Console.WriteLine("Press T to create sign, E to edit nearby sign, Del to delete sign, G to toggle coordinates, C to toggle controls");
         }
+
+        if (_showSignTooltip && !IsEditingSign)
+        {
+            SetRgbColor(255, 255, 150); // Light yellow
+            Console.WriteLine($"Sign: {_signTooltipText}");
+        }
     }
     
     private static (int r, int g, int b) HsvToRgb(double h, double s, double v)
@@ -200,6 +208,20 @@ public class Game
             Player.SetFromAddress(vortex.TargetAddress);
             _justTeleported = true;
         }
+
+        // Check for sign tooltip
+        var signAtPosition = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y && 
+            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
+        if (signAtPosition != null && !string.IsNullOrEmpty(signAtPosition.Text))
+        {
+            _showSignTooltip = true;
+            _signTooltipText = signAtPosition.Text;
+        }
+        else
+        {
+            _showSignTooltip = false;
+            _signTooltipText = "";
+        }
     }
     
     private void UpdatePlayerAddress()
@@ -223,17 +245,28 @@ public class Game
         ShowControlsTooltip = !ShowControlsTooltip;
     }
     
-    public void CreateSign()
+    public void CreateOrEditSignAtPlayer()
     {
-        // Don't create if there's already a sign or vortex here
-        if (Signs.Any(s => s.X == Player.X && s.Y == Player.Y && 
-            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress) || 
-            Vortexes.ContainsKey(Player.Address))
-            return;
-            
-        var newSign = new Sign(Player.X, Player.Y, "", Player.BoxAddress);
-        Signs.Add(newSign);
-        StartEditingSign(newSign);
+        // Check if there's already a sign here
+        var existingSign = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y && 
+            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
+        
+        if (existingSign != null)
+        {
+            // Edit existing sign
+            StartEditingSign(existingSign);
+        }
+        else
+        {
+            // Don't create if there's a vortex here
+            if (Vortexes.ContainsKey(Player.Address))
+                return;
+                
+            // Create new sign
+            var newSign = new Sign(Player.X, Player.Y, "", Player.BoxAddress);
+            Signs.Add(newSign);
+            StartEditingSign(newSign);
+        }
     }
 
     public void StartEditingSign(Sign sign)
@@ -254,16 +287,6 @@ public class Game
             CurrentlyEditingSign.IsBeingEdited = false;
             CurrentlyEditingSign = null;
             EditBuffer = "";
-        }
-    }
-
-    public void EditNearbySign()
-    {
-        var nearbySign = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y && 
-            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
-        if (nearbySign != null)
-        {
-            StartEditingSign(nearbySign);
         }
     }
 
