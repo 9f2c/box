@@ -46,6 +46,7 @@ public class Game
         allThings.Add(Player);
         InitializeVortexes();
         InitializeSigns();
+        ResolveDuplicateAddresses(); // Add this line
     }
 
     private void ResolveDuplicateAddresses()
@@ -74,28 +75,12 @@ public class Game
     
     private void InitializeVortexes()
     {
-        var vortexPairs = new Dictionary<string, string>
-        {
-            {"e", "ea"},
-            {"ey", "eye"}
-        };
-        
-        foreach (var pair in vortexPairs)
-        {
-            var (entry, exit) = Vortex.CreatePair(pair.Key, pair.Value);
-            Vortexes.Add(entry);
-            Vortexes.Add(exit);
-            allThings.Add(entry);
-            allThings.Add(exit);
-        }
+        // Remove all the vortex creation code - leave method empty
     }
     
     private void InitializeSigns()
     {
-        // Example: Add a sign at position (2,2) in the root box
-        var sign = new Sign(2, 2, "Welcome!", "");
-        Signs.Add(sign);
-        allThings.Add(sign);
+        // Remove the sign creation code - leave method empty
     }
     
     public static void SetRgbColor(int r, int g, int b)
@@ -371,8 +356,8 @@ public class Game
 
     private void CreateSignAtPlayerForCreation()
     {
-        // Don't create if there's already a vortex here
-        if (Vortexes.Any(v => v.Address == Player.Address))
+        // Check if there's already any thing here (except player)
+        if (allThings.Any(t => t.Address == Player.Address && t != Player))
             return;
             
         var newSign = new Sign(Player.X, Player.Y, "", Player.BoxAddress);
@@ -385,9 +370,8 @@ public class Game
 
     private void CreateVortexAtPlayer(string targetAddress, bool isOneWay)
     {
-        // Don't create if there's already a vortex or sign here
-        if (Vortexes.Any(v => v.Address == Player.Address) || 
-            Signs.Any(s => s.Address == Player.Address))
+        // Check if there's already any thing here (except player)
+        if (allThings.Any(t => t.Address == Player.Address && t != Player))
             return;
             
         if (isOneWay)
@@ -570,13 +554,14 @@ public class Game
         }
         else
         {
-            // Don't create if there's a vortex here
-            if (Vortexes.Any(v => v.Address == Player.Address))
+            // Check if there's any other thing here (except player)
+            if (allThings.Any(t => t.Address == Player.Address && t != Player))
                 return;
                 
             // Create new sign
             var newSign = new Sign(Player.X, Player.Y, "", Player.BoxAddress);
             Signs.Add(newSign);
+            allThings.Add(newSign); // Add this line
             StartEditingSign(newSign);
         }
         ResolveDuplicateAddresses();
