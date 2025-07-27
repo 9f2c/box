@@ -2,7 +2,7 @@
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
   "ShowControlsTooltip": false,
-  "PlayerAddress": "yuh",
+  "PlayerAddress": "a",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -59,20 +59,6 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-27T21:31:50.4934004Z"
-    },
-    {
-      "Text": "Tutorial box",
-      "IsBeingEdited": false,
-      "Address": "u",
-      "X": 0,
-      "Y": 4,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-27T21:32:14.9973169Z"
     },
     {
       "Text": "The Hub",
@@ -367,6 +353,20 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-27T21:42:01.7281318Z"
+    },
+    {
+      "Text": "Vortex to the hub",
+      "IsBeingEdited": false,
+      "Address": "s",
+      "X": 3,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-27T21:42:54.5829729Z"
     }
   ],
   "Vortexes": [
