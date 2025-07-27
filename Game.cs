@@ -393,12 +393,16 @@ public class Game
         if (isOneWay)
         {
             var entryVortex = new Vortex(Player.Address, targetAddress, true);
+            entryVortex.X = Player.X;
+            entryVortex.Y = Player.Y;
             Vortexes.Add(entryVortex);
             allThings.Add(entryVortex);
         }
         else
         {
             var (entry, exit) = Vortex.CreatePair(Player.Address, targetAddress);
+            entry.X = Player.X;
+            entry.Y = Player.Y;
             Vortexes.Add(entry);
             Vortexes.Add(exit);
             allThings.Add(entry);
