@@ -21,8 +21,7 @@ public class Vortex : Thing
         var exit = new Vortex(exitAddress, entryAddress, false);
         
         entry.PairedVortex = exit;
-        if (!isOneWay)
-            exit.PairedVortex = entry;
+        exit.PairedVortex = entry; // Always pair both directions for the objects, even if one-way
             
         return (entry, exit);
     }
