@@ -144,7 +144,7 @@ public class Game
         else
         {
             SetRgbColor(200, 200, 200); // Light gray
-            Console.WriteLine("Press S to create sign, E to edit nearby sign, Del to delete sign");
+            Console.WriteLine("Press T to create sign, E to edit nearby sign, Del to delete sign, G to toggle coordinates");
         }
     }
     

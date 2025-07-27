@@ -19,24 +19,41 @@ class Program
             {
                 case ConsoleKey.A:
                 case ConsoleKey.H:
-                    if (!game.IsEditingSign) game.MoveLeft();
+                    if (game.IsEditingSign)
+                    {
+                        game.AddCharToEditBuffer(ki.KeyChar);
+                    }
+                    else
+                    {
+                        game.MoveLeft();
+                    }
                     break;
                 case ConsoleKey.D:
                 case ConsoleKey.L:
-                    if (!game.IsEditingSign) game.MoveRight();
+                    if (game.IsEditingSign)
+                    {
+                        game.AddCharToEditBuffer(ki.KeyChar);
+                    }
+                    else
+                    {
+                        game.MoveRight();
+                    }
                     break;
                 case ConsoleKey.W:
                 case ConsoleKey.K:
-                    if (!game.IsEditingSign) game.MoveUp();
+                    if (game.IsEditingSign)
+                    {
+                        game.AddCharToEditBuffer(ki.KeyChar);
+                    }
+                    else
+                    {
+                        game.MoveUp();
+                    }
                     break;
                 case ConsoleKey.S:
                     if (game.IsEditingSign)
                     {
                         game.AddCharToEditBuffer('s');
-                    }
-                    else if (ki.Modifiers == ConsoleModifiers.None) // Only if no modifiers
-                    {
-                        game.CreateSign();
                     }
                     else
                     {
@@ -44,16 +61,41 @@ class Program
                     }
                     break;
                 case ConsoleKey.J:
-                    if (!game.IsEditingSign) game.MoveDown();
+                    if (game.IsEditingSign)
+                    {
+                        game.AddCharToEditBuffer(ki.KeyChar);
+                    }
+                    else
+                    {
+                        game.MoveDown();
+                    }
                     break;
                 case ConsoleKey.T:
+                    if (!game.IsEditingSign) game.CreateSign();
+                    break;
+                case ConsoleKey.G:
                     if (!game.IsEditingSign) game.ToggleAddresses();
                     break;
                 case ConsoleKey.E:
-                    if (!game.IsEditingSign) game.EditNearbySign();
+                    if (game.IsEditingSign)
+                    {
+                        game.AddCharToEditBuffer('e');
+                    }
+                    else
+                    {
+                        game.EditNearbySign();
+                    }
                     break;
                 case ConsoleKey.Delete:
-                    if (!game.IsEditingSign) game.DeleteNearbySign();
+                    if (game.IsEditingSign)
+                    {
+                        // Delete key should still work as backspace during editing
+                        game.RemoveCharFromEditBuffer();
+                    }
+                    else
+                    {
+                        game.DeleteNearbySign();
+                    }
                     break;
                 case ConsoleKey.Enter:
                     if (game.IsEditingSign) game.StopEditingSign(true);
@@ -73,7 +115,11 @@ class Program
                     }
                     break;
                 case ConsoleKey.Q:
-                    if (!game.IsEditingSign)
+                    if (game.IsEditingSign)
+                    {
+                        game.AddCharToEditBuffer('q');
+                    }
+                    else
                     {
                         game.End();
                         return;
