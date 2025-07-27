@@ -12,6 +12,9 @@ public class Game
     private bool _showThingTooltip = false;
     private string _thingTooltipText = "";
 
+    public bool IsInTeleportMode { get; private set; } = false;
+    private string _teleportBuffer = "";
+
     public Player Player { get; private set; }
     private bool _justTeleported = false;
     
@@ -213,7 +216,100 @@ public class Game
             Console.WriteLine($"Thing: {_thingTooltipText}");
         }
 
+        if (IsInTeleportMode)
+        {
+            SetRgbColor(255, 255, 100); // Bright yellow
+            Console.WriteLine($"Teleport to: {_teleportBuffer}_");
+            SetRgbColor(200, 200, 200); // Light gray
+            Console.WriteLine("Enter valid address (a-y letters), Enter to teleport, Escape to cancel");
+        }
+
         SaveGame();
+    }
+
+
+    public void StartTeleportMode()
+    {
+        IsInTeleportMode = true;
+        _teleportBuffer = "";
+    }
+
+    public void CancelTeleport()
+    {
+        IsInTeleportMode = false;
+        _teleportBuffer = "";
+    }
+
+    public void ExecuteTeleport()
+    {
+        if (!IsInTeleportMode) return;
+        
+        if (IsValidTeleportTarget(_teleportBuffer))
+        {
+            Player.SetFromAddress(_teleportBuffer);
+            _justTeleported = true; // Set this to true so the next move doesn't change the box
+            SaveGame();
+        }
+        
+        IsInTeleportMode = false;
+        _teleportBuffer = "";
+    }
+
+    public void AddCharToTeleportBuffer(char c)
+    {
+        if (IsInTeleportMode && c >= 'a' && c <= 'y')
+        {
+            _teleportBuffer += c;
+        }
+    }
+
+    public void RemoveCharFromTeleportBuffer()
+    {
+        if (IsInTeleportMode && _teleportBuffer.Length > 0)
+        {
+            _teleportBuffer = _teleportBuffer.Substring(0, _teleportBuffer.Length - 1);
+        }
+    }
+
+    private bool IsValidTeleportTarget(string address)
+    {
+        // Valid if it's a single letter (origin box)
+        if (address.Length == 1) return true;
+        
+        // Check if there's a vortex path leading to this address
+        return HasVortexPathTo(address);
+    }
+
+    private bool HasVortexPathTo(string targetAddress)
+    {
+        // Use BFS to find if there's a path from any origin box position to the target
+        var visited = new HashSet<string>();
+        var queue = new Queue<string>();
+        
+        // Start from all positions in origin box
+        for (char c = 'a'; c <= 'y'; c++)
+        {
+            queue.Enqueue(c.ToString());
+            visited.Add(c.ToString());
+        }
+        
+        while (queue.Count > 0)
+        {
+            var current = queue.Dequeue();
+            
+            if (current == targetAddress)
+                return true;
+            
+            // Find vortexes at this address
+            var vortex = Vortexes.FirstOrDefault(v => v.Address == current);
+            if (vortex != null && !visited.Contains(vortex.TargetAddress))
+            {
+                visited.Add(vortex.TargetAddress);
+                queue.Enqueue(vortex.TargetAddress);
+            }
+        }
+        
+        return false;
     }
 
 

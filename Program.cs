@@ -22,11 +22,19 @@ class Program
                     {
                         game.StopEditingSign(true);
                     }
+                    else if (game.IsInTeleportMode)
+                    {
+                        game.ExecuteTeleport();
+                    }
                     break;
                 case ConsoleKey.Escape:
                     if (game.IsEditingSign)
                     {
                         game.StopEditingSign(false);
+                    }
+                    else if (game.IsInTeleportMode)
+                    {
+                        game.CancelTeleport();
                     }
                     else
                     {
@@ -39,6 +47,10 @@ class Program
                     {
                         game.RemoveCharFromEditBuffer();
                     }
+                    else if (game.IsInTeleportMode)
+                    {
+                        game.RemoveCharFromTeleportBuffer();
+                    }
                     break;
                 default:
                     if (game.IsEditingSign)
@@ -49,9 +61,17 @@ class Program
                             game.AddCharToEditBuffer(ki.KeyChar);
                         }
                     }
+                    else if (game.IsInTeleportMode)
+                    {
+                        // When in teleport mode, only allow a-y characters
+                        if (ki.KeyChar >= 'a' && ki.KeyChar <= 'y')
+                        {
+                            game.AddCharToTeleportBuffer(ki.KeyChar);
+                        }
+                    }
                     else
                     {
-                        // When not editing, handle normal game controls
+                        // When not editing or teleporting, handle normal game controls
                         HandleGameControls(game, key, ki.KeyChar);
                     }
                     break;
@@ -72,6 +92,7 @@ class Program
             case ConsoleKey.G: game.ToggleAddresses(); break;
             case ConsoleKey.C: game.ToggleControlsTooltip(); break;
             case ConsoleKey.Delete: game.DeleteNearbySign(); break;
+            case ConsoleKey.F: game.StartTeleportMode(); break;
             case ConsoleKey.Q: game.End(); return;
         }
     }
