@@ -66,7 +66,7 @@ public class Game
 
     private void ResolveDuplicateAddresses()
     {
-        var addressGroups = allThings.GroupBy(t => t.Address).Where(g => g.Count() > 1);
+        var addressGroups = allThings.Where(t => t != Player).GroupBy(t => t.Address).Where(g => g.Count() > 1);
         
         foreach (var group in addressGroups)
         {
