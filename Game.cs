@@ -184,10 +184,6 @@ public class Game
         SaveGame();
     }
 
-    private void MarkNeedsSave()
-    {
-        SaveGame();
-    }
 
     private static (int r, int g, int b) HsvToRgb(double h, double s, double v)
     {
@@ -225,7 +221,7 @@ public class Game
         Player.X = Math.Clamp(newX, 0, 4);
         Player.Y = Math.Clamp(newY, 0, 4);
         UpdatePlayerAddress();
-        MarkNeedsSave();
+        SaveGame();
 
         var vortex = Vortexes.FirstOrDefault(v => v.Address == Player.Address);
         if (vortex != null)
@@ -292,7 +288,7 @@ public class Game
             Signs.Add(newSign);
             StartEditingSign(newSign);
         }
-        MarkNeedsSave();
+        SaveGame();
     }
 
     public void StartEditingSign(Sign sign)
@@ -309,7 +305,7 @@ public class Game
             if (save)
             {
                 CurrentlyEditingSign.Text = EditBuffer;
-                MarkNeedsSave();
+                SaveGame();
             }
             CurrentlyEditingSign.IsBeingEdited = false;
             CurrentlyEditingSign = null;
@@ -324,7 +320,7 @@ public class Game
         if (nearbySign != null)
         {
             Signs.Remove(nearbySign);
-            MarkNeedsSave();
+            SaveGame();
         }
     }
 
@@ -351,7 +347,7 @@ public class Game
         {
             Player = this.Player,
             Signs = this.Signs,
-            Vortexes = this.Vortexes,
+            // Remove Vortexes from saving - they're always the same
             ShowAddressesInCurrentBox = this.ShowAddressesInCurrentBox,
             ShowControlsTooltip = this.ShowControlsTooltip,
             Seed = this.Seed
@@ -389,13 +385,11 @@ public class Game
                 foreach (var sign in Signs)
                     allThings.Add(sign);
                 
-                // Clear and reload vortexes
+                // Recreate vortexes instead of loading them
                 foreach (var vortex in Vortexes)
                     allThings.Remove(vortex);
                 Vortexes.Clear();
-                Vortexes.AddRange(gameState.Vortexes);
-                foreach (var vortex in Vortexes)
-                    allThings.Add(vortex);
+                InitializeVortexes(); // This recreates the standard vortexes
                 
                 // Restore other properties
                 this.ShowAddressesInCurrentBox = gameState.ShowAddressesInCurrentBox;
@@ -414,7 +408,7 @@ public class GameState
 {
     public Player Player { get; set; }
     public List<Sign> Signs { get; set; }
-    public List<Vortex> Vortexes { get; set; }
+    // Remove Vortexes - they will be recreated from InitializeVortexes()
     public bool ShowAddressesInCurrentBox { get; set; }
     public bool ShowControlsTooltip { get; set; }
     public string Seed { get; set; }
