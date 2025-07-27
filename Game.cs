@@ -409,7 +409,6 @@ public class Game
             allThings.Add(exit);
         }
         
-        ResolveDuplicateAddresses();
         SaveGame();
     }
 
