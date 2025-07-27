@@ -7,25 +7,40 @@ public class Game
     public bool ShowAddressesInCurrentBox { get; set; } = false;
     public string Seed { get; set; } = "";
     public bool ShowControlsTooltip { get; set; } = false;
+    [JsonIgnore]
     private bool _showSignTooltip = false;
+    [JsonIgnore]
     private string _signTooltipText = "";
+    [JsonIgnore]
     private bool _showThingTooltip = false;
+    [JsonIgnore]
     private string _thingTooltipText = "";
 
+    [JsonIgnore]
     public bool IsInTeleportMode { get; private set; } = false;
+    [JsonIgnore]
     private string _teleportBuffer = "";
 
+    [JsonIgnore]
     public bool IsInCreationMode { get; private set; } = false;
+    [JsonIgnore]
     private bool _isSelectingCreationType = false;
+    [JsonIgnore]
     private bool _isCreatingVortex = false;
+    [JsonIgnore]
     private bool _isSpecifyingVortexTarget = false;
+    [JsonIgnore]
     private bool _isSpecifyingVortexDirection = false;
+    [JsonIgnore]
     private string _creationBuffer = "";
+    [JsonIgnore]
     private string _pendingVortexTarget = "";
 
     public Player Player { get; private set; }
+    [JsonIgnore]
     private bool _justTeleported = false;
     
+    [JsonIgnore]
     private List<Thing> allThings = new List<Thing>();
     public List<Player> Players { get; private set; } = new List<Player>();
     public List<Sign> Signs { get; private set; } = new List<Sign>();
@@ -35,8 +50,11 @@ public class Game
     {
         return address.Length > 0 ? address.Substring(0, address.Length - 1) : "";
     }
+    [JsonIgnore]
     public Sign? CurrentlyEditingSign { get; private set; } = null;
+    [JsonIgnore]
     public bool IsEditingSign => CurrentlyEditingSign != null;
+    [JsonIgnore]
     public string EditBuffer { get; private set; } = "";
     
     public Game()
@@ -620,17 +638,7 @@ public class Game
 
     public void SaveGame(string filePath = "savegame.json")
     {
-        var gameState = new GameState
-        {
-            Player = this.Player,
-            Signs = this.Signs,
-            // Remove Vortexes from saving - they're always the same
-            ShowAddressesInCurrentBox = this.ShowAddressesInCurrentBox,
-            ShowControlsTooltip = this.ShowControlsTooltip,
-            Seed = this.Seed
-        };
-        
-        string json = JsonConvert.SerializeObject(gameState, Formatting.Indented);
+        string json = JsonConvert.SerializeObject(this, Formatting.Indented);
         File.WriteAllText(filePath, json);
     }
 
@@ -641,38 +649,25 @@ public class Game
         try
         {
             string json = File.ReadAllText(filePath);
-            var gameState = JsonConvert.DeserializeObject<GameState>(json);
+            var loadedGame = JsonConvert.DeserializeObject<Game>(json);
             
-            if (gameState != null)
+            if (loadedGame != null)
             {
-                // Remove old player from collections
-                allThings.Remove(this.Player);
-                Players.Clear();
+                // Copy loaded properties to this instance
+                this.Player = loadedGame.Player;
+                this.Players = loadedGame.Players;
+                this.Signs = loadedGame.Signs;
+                this.Vortexes = loadedGame.Vortexes;
+                this.ShowAddressesInCurrentBox = loadedGame.ShowAddressesInCurrentBox;
+                this.ShowControlsTooltip = loadedGame.ShowControlsTooltip;
+                this.Seed = loadedGame.Seed;
                 
-                // Set new player
-                this.Player = gameState.Player;
-                Players.Add(this.Player);
-                allThings.Add(this.Player);
+                // Rebuild allThings list
+                allThings.Clear();
+                allThings.AddRange(Players);
+                allThings.AddRange(Signs);
+                allThings.AddRange(Vortexes);
                 
-                // Clear and reload signs
-                foreach (var sign in Signs)
-                    allThings.Remove(sign);
-                Signs.Clear();
-                Signs.AddRange(gameState.Signs);
-                foreach (var sign in Signs)
-                    allThings.Add(sign);
-                
-                // Recreate vortexes instead of loading them
-                foreach (var vortex in Vortexes)
-                    allThings.Remove(vortex);
-                Vortexes.Clear();
-                InitializeVortexes(); // This recreates the standard vortexes
-                
-                // Restore other properties
-                this.ShowAddressesInCurrentBox = gameState.ShowAddressesInCurrentBox;
-                this.ShowControlsTooltip = gameState.ShowControlsTooltip;
-                this.Seed = gameState.Seed;
-
                 ResolveDuplicateAddresses();
                 SaveGame(); // Save after resolving duplicates
             }
@@ -682,14 +677,4 @@ public class Game
             // Silently fail if save file is corrupted
         }
     }
-}
-
-public class GameState
-{
-    public Player Player { get; set; }
-    public List<Sign> Signs { get; set; }
-    // Remove Vortexes - they will be recreated from InitializeVortexes()
-    public bool ShowAddressesInCurrentBox { get; set; }
-    public bool ShowControlsTooltip { get; set; }
-    public string Seed { get; set; }
 }
