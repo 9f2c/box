@@ -2,7 +2,23 @@
 
 class Program
 {
-    public static string PlayerAddress = "a";
+    public static string PlayerAddress
+    {
+        get => CurrentBoxAddress + (char)('a' + PlayerY * 5 + PlayerX);
+        set
+        {
+            if (value.Length > 0)
+            {
+                char lastChar = value[value.Length - 1];
+                CurrentBoxAddress = value.Substring(0, value.Length - 1);
+                
+                int position = lastChar - 'a';
+                PlayerX = position % 5;
+                PlayerY = position / 5;
+            }
+        }
+    }
+    public static bool ShowAddressesInCurrentBox = false;
     public static string CurrentBoxAddress = "";
     public static string Seed = "";
     public static int PlayerX = 0; // 0-4
@@ -41,6 +57,7 @@ class Program
 
     public static void Start()
     {
+        Console.ForegroundColor = ConsoleColor.White;
         Console.CursorVisible = false;
     }
 
@@ -66,6 +83,14 @@ class Program
                 {
                     Console.Write("o");
                 }
+                else if (ShowAddressesInCurrentBox)
+                {
+                    int cellIndex = (y - 1) * 5 + (x - 1);
+                    char letter = (char)('a' + cellIndex);
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.Write(letter);
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
                 else
                 {
                     Console.Write(" ");
@@ -73,6 +98,7 @@ class Program
             }
             Console.WriteLine();
         }
+        Console.WriteLine();
         Console.WriteLine($"Address: {PlayerAddress}");
     }
 
