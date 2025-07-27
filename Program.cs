@@ -122,7 +122,7 @@ class Program
             case ConsoleKey.T: game.CreateOrEditSignAtPlayer(); break;
             case ConsoleKey.G: game.ToggleAddresses(); break;
             case ConsoleKey.C: game.ToggleControlsTooltip(); break;
-            case ConsoleKey.Delete: game.DeleteNearbySign(); break;
+            case ConsoleKey.Delete: game.DeleteThingAtPlayer(); break;
             case ConsoleKey.F: game.StartTeleportMode(); break;
             case ConsoleKey.N: game.StartCreationMode(); break;
             case ConsoleKey.Q: game.End(); return;

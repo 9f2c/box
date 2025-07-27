@@ -608,13 +608,34 @@ public class Game
         }
     }
 
-    public void DeleteNearbySign()
+    public void DeleteThingAtPlayer()
     {
-        var nearbySign = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y && 
-            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
-        if (nearbySign != null)
+        var thingAtPlayer = allThings.FirstOrDefault(t => t.X == Player.X && t.Y == Player.Y && 
+            GetBoxAddressFromAddress(t.Address) == Player.BoxAddress && t != Player); // Exclude player itself
+        
+        if (thingAtPlayer != null)
         {
-            Signs.Remove(nearbySign);
+            allThings.Remove(thingAtPlayer);
+            
+            // Also remove from specific lists
+            if (thingAtPlayer is Sign sign)
+            {
+                Signs.Remove(sign);
+            }
+            else if (thingAtPlayer is Vortex vortex)
+            {
+                Vortexes.Remove(vortex);
+                // If it's a two-way vortex, remove its pair as well
+                if (!vortex.IsOneWay)
+                {
+                    var pairedVortex = Vortexes.FirstOrDefault(v => v.PairedVortexAddress == vortex.Address);
+                    if (pairedVortex != null)
+                    {
+                        Vortexes.Remove(pairedVortex);
+                        allThings.Remove(pairedVortex);
+                    }
+                }
+            }
             SaveGame();
         }
     }
