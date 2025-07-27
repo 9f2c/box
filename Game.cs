@@ -9,6 +9,8 @@ public class Game
     public bool ShowControlsTooltip { get; set; } = false;
     private bool _showSignTooltip = false;
     private string _signTooltipText = "";
+    private bool _showThingTooltip = false;
+    private string _thingTooltipText = "";
 
     public Player Player { get; private set; }
     private bool _justTeleported = false;
@@ -33,6 +35,30 @@ public class Game
         allThings.Add(Player);
         InitializeVortexes();
         InitializeSigns();
+    }
+
+    private void ResolveDuplicateAddresses()
+    {
+        var addressGroups = allThings.GroupBy(t => t.Address).Where(g => g.Count() > 1);
+        
+        foreach (var group in addressGroups)
+        {
+            // Keep the thing with the latest creation time, remove others
+            var thingsToRemove = group.OrderBy(t => t.CreatedAt).Take(group.Count() - 1).ToList();
+            
+            foreach (var thingToRemove in thingsToRemove)
+            {
+                allThings.Remove(thingToRemove);
+                
+                // Remove from specific collections
+                if (thingToRemove is Player player)
+                    Players.Remove(player);
+                else if (thingToRemove is Sign sign)
+                    Signs.Remove(sign);
+                else if (thingToRemove is Vortex vortex)
+                    Vortexes.Remove(vortex);
+            }
+        }
     }
     
     private void InitializeVortexes()
@@ -181,6 +207,12 @@ public class Game
             Console.WriteLine($"Sign: {_signTooltipText}");
         }
 
+        if (_showThingTooltip && !IsEditingSign)
+        {
+            SetRgbColor(150, 255, 150); // Light green
+            Console.WriteLine($"Thing: {_thingTooltipText}");
+        }
+
         SaveGame();
     }
 
@@ -243,6 +275,18 @@ public class Game
             _showSignTooltip = false;
             _signTooltipText = "";
         }
+
+        var thingAtPosition = allThings.FirstOrDefault(t => t.Address == Player.Address && t != Player);
+        if (thingAtPosition != null)
+        {
+            _showThingTooltip = true;
+            _thingTooltipText = $"Created: {thingAtPosition.CreatedAt:yyyy-MM-dd HH:mm:ss}";
+        }
+        else
+        {
+            _showThingTooltip = false;
+            _thingTooltipText = "";
+        }
     }
     
     private void UpdatePlayerAddress()
@@ -288,6 +332,7 @@ public class Game
             Signs.Add(newSign);
             StartEditingSign(newSign);
         }
+        ResolveDuplicateAddresses();
         SaveGame();
     }
 
@@ -395,6 +440,9 @@ public class Game
                 this.ShowAddressesInCurrentBox = gameState.ShowAddressesInCurrentBox;
                 this.ShowControlsTooltip = gameState.ShowControlsTooltip;
                 this.Seed = gameState.Seed;
+
+                ResolveDuplicateAddresses();
+                SaveGame(); // Save after resolving duplicates
             }
         }
         catch (Exception)
