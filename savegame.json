@@ -2,47 +2,7 @@
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
   "ShowControlsTooltip": true,
-  "Player": {
-    "BoxAddress": "",
-    "Address": "e",
-    "X": 4,
-    "Y": 0,
-    "Symbol": "o",
-    "Color": {
-      "Item1": 255,
-      "Item2": 100,
-      "Item3": 255
-    },
-    "CreatedAt": "2025-07-27T21:22:59.7609823Z"
-  },
-  "Players": [
-    {
-      "BoxAddress": "",
-      "Address": "e",
-      "X": 4,
-      "Y": 0,
-      "Symbol": "o",
-      "Color": {
-        "Item1": 255,
-        "Item2": 100,
-        "Item3": 255
-      },
-      "CreatedAt": "2025-07-27T21:22:59.7609823Z"
-    },
-    {
-      "BoxAddress": "",
-      "Address": "e",
-      "X": 4,
-      "Y": 0,
-      "Symbol": "o",
-      "Color": {
-        "Item1": 255,
-        "Item2": 100,
-        "Item3": 255
-      },
-      "CreatedAt": "2025-07-27T21:22:59.7609823Z"
-    }
-  ],
+  "PlayerAddress": "e",
   "Signs": [
     {
       "Text": "Hello, welcome to my house.",

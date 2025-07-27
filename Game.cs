@@ -34,13 +34,15 @@ public class Game
     [JsonIgnore]
     private string _pendingVortexTarget = "";
 
+    public string PlayerAddress { get; set; } = "";
+    
+    [JsonIgnore]
     public Player Player { get; private set; }
     [JsonIgnore]
     private bool _justTeleported = false;
     
     [JsonIgnore]
     private List<Thing> allThings = new List<Thing>();
-    public List<Player> Players { get; private set; } = new List<Player>();
     public List<Sign> Signs { get; private set; } = new List<Sign>();
     public List<Vortex> Vortexes { get; private set; } = new List<Vortex>();
 
@@ -58,7 +60,6 @@ public class Game
     public Game()
     {
         Player = new Player();
-        Players.Add(Player);
         allThings.Add(Player);
         ResolveDuplicateAddresses();
     }
@@ -77,8 +78,6 @@ public class Game
                 allThings.Remove(thingToRemove);
                 
                 // Remove from specific collections
-                if (thingToRemove is Player player)
-                    Players.Remove(player);
                 else if (thingToRemove is Sign sign)
                     Signs.Remove(sign);
                 else if (thingToRemove is Vortex vortex)
@@ -536,6 +535,7 @@ public class Game
     {
         char positionChar = (char)('a' + Player.Y * 5 + Player.X);
         Player.Address = Player.BoxAddress + positionChar;
+        PlayerAddress = Player.Address;
     }
     
     public void MoveLeft() => Move(-1, 0);
@@ -700,9 +700,10 @@ public class Game
             
             if (loadedGame != null)
             {
-                // Copy loaded properties to this instance
-                this.Player = loadedGame.Player;
-                this.Players = loadedGame.Players;
+                // Load player address and recreate player
+                this.PlayerAddress = loadedGame.PlayerAddress ?? "";
+                this.Player.SetFromAddress(this.PlayerAddress);
+                
                 this.Signs = loadedGame.Signs;
                 this.Vortexes = loadedGame.Vortexes;
                 this.ShowAddressesInCurrentBox = loadedGame.ShowAddressesInCurrentBox;
@@ -711,7 +712,7 @@ public class Game
                 
                 // Rebuild allThings list
                 allThings.Clear();
-                allThings.AddRange(Players);
+                allThings.Add(Player); // Add the single player
                 allThings.AddRange(Signs);
                 allThings.AddRange(Vortexes);
                 
