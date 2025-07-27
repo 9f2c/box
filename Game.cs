@@ -394,14 +394,14 @@ public class Game
             Signs.Any(s => s.Address == Player.Address))
             return;
             
-        var newVortex = new Vortex(Player.Address, targetAddress, isOneWay);
+        var newVortex = new Vortex(Player.Address, targetAddress, true); // Entry vortex
         Vortexes.Add(newVortex);
         allThings.Add(newVortex);
-    
+
         // If two-way, create the return vortex at the target address
         if (!isOneWay)
         {
-            var returnVortex = new Vortex(targetAddress, Player.Address, true);
+            var returnVortex = new Vortex(targetAddress, Player.Address, false); // Change this to false
             Vortexes.Add(returnVortex);
             allThings.Add(returnVortex);
         }
