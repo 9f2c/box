@@ -331,6 +331,10 @@ public class Game
         {
             _creationBuffer += c;
         }
+        else if (_isSpecifyingVortexDirection)
+        {
+            HandleCreationDirection(c);
+        }
     }
 
     public void HandleCreationEnter()
