@@ -14,12 +14,5 @@ public class Vortex : Thing
         Symbol = '@';
         Color = isEntry ? (30, 144, 255) : (255, 165, 0); // Keep color logic for now
         
-        if (address.Length > 0)
-        {
-            char lastChar = address[address.Length - 1];
-            int position = lastChar - 'a';
-            X = position % 5;
-            Y = position / 5;
-        }
     }
 }

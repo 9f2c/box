@@ -389,9 +389,6 @@ public class Game
 
     private void CreateVortexAtPlayer(string targetAddress, bool isOneWay)
     {
-        // Ensure player address is up to date
-        UpdatePlayerAddress();
-        
         // Don't create if there's already a vortex or sign here
         if (Vortexes.Any(v => v.Address == Player.Address) || 
             Signs.Any(s => s.Address == Player.Address))
@@ -399,9 +396,6 @@ public class Game
             
         var newVortex = new Vortex(Player.Address, targetAddress, true); // Entry vortex at player location
         newVortex.IsOneWay = isOneWay; // Set the IsOneWay property
-        // Manually set position to match player's current position
-        newVortex.X = Player.X;
-        newVortex.Y = Player.Y;
         Vortexes.Add(newVortex);
         allThings.Add(newVortex);
 
