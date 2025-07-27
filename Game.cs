@@ -7,10 +7,12 @@ public class Game
     private bool _showSignTooltip = false;
     private string _signTooltipText = "";
     public Player Player { get; private set; }
-    public Dictionary<string, Vortex> Vortexes { get; private set; }
     private bool _justTeleported = false;
     
-    public List<Sign> Signs { get; private set; }
+    private List<Thing> allThings = new List<Thing>();
+    public List<Player> Players { get; private set; } = new List<Player>();
+    public List<Sign> Signs { get; private set; } = new List<Sign>();
+    public List<Vortex> Vortexes { get; private set; } = new List<Vortex>();
 
     private string GetBoxAddressFromAddress(string address)
     {
@@ -23,6 +25,8 @@ public class Game
     public Game()
     {
         Player = new Player();
+        Players.Add(Player);
+        allThings.Add(Player);
         InitializeVortexes();
         InitializeSigns();
     }
@@ -35,20 +39,26 @@ public class Game
             {"ey", "eye"}
         };
         
-        Vortexes = new Dictionary<string, Vortex>();
-        
         foreach (var pair in vortexPairs)
         {
-            Vortexes[pair.Key] = new Vortex(pair.Key, pair.Value, true);
-            Vortexes[pair.Value] = new Vortex(pair.Value, pair.Key, false);
+            // Create entry vortex
+            var entryVortex = new Vortex(pair.Key, pair.Value, true);
+            Vortexes.Add(entryVortex);
+            allThings.Add(entryVortex);
+            
+            // Create exit vortex (since IsOneWay defaults to false)
+            var exitVortex = new Vortex(pair.Value, pair.Key, false);
+            Vortexes.Add(exitVortex);
+            allThings.Add(exitVortex);
         }
     }
     
     private void InitializeSigns()
     {
-        Signs = new List<Sign>();
         // Example: Add a sign at position (2,2) in the root box
-        Signs.Add(new Sign(2, 2, "Welcome!", ""));
+        var sign = new Sign(2, 2, "Welcome!", "");
+        Signs.Add(sign);
+        allThings.Add(sign);
     }
     
     public static void SetRgbColor(int r, int g, int b)
@@ -107,9 +117,10 @@ public class Game
                     char letter = (char)('a' + cellIndex);
                     string cellAddress = Player.BoxAddress + letter;
                     
-                    if (Vortexes.ContainsKey(cellAddress))
+                    var vortex = Vortexes.FirstOrDefault(v => v.Address == cellAddress);
+                    if (vortex != null)
                     {
-                        Vortexes[cellAddress].Draw();
+                        vortex.Draw();
                     }
                     else
                     {
@@ -202,9 +213,9 @@ public class Game
         Player.Y = Math.Clamp(newY, 0, 4);
         UpdatePlayerAddress();
         
-        if (Vortexes.ContainsKey(Player.Address))
+        var vortex = Vortexes.FirstOrDefault(v => v.Address == Player.Address);
+        if (vortex != null)
         {
-            var vortex = Vortexes[Player.Address];
             Player.SetFromAddress(vortex.TargetAddress);
             _justTeleported = true;
         }
@@ -259,7 +270,7 @@ public class Game
         else
         {
             // Don't create if there's a vortex here
-            if (Vortexes.ContainsKey(Player.Address))
+            if (Vortexes.Any(v => v.Address == Player.Address))
                 return;
                 
             // Create new sign
