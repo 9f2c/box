@@ -389,19 +389,22 @@ public class Game
 
     private void CreateVortexAtPlayer(string targetAddress, bool isOneWay)
     {
+        // Ensure player address is up to date
+        UpdatePlayerAddress();
+        
         // Don't create if there's already a vortex or sign here
         if (Vortexes.Any(v => v.Address == Player.Address) || 
             Signs.Any(s => s.Address == Player.Address))
             return;
             
-        var newVortex = new Vortex(Player.Address, targetAddress, true); // Entry vortex
+        var newVortex = new Vortex(Player.Address, targetAddress, true); // Entry vortex at player location
         Vortexes.Add(newVortex);
         allThings.Add(newVortex);
 
         // If two-way, create the return vortex at the target address
         if (!isOneWay)
         {
-            var returnVortex = new Vortex(targetAddress, Player.Address, false); // Change this to false
+            var returnVortex = new Vortex(targetAddress, Player.Address, false); // Exit vortex at target
             Vortexes.Add(returnVortex);
             allThings.Add(returnVortex);
         }
