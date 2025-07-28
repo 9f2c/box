@@ -770,6 +770,7 @@ public class Game
             {
                 CurrentlyEditingSign.Text = EditBuffer;
                 SaveGame();
+                UpdateTooltips(); // Add this line to refresh tooltips after editing
             }
             CurrentlyEditingSign.IsBeingEdited = false;
             CurrentlyEditingSign = null;
