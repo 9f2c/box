@@ -2,6 +2,8 @@
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
   "ShowControlsTooltip": false,
+  "IsHoldingSign": false,
+  "HeldSign": null,
   "PlayerAddress": "yuwuo",
   "Signs": [
     {
