@@ -206,7 +206,7 @@ public class Game
             Console.WriteLine(
                 """
                 T - place sign
-                Del - delete thing
+                X - delete thing
                 G - toggle coordinates
                 C - toggle controls
                 N - create thing
