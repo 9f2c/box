@@ -167,9 +167,8 @@ public class Game
             {
                 if (y == 0 || y == 6 || x == 0 || x == 6)
                 {
-                    // Rainbow border
-                    int hue = (x + y) * 30 % 360;
-                    var (r, g, b) = HsvToRgb(hue, 1.0, 1.0);
+                    // Seeded gradient border
+                    var (r, g, b) = GetGradientBorderColor(x, y, Player.BoxAddress);
                     SetRgbColor(r, g, b);
                     Console.Write("█");
                 }
@@ -970,6 +969,74 @@ public class Game
         }
     }
 
+
+    private int GetSeedFromBoxAddress(string boxAddress)
+    {
+        if (string.IsNullOrEmpty(boxAddress))
+            return 0;
+        
+        int seed = 0;
+        for (int i = 0; i < boxAddress.Length; i++)
+        {
+            seed = seed * 31 + (boxAddress[i] - 'a' + 1);
+        }
+        return Math.Abs(seed);
+    }
+
+    private (int r, int g, int b) GetGradientBorderColor(int x, int y, string boxAddress)
+    {
+        int seed = GetSeedFromBoxAddress(boxAddress);
+        Random random = new Random(seed);
+        
+        // Generate 2-4 colors that are close to each other
+        int colorCount = random.Next(2, 5); // 2 to 4 colors
+        var baseHue = random.Next(0, 360);
+        var colors = new List<(int r, int g, int b)>();
+        
+        for (int i = 0; i < colorCount; i++)
+        {
+            // Keep colors close to each other (within 60 degrees)
+            int hue = (baseHue + random.Next(-30, 31)) % 360;
+            if (hue < 0) hue += 360;
+            
+            double saturation = 0.7 + random.NextDouble() * 0.3; // 0.7 to 1.0
+            double value = 0.8 + random.NextDouble() * 0.2; // 0.8 to 1.0
+            
+            colors.Add(HsvToRgb(hue, saturation, value));
+        }
+        
+        // Calculate position along the border perimeter
+        int totalBorderCells = 20; // 7*4 - 4 corners counted once
+        int position;
+        
+        if (y == 0) // Top edge
+            position = x;
+        else if (x == 6) // Right edge
+            position = 6 + y;
+        else if (y == 6) // Bottom edge
+            position = 12 + (6 - x);
+        else // Left edge
+            position = 18 + (6 - y);
+        
+        // Interpolate between colors based on position
+        double t = (double)position / totalBorderCells * (colorCount - 1);
+        int colorIndex = (int)t;
+        double fraction = t - colorIndex;
+        
+        if (colorIndex >= colorCount - 1)
+        {
+            return colors[colorCount - 1];
+        }
+        
+        var color1 = colors[colorIndex];
+        var color2 = colors[colorIndex + 1];
+        
+        int r = (int)(color1.r * (1 - fraction) + color2.r * fraction);
+        int g = (int)(color1.g * (1 - fraction) + color2.g * fraction);
+        int b = (int)(color1.b * (1 - fraction) + color2.b * fraction);
+        
+        return (r, g, b);
+    }
 
     public void SaveGame(string filePath = "savegame.json")
     {
