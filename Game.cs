@@ -39,10 +39,8 @@ public class Game
     [JsonIgnore]
     private string _pendingVortexTarget = "";
 
-    [JsonIgnore]
-    public bool IsHoldingSign { get; private set; } = false;
-    [JsonIgnore]
-    public Sign? HeldSign { get; private set; } = null;
+    public bool IsHoldingSign { get; set; } = false;
+    public Sign? HeldSign { get; set; } = null;
 
     public string PlayerAddress { get; set; } = "";
     
@@ -922,6 +920,14 @@ public class Game
                 allThings.Add(Player); // Add the single player
                 allThings.AddRange(Signs);
                 allThings.AddRange(Vortexes);
+
+                // Restore held sign state
+                if (loadedGame.IsHoldingSign && loadedGame.HeldSign != null)
+                {
+                    this.IsHoldingSign = loadedGame.IsHoldingSign;
+                    this.HeldSign = loadedGame.HeldSign;
+                    // Don't add held sign to collections since it's being held
+                }
                 
                 ResolveDuplicateAddresses();
                 SaveGame(); // Save after resolving duplicates
