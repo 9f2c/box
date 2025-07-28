@@ -423,6 +423,20 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-27T21:50:31.054593Z"
+    },
+    {
+      "Text": "Back to spawn",
+      "IsBeingEdited": false,
+      "Address": "yyd",
+      "X": 3,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T05:58:24.4658666Z"
     }
   ],
   "Vortexes": [
@@ -553,6 +567,22 @@
         "Item3": 0
       },
       "CreatedAt": "2025-07-27T21:43:41.4909954Z"
+    },
+    {
+      "TargetAddress": "a",
+      "IsEntry": true,
+      "PairedVortexAddress": "",
+      "IsOneWay": true,
+      "Address": "yye",
+      "X": 4,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T05:58:16.6712211Z"
     }
   ]
 }
