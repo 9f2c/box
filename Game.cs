@@ -475,6 +475,24 @@ public class Game
         {
             Player.SetFromAddress(vortex.TargetAddress);
             _justTeleported = true;
+            
+            // Check for chained vortexes at the destination
+            int chainCount = 0;
+            const int maxChainLength = 10; // Prevent infinite loops
+            
+            while (chainCount < maxChainLength)
+            {
+                var nextVortex = Vortexes.FirstOrDefault(v => v.Address == Player.Address);
+                if (nextVortex != null && !string.IsNullOrEmpty(nextVortex.TargetAddress))
+                {
+                    Player.SetFromAddress(nextVortex.TargetAddress);
+                    chainCount++;
+                }
+                else
+                {
+                    break;
+                }
+            }
         }
 
         UpdateTooltips();
