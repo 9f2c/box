@@ -22,6 +22,11 @@ public class Game
     private string _teleportBuffer = "";
 
     [JsonIgnore]
+    private bool _isInDeleteByAddressMode = false;
+    [JsonIgnore]
+    private string _deleteAddressBuffer = "";
+
+    [JsonIgnore]
     public bool IsInCreationMode { get; private set; } = false;
     [JsonIgnore]
     private bool _isSelectingCreationType = false;
@@ -243,6 +248,13 @@ public class Game
             SetRgbColor(200, 200, 200); // Light gray
             Console.WriteLine("Enter valid address (a-y letters), Enter to teleport, Escape to cancel");
         }
+        else if (_isInDeleteByAddressMode)
+        {
+            SetRgbColor(255, 100, 100); // Bright red
+            Console.WriteLine($"Delete at address: {_deleteAddressBuffer}_");
+            SetRgbColor(200, 200, 200); // Light gray
+            Console.WriteLine("Enter valid address (a-y letters), Enter to delete, Escape to cancel");
+        }
 
         if (IsInCreationMode)
         {
@@ -300,6 +312,91 @@ public class Game
         {
             _teleportBuffer += c;
         }
+    }
+
+    public void StartDeleteByAddress()
+    {
+        _isInDeleteByAddressMode = true;
+        _deleteAddressBuffer = "";
+    }
+
+    public void CancelDeleteByAddress()
+    {
+        _isInDeleteByAddressMode = false;
+        _deleteAddressBuffer = "";
+    }
+
+    public void AddCharToDeleteAddressBuffer(char c)
+    {
+        if (_isInDeleteByAddressMode && c >= 'a' && c <= 'y')
+        {
+            _deleteAddressBuffer += c;
+        }
+    }
+
+    public void RemoveCharFromDeleteAddressBuffer()
+    {
+        if (_isInDeleteByAddressMode && _deleteAddressBuffer.Length > 0)
+        {
+            _deleteAddressBuffer = _deleteAddressBuffer.Substring(0, _deleteAddressBuffer.Length - 1);
+        }
+    }
+
+    public void ExecuteDeleteByAddress()
+    {
+        if (!_isInDeleteByAddressMode) return;
+
+        if (IsValidAddressFormat(_deleteAddressBuffer))
+        {
+            var thingToDelete = allThings.FirstOrDefault(t => t.Address == _deleteAddressBuffer && t != Player);
+
+            if (thingToDelete != null)
+            {
+                // Special handling for vortexes
+                if (thingToDelete is Vortex vortex)
+                {
+                    // Only allow deletion of blue (entry) vortexes
+                    if (!vortex.IsEntry)
+                    {
+                        // Cannot delete orange (exit) vortexes directly
+                        // They are removed when their paired entry vortex is deleted
+                        // For now, just return without deleting
+                        _isInDeleteByAddressMode = false;
+                        _deleteAddressBuffer = "";
+                        return;
+                    }
+
+                    // Remove the blue vortex
+                    allThings.Remove(vortex);
+                    Vortexes.Remove(vortex);
+
+                    // If it has a paired vortex, remove that too
+                    if (!vortex.IsOneWay)
+                    {
+                        var pairedVortex = Vortexes.FirstOrDefault(v => v.Address == vortex.PairedVortexAddress);
+                        if (pairedVortex != null)
+                        {
+                            Vortexes.Remove(pairedVortex);
+                            allThings.Remove(pairedVortex);
+                        }
+                    }
+                }
+                else
+                {
+                    // Handle other thing types (signs, etc.)
+                    allThings.Remove(thingToDelete);
+
+                    if (thingToDelete is Sign sign)
+                    {
+                        Signs.Remove(sign);
+                    }
+                }
+                SaveGame();
+            }
+        }
+
+        _isInDeleteByAddressMode = false;
+        _deleteAddressBuffer = "";
     }
 
     public void StartCreationMode()

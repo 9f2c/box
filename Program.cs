@@ -26,6 +26,10 @@ class Program
                     {
                         game.ExecuteTeleport();
                     }
+                    else if (game._isInDeleteByAddressMode)
+                    {
+                        game.ExecuteDeleteByAddress();
+                    }
                     else if (game.IsInCreationMode)
                     {
                         game.HandleCreationEnter();
@@ -39,6 +43,10 @@ class Program
                     else if (game.IsInTeleportMode)
                     {
                         game.CancelTeleport();
+                    }
+                    else if (game._isInDeleteByAddressMode)
+                    {
+                        game.CancelDeleteByAddress();
                     }
                     else if (game.IsInCreationMode)
                     {
@@ -58,6 +66,10 @@ class Program
                     else if (game.IsInTeleportMode)
                     {
                         game.RemoveCharFromTeleportBuffer();
+                    }
+                    else if (game._isInDeleteByAddressMode)
+                    {
+                        game.RemoveCharFromDeleteAddressBuffer();
                     }
                     else if (game.IsInCreationMode)
                     {
@@ -79,6 +91,14 @@ class Program
                         if (ki.KeyChar >= 'a' && ki.KeyChar <= 'y')
                         {
                             game.AddCharToTeleportBuffer(ki.KeyChar);
+                        }
+                    }
+                    else if (game._isInDeleteByAddressMode)
+                    {
+                        // When in delete by address mode, only allow a-y characters
+                        if (ki.KeyChar >= 'a' && ki.KeyChar <= 'y')
+                        {
+                            game.AddCharToDeleteAddressBuffer(ki.KeyChar);
                         }
                     }
                     else if (game.IsInCreationMode)
@@ -122,7 +142,16 @@ class Program
             case ConsoleKey.T: game.CreateOrEditSignAtPlayer(); break;
             case ConsoleKey.G: game.ToggleAddresses(); break;
             case ConsoleKey.C: game.ToggleControlsTooltip(); break;
-            case ConsoleKey.X: game.DeleteThingAtPlayer(); break;
+            case ConsoleKey.X:
+                if (ki.Modifiers.HasFlag(ConsoleModifiers.Shift))
+                {
+                    game.StartDeleteByAddress();
+                }
+                else
+                {
+                    game.DeleteThingAtPlayer();
+                }
+                break;
             case ConsoleKey.F: game.StartTeleportMode(); break;
             case ConsoleKey.N: game.StartCreationMode(); break;
             case ConsoleKey.V: game.CreateQuickVortex(); break;
