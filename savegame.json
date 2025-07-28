@@ -2,7 +2,7 @@
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
   "ShowControlsTooltip": false,
-  "PlayerAddress": "yyg",
+  "PlayerAddress": "yym",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -75,15 +75,15 @@
       "CreatedAt": "2025-07-27T21:32:36.522711Z"
     },
     {
-      "Text": "Help",
+      "Text": "@Help",
       "IsBeingEdited": false,
       "Address": "yuh",
       "X": 2,
       "Y": 1,
       "Symbol": "■",
       "Color": {
-        "Item1": 200,
-        "Item2": 200,
+        "Item1": 100,
+        "Item2": 255,
         "Item3": 100
       },
       "CreatedAt": "2025-07-27T21:35:20.0765807Z"
@@ -325,20 +325,6 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-27T21:40:01.8603722Z"
-    },
-    {
-      "Text": "Vortex tutorial",
-      "IsBeingEdited": false,
-      "Address": "yuub",
-      "X": 1,
-      "Y": 0,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-27T21:40:40.7261825Z"
     },
     {
       "Text": "Please read from left to right like a book.",
@@ -773,6 +759,258 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-28T06:36:36.8592151Z"
+    },
+    {
+      "Text": "@Dev todo list",
+      "IsBeingEdited": false,
+      "Address": "yyue",
+      "X": 4,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:37:03.0787322Z"
+    },
+    {
+      "Text": "Sign tutorial",
+      "IsBeingEdited": false,
+      "Address": "yuq",
+      "X": 1,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:37:55.2946723Z"
+    },
+    {
+      "Text": "@Vortex tutorial",
+      "IsBeingEdited": false,
+      "Address": "yuue",
+      "X": 4,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:38:28.3870186Z"
+    },
+    {
+      "Text": "A sign can be created using T.",
+      "IsBeingEdited": false,
+      "Address": "yuvk",
+      "X": 0,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:38:41.9211064Z"
+    },
+    {
+      "Text": "When standing on a sign, press T to edit it.",
+      "IsBeingEdited": false,
+      "Address": "yuvl",
+      "X": 1,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:38:48.5715194Z"
+    },
+    {
+      "Text": "Once editing, type the text and...",
+      "IsBeingEdited": false,
+      "Address": "yuvm",
+      "X": 2,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:38:59.8341856Z"
+    },
+    {
+      "Text": "Press Enter to confirm or Escape to cancel.",
+      "IsBeingEdited": false,
+      "Address": "yuvn",
+      "X": 3,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:39:13.2934503Z"
+    },
+    {
+      "Text": "Press X to delete a sign.",
+      "IsBeingEdited": false,
+      "Address": "yuvo",
+      "X": 4,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:39:22.7905811Z"
+    },
+    {
+      "Text": "Read from left to right!",
+      "IsBeingEdited": false,
+      "Address": "yuvf",
+      "X": 0,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:39:31.3861705Z"
+    },
+    {
+      "Text": "@Sign tutorial",
+      "IsBeingEdited": false,
+      "Address": "yuve",
+      "X": 4,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:39:37.1859583Z"
+    },
+    {
+      "Text": "To name an entire box, start your sign with @.",
+      "IsBeingEdited": false,
+      "Address": "yuvp",
+      "X": 0,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:39:44.8722202Z"
+    },
+    {
+      "Text": "The box name will show up across the whole box.",
+      "IsBeingEdited": false,
+      "Address": "yuvq",
+      "X": 1,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:40:17.5792486Z"
+    },
+    {
+      "Text": "The box name sign will be green.",
+      "IsBeingEdited": false,
+      "Address": "yuvr",
+      "X": 2,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:40:27.8558308Z"
+    },
+    {
+      "Text": "Tip: To create long texts, you can use vortexes...",
+      "IsBeingEdited": false,
+      "Address": "yuvs",
+      "X": 3,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:40:38.8553787Z"
+    },
+    {
+      "Text": "at the edge of rooms to make the player only",
+      "IsBeingEdited": false,
+      "Address": "yuvt",
+      "X": 4,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:40:52.7746781Z"
+    },
+    {
+      "Text": "have to move in one direction to read.",
+      "IsBeingEdited": false,
+      "Address": "yuvu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:41:08.9593867Z"
+    },
+    {
+      "Text": "If a text is too long, just put a vortex",
+      "IsBeingEdited": false,
+      "Address": "yuvv",
+      "X": 1,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:41:17.7016944Z"
+    },
+    {
+      "Text": "at the end of it. Space is unlimited!",
+      "IsBeingEdited": false,
+      "Address": "yuvw",
+      "X": 2,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:41:24.1014056Z"
     }
   ],
   "Vortexes": [
@@ -1431,6 +1669,38 @@
         "Item3": 0
       },
       "CreatedAt": "2025-07-28T06:28:30.3991065Z"
+    },
+    {
+      "TargetAddress": "yuva",
+      "IsEntry": true,
+      "PairedVortexAddress": "yuva",
+      "IsOneWay": false,
+      "Address": "yuv",
+      "X": 1,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T06:37:54.5950552Z"
+    },
+    {
+      "TargetAddress": "yuv",
+      "IsEntry": false,
+      "PairedVortexAddress": "yuv",
+      "IsOneWay": false,
+      "Address": "yuva",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T06:37:54.5950564Z"
     }
   ]
 }
