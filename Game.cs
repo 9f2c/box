@@ -915,10 +915,13 @@ public class Game
 
     private void ProcessInvisibilityCommands()
     {
-        // Reset all things' invisibility state first
+        // Reset all things' invisibility state first (except player)
         foreach (var thing in allThings)
         {
-            thing.IsInvisible = false;
+            if (thing != Player)
+            {
+                thing.IsInvisible = false;
+            }
         }
 
         // Process signs with /invisible command
@@ -931,7 +934,7 @@ public class Game
                 {
                     string targetAddress = parts[1].Trim();
                     var targetThing = allThings.FirstOrDefault(t => t.Address == targetAddress);
-                    if (targetThing != null)
+                    if (targetThing != null && targetThing != Player)
                     {
                         targetThing.IsInvisible = true;
                     }

@@ -13,7 +13,11 @@ public class Thing
     public virtual void Update() { }
     public virtual void Draw()
     {
-        if (IsInvisible) return;
+        if (IsInvisible) 
+        {
+            Console.Write(" ");
+            return;
+        }
         Console.Write($"\x1b[38;2;{Color.r};{Color.g};{Color.b}m{Symbol}\x1b[0m");
     }
 }
