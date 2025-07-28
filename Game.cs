@@ -39,6 +39,11 @@ public class Game
     [JsonIgnore]
     private string _pendingVortexTarget = "";
 
+    [JsonIgnore]
+    public bool IsHoldingSign { get; private set; } = false;
+    [JsonIgnore]
+    public Sign? HeldSign { get; private set; } = null;
+
     public string PlayerAddress { get; set; } = "";
     
     [JsonIgnore]
@@ -226,6 +231,7 @@ public class Game
                 N - create thing
                 F - teleport to accessible address
                 V - quick vortex (two-way to another box)
+                M - move sign (pick up/place)
                 """
             );
         }
@@ -240,6 +246,14 @@ public class Game
         {
             SetRgbColor(150, 255, 150); // Light green
             Console.WriteLine($"Thing: {_thingTooltipText}");
+        }
+
+        if (IsHoldingSign && HeldSign != null)
+        {
+            SetRgbColor(255, 255, 100); // Bright yellow
+            Console.WriteLine($"Holding sign: \"{HeldSign.Text}\"");
+            SetRgbColor(200, 200, 200); // Light gray
+            Console.WriteLine("Press M to place at current position");
         }
 
         if (IsInTeleportMode)
@@ -779,6 +793,67 @@ public class Game
         allThings.Add(entry);
         allThings.Add(exit);
         
+        SaveGame();
+    }
+
+    public void ToggleMoveSign()
+    {
+        if (IsHoldingSign && HeldSign != null)
+        {
+            // Place the held sign at current position
+            PlaceHeldSign();
+        }
+        else
+        {
+            // Pick up sign at current position
+            PickUpSignAtPlayer();
+        }
+    }
+
+    private void PickUpSignAtPlayer()
+    {
+        var signAtPlayer = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y && 
+            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
+        
+        if (signAtPlayer != null)
+        {
+            // Remove sign from its current position
+            HeldSign = signAtPlayer;
+            IsHoldingSign = true;
+            
+            // Remove from collections but don't delete it
+            Signs.Remove(signAtPlayer);
+            allThings.Remove(signAtPlayer);
+            
+            SaveGame();
+        }
+    }
+
+    private void PlaceHeldSign()
+    {
+        if (HeldSign == null) return;
+        
+        // Check if there's already any thing here (except player)
+        if (allThings.Any(t => t.Address == Player.Address && t != Player))
+        {
+            // Can't place here, position is occupied
+            return;
+        }
+        
+        // Update sign's position and address
+        HeldSign.X = Player.X;
+        HeldSign.Y = Player.Y;
+        HeldSign.Address = Player.Address;
+        
+        // Add back to collections
+        Signs.Add(HeldSign);
+        allThings.Add(HeldSign);
+        
+        // Clear held sign
+        HeldSign = null;
+        IsHoldingSign = false;
+        
+        ResolveDuplicateAddresses();
         SaveGame();
     }
 
