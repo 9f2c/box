@@ -4,7 +4,7 @@
   "ShowAdvancedInfo": false,
   "IsHoldingSign": false,
   "HeldSign": null,
-  "PlayerAddress": "p",
+  "PlayerAddress": "a",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
