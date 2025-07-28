@@ -2,7 +2,7 @@
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
   "ShowControlsTooltip": false,
-  "PlayerAddress": "ywuuuuk",
+  "PlayerAddress": "yyg",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -61,15 +61,15 @@
       "CreatedAt": "2025-07-27T21:31:50.4934004Z"
     },
     {
-      "Text": "The Hub",
+      "Text": "@The Hub",
       "IsBeingEdited": false,
       "Address": "yh",
       "X": 2,
       "Y": 1,
       "Symbol": "■",
       "Color": {
-        "Item1": 200,
-        "Item2": 200,
+        "Item1": 100,
+        "Item2": 255,
         "Item3": 100
       },
       "CreatedAt": "2025-07-27T21:32:36.522711Z"
@@ -745,6 +745,34 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-28T06:28:51.8067541Z"
+    },
+    {
+      "Text": "@Spawn",
+      "IsBeingEdited": false,
+      "Address": "u",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:36:09.3597055Z"
+    },
+    {
+      "Text": "@Dev room",
+      "IsBeingEdited": false,
+      "Address": "yyy",
+      "X": 4,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:36:36.8592151Z"
     }
   ],
   "Vortexes": [
