@@ -460,6 +460,7 @@ public class Game
             Player.X = Math.Clamp(newX, 0, 4);
             Player.Y = Math.Clamp(newY, 0, 4);
             UpdatePlayerAddress();
+            UpdateTooltips();
             return;
         }
         
@@ -475,6 +476,11 @@ public class Game
             _justTeleported = true;
         }
 
+        UpdateTooltips();
+    }
+    
+    private void UpdateTooltips()
+    {
         // Check for sign tooltip
         var signAtPosition = Signs.FirstOrDefault(s => s.X == Player.X && s.Y == Player.Y && 
             GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
@@ -501,7 +507,7 @@ public class Game
             _thingTooltipText = "";
         }
     }
-    
+
     private void UpdatePlayerAddress()
     {
         char positionChar = (char)('a' + Player.Y * 5 + Player.X);
