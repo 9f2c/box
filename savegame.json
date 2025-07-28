@@ -4,7 +4,7 @@
   "ShowControlsTooltip": false,
   "IsHoldingSign": false,
   "HeldSign": null,
-  "PlayerAddress": "yuwuo",
+  "PlayerAddress": "a",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -455,35 +455,7 @@
       "CreatedAt": "2025-07-28T06:14:21.4025125Z"
     },
     {
-      "Text": "This is a collection of maps used to test game",
-      "IsBeingEdited": false,
-      "Address": "ywyub",
-      "X": 1,
-      "Y": 0,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-28T06:14:28.909242Z"
-    },
-    {
-      "Text": "features.",
-      "IsBeingEdited": false,
-      "Address": "ywyuc",
-      "X": 2,
-      "Y": 0,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-28T06:14:40.4456929Z"
-    },
-    {
-      "Text": "Main",
+      "Text": "Page 1",
       "IsBeingEdited": false,
       "Address": "ywyt",
       "X": 4,
@@ -2637,6 +2609,314 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-28T13:33:44.9607388Z"
+    },
+    {
+      "Text": "The \"y\" vortex on each page of the hub is a vortex",
+      "IsBeingEdited": false,
+      "Address": "yuwuu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:37:40.364513Z"
+    },
+    {
+      "Text": "pointing to the next page of the hub.",
+      "IsBeingEdited": false,
+      "Address": "yuwuv",
+      "X": 1,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:38:00.7880711Z"
+    },
+    {
+      "Text": "This is a collection of maps used to test game",
+      "IsBeingEdited": false,
+      "Address": "ywyuu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:14:28.909242Z"
+    },
+    {
+      "Text": "features and mechanics.",
+      "IsBeingEdited": false,
+      "Address": "ywyuv",
+      "X": 1,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:14:40.4456929Z"
+    },
+    {
+      "Text": "@Test maps: Page 1",
+      "IsBeingEdited": false,
+      "Address": "ywyyh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:39:11.8324625Z"
+    },
+    {
+      "Text": "Barriers",
+      "IsBeingEdited": false,
+      "Address": "ywyyp",
+      "X": 0,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:39:18.8189121Z"
+    },
+    {
+      "Text": "@Barriers test map",
+      "IsBeingEdited": false,
+      "Address": "ywyyuh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:39:31.098895Z"
+    },
+    {
+      "Text": "/barrier",
+      "IsBeingEdited": false,
+      "Address": "ywyyuu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 255,
+        "Item2": 100,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:39:36.8495957Z"
+    },
+    {
+      "Text": "/barrier",
+      "IsBeingEdited": false,
+      "Address": "ywyyuw",
+      "X": 2,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 255,
+        "Item2": 100,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:39:48.5859786Z"
+    },
+    {
+      "Text": "/barrier",
+      "IsBeingEdited": false,
+      "Address": "ywyyuv",
+      "X": 1,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 255,
+        "Item2": 100,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:40:27.5202104Z"
+    },
+    {
+      "Text": "/ignorebarriers",
+      "IsBeingEdited": false,
+      "Address": "ywyyuye",
+      "X": 4,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T13:39:52.6995479Z"
+    },
+    {
+      "Text": "/barrier",
+      "IsBeingEdited": false,
+      "Address": "ywyyuyi",
+      "X": 3,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 255,
+        "Item2": 100,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:42:25.0802841Z"
+    },
+    {
+      "Text": "/barrier",
+      "IsBeingEdited": false,
+      "Address": "ywyyuyg",
+      "X": 1,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 255,
+        "Item2": 100,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:42:22.799386Z"
+    },
+    {
+      "Text": "/barrier",
+      "IsBeingEdited": false,
+      "Address": "ywyyuys",
+      "X": 3,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 255,
+        "Item2": 100,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:42:19.1468783Z"
+    },
+    {
+      "Text": "/barrier",
+      "IsBeingEdited": false,
+      "Address": "ywyyuyq",
+      "X": 1,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 255,
+        "Item2": 100,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:42:12.5280071Z"
+    },
+    {
+      "Text": "If a sign contains /ignorebarriers it disables",
+      "IsBeingEdited": false,
+      "Address": "ywyyuyu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:40:42.5050644Z"
+    },
+    {
+      "Text": "all barriers in the current box.",
+      "IsBeingEdited": false,
+      "Address": "ywyyuyv",
+      "X": 1,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:40:57.0516264Z"
+    },
+    {
+      "Text": "/barrier",
+      "IsBeingEdited": false,
+      "Address": "ywyyuyr",
+      "X": 2,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 255,
+        "Item2": 100,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:42:17.4228553Z"
+    },
+    {
+      "Text": "Useful if you want to delete or move them.",
+      "IsBeingEdited": false,
+      "Address": "ywyyuyx",
+      "X": 3,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:42:57.9262967Z"
+    },
+    {
+      "Text": "It will become orange (\"/ignorebarriers\" signs).",
+      "IsBeingEdited": false,
+      "Address": "ywyyuyw",
+      "X": 2,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:43:19.4236492Z"
+    },
+    {
+      "Text": "A sign with \"/barrier\" means you can't",
+      "IsBeingEdited": false,
+      "Address": "ywyyul",
+      "X": 1,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:41:17.7596431Z"
+    },
+    {
+      "Text": "go on top of it.",
+      "IsBeingEdited": false,
+      "Address": "ywyyum",
+      "X": 2,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:43:47.257255Z"
     }
   ],
   "Vortexes": [
@@ -4031,6 +4311,70 @@
         "Item3": 0
       },
       "CreatedAt": "2025-07-28T13:27:49.4323109Z"
+    },
+    {
+      "TargetAddress": "ywyyua",
+      "IsEntry": true,
+      "PairedVortexAddress": "ywyyua",
+      "IsOneWay": false,
+      "Address": "ywyyu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T13:39:18.2744739Z"
+    },
+    {
+      "TargetAddress": "ywyyu",
+      "IsEntry": false,
+      "PairedVortexAddress": "ywyyu",
+      "IsOneWay": false,
+      "Address": "ywyyua",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T13:39:18.2744749Z"
+    },
+    {
+      "TargetAddress": "ywyyuya",
+      "IsEntry": true,
+      "PairedVortexAddress": "ywyyuya",
+      "IsOneWay": false,
+      "Address": "ywyyuy",
+      "X": 4,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T13:42:05.8430004Z"
+    },
+    {
+      "TargetAddress": "ywyyuy",
+      "IsEntry": false,
+      "PairedVortexAddress": "ywyyuy",
+      "IsOneWay": false,
+      "Address": "ywyyuya",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T13:42:05.8430016Z"
     }
   ]
 }
