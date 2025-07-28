@@ -220,11 +220,12 @@ public class Game
                 """
                 T - place sign
                 X - delete thing
+                Shift+X - delete thing at address
                 G - toggle coordinates
                 C - toggle controls
                 N - create thing
                 F - teleport to accessible address
-                V - quick vortex (to current address + 'a')
+                V - quick vortex (two-way to another box)
                 """
             );
         }
