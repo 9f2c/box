@@ -149,7 +149,7 @@ class Program
             case ConsoleKey.S: case ConsoleKey.J: game.MoveDown(); break;
             case ConsoleKey.T: game.CreateOrEditSignAtPlayer(); break;
             case ConsoleKey.G: game.ToggleAddresses(); break;
-            case ConsoleKey.C: game.ToggleControlsTooltip(); break;
+            case ConsoleKey.C: game.ToggleAdvancedInfo(); break;
             case ConsoleKey.X:
                 // Regular X (without shift) - delete thing at player
                 game.DeleteThingAtPlayer();

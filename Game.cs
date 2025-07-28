@@ -6,7 +6,7 @@ public class Game
 {
     public bool ShowAddressesInCurrentBox { get; set; } = false;
     public string Seed { get; set; } = "";
-    public bool ShowControlsTooltip { get; set; } = false;
+    public bool ShowAdvancedInfo { get; set; } = false;
     [JsonIgnore]
     private bool _showSignTooltip = false;
     [JsonIgnore]
@@ -237,7 +237,7 @@ public class Game
             SetRgbColor(200, 200, 200); // Light gray
             Console.WriteLine("Press Enter to save, Escape to cancel");
         }
-        else if (ShowControlsTooltip)
+        else if (ShowAdvancedInfo)
         {
             SetRgbColor(200, 200, 200); // Light gray
             Console.WriteLine(
@@ -246,7 +246,7 @@ public class Game
                 X - delete thing
                 Shift+X - delete thing at address
                 G - toggle coordinates
-                C - toggle controls
+                C - toggle advanced info
                 N - create thing
                 F - teleport to accessible address
                 V - quick vortex (two-way to another box)
@@ -261,7 +261,7 @@ public class Game
             Console.WriteLine($"Sign: {_signTooltipText}");
         }
 
-        if (_showThingTooltip && !IsEditingSign)
+        if (_showThingTooltip && !IsEditingSign && ShowAdvancedInfo)
         {
             SetRgbColor(150, 255, 150); // Light green
             Console.WriteLine($"Thing: {_thingTooltipText}");
@@ -717,9 +717,9 @@ public class Game
         ShowAddressesInCurrentBox = !ShowAddressesInCurrentBox;
     }
     
-    public void ToggleControlsTooltip()
+    public void ToggleAdvancedInfo()
     {
-        ShowControlsTooltip = !ShowControlsTooltip;
+        ShowAdvancedInfo = !ShowAdvancedInfo;
     }
     
     public void CreateOrEditSignAtPlayer()
@@ -1001,7 +1001,7 @@ public class Game
                 this.Signs = loadedGame.Signs;
                 this.Vortexes = loadedGame.Vortexes;
                 this.ShowAddressesInCurrentBox = loadedGame.ShowAddressesInCurrentBox;
-                this.ShowControlsTooltip = loadedGame.ShowControlsTooltip;
+                this.ShowAdvancedInfo = loadedGame.ShowAdvancedInfo;
                 this.Seed = loadedGame.Seed;
                 
                 // Rebuild allThings list
