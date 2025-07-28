@@ -2,7 +2,7 @@
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
   "ShowControlsTooltip": false,
-  "PlayerAddress": "a",
+  "PlayerAddress": "yq",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -437,6 +437,34 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-28T05:58:24.4658666Z"
+    },
+    {
+      "Text": "Useful address list",
+      "IsBeingEdited": false,
+      "Address": "yq",
+      "X": 1,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:01:07.7855647Z"
+    },
+    {
+      "Text": "Dev room: yyu",
+      "IsBeingEdited": false,
+      "Address": "yvu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:01:14.5739012Z"
     }
   ],
   "Vortexes": [
@@ -583,6 +611,38 @@
         "Item3": 255
       },
       "CreatedAt": "2025-07-28T05:58:16.6712211Z"
+    },
+    {
+      "TargetAddress": "yva",
+      "IsEntry": true,
+      "PairedVortexAddress": "yva",
+      "IsOneWay": false,
+      "Address": "yv",
+      "X": 1,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T06:01:06.4024008Z"
+    },
+    {
+      "TargetAddress": "yv",
+      "IsEntry": false,
+      "PairedVortexAddress": "yv",
+      "IsOneWay": false,
+      "Address": "yva",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T06:01:06.4024018Z"
     }
   ]
 }
