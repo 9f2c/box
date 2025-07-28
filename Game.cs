@@ -1071,13 +1071,13 @@ public class Game
         return (r, g, b);
     }
 
-    public void SaveGame(string filePath = "savegame.json")
+    public void SaveGame(string filePath = "default.json")
     {
         string json = JsonConvert.SerializeObject(this, Formatting.Indented);
         File.WriteAllText(filePath, json);
     }
 
-    public void LoadGame(string filePath = "savegame.json")
+    public void LoadGame(string filePath = "default.json")
     {
         if (!File.Exists(filePath)) 
         {
