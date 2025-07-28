@@ -161,50 +161,57 @@ public class Game
         ProcessInvisibilityCommands();
 
         // Draw border with gradient effect
-        for (int y = 0; y < 7; y++)
+        for (int y = 0; y < 9; y++)  // Increase from 7 to 9
         {
-            for (int x = 0; x < 7; x++)
+            for (int x = 0; x < 9; x++)  // Increase from 7 to 9
             {
-                if (y == 0 || y == 6 || x == 0 || x == 6)
+                if (y == 0 || y == 8 || x == 0 || x == 1 || x == 7 || x == 8)  // Left/right borders are 2 wide
                 {
                     // Seeded gradient border
                     var (r, g, b) = GetGradientBorderColor(x, y, Player.BoxAddress);
                     SetRgbColor(r, g, b);
                     Console.Write("█");
                 }
-                else if (x == Player.X + 1 && y == Player.Y + 1)
+                else if (x == Player.X + 2 && y == Player.Y + 1)  // Adjust for new border width
                 {
                     Player.Draw();
                 }
                 else
                 {
-                    int cellIndex = (y - 1) * 5 + (x - 1);
-                    char letter = (char)('a' + cellIndex);
-                    string cellAddress = Player.BoxAddress + letter;
-                    
-                    var vortex = Vortexes.FirstOrDefault(v => v.Address == cellAddress);
-                    if (vortex != null)
+                    // Only process cells that are in the game area (not border)
+                    if (x >= 2 && x <= 6 && y >= 1 && y <= 7)
                     {
-                        vortex.Draw();
-                    }
-                    else
-                    {
-                        // Check for signs at this position that are in the current box
-                        var sign = Signs.FirstOrDefault(s => s.X == x - 1 && s.Y == y - 1 && 
-                            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
-                        if (sign != null)
+                        int cellIndex = (y - 1) * 5 + (x - 2);  // Adjust for new border width
+                        char letter = (char)('a' + cellIndex);
+                        string cellAddress = Player.BoxAddress + letter;
+                        
+                        var vortex = Vortexes.FirstOrDefault(v => v.Address == cellAddress);
+                        if (vortex != null)
                         {
-                            sign.Draw();
-                        }
-                        else if (ShowAddressesInCurrentBox)
-                        {
-                            SetRgbColor(100, 100, 100);
-                            Console.Write(letter);
+                            vortex.Draw();
                         }
                         else
                         {
-                            Console.Write(" ");
+                            var sign = Signs.FirstOrDefault(s => s.X == x - 2 && s.Y == y - 1 && 
+                                GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
+                            if (sign != null)
+                            {
+                                sign.Draw();
+                            }
+                            else if (ShowAddressesInCurrentBox)
+                            {
+                                SetRgbColor(100, 100, 100);
+                                Console.Write(letter);
+                            }
+                            else
+                            {
+                                Console.Write(" ");
+                            }
                         }
+                    }
+                    else
+                    {
+                        Console.Write(" ");  // Empty space for non-border, non-game areas
                     }
                 }
             }
@@ -988,48 +995,53 @@ public class Game
         int seed = GetSeedFromBoxAddress(boxAddress);
         Random random = new Random(seed);
         
-        // Generate 2-4 colors that are close to each other
-        int colorCount = random.Next(2, 5); // 2 to 4 colors
+        // Generate 3-6 colors for smoother transitions
+        int colorCount = random.Next(3, 7);
         var baseHue = random.Next(0, 360);
         var colors = new List<(int r, int g, int b)>();
         
         for (int i = 0; i < colorCount; i++)
         {
-            // Keep colors close to each other (within 60 degrees)
-            int hue = (baseHue + random.Next(-30, 31)) % 360;
+            // Spread colors more evenly around the hue circle
+            int hue = (baseHue + (i * 360 / colorCount) + random.Next(-20, 21)) % 360;
             if (hue < 0) hue += 360;
             
-            double saturation = 0.7 + random.NextDouble() * 0.3; // 0.7 to 1.0
-            double value = 0.8 + random.NextDouble() * 0.2; // 0.8 to 1.0
+            double saturation = 0.6 + random.NextDouble() * 0.4; // 0.6 to 1.0
+            double value = 0.7 + random.NextDouble() * 0.3; // 0.7 to 1.0
             
             colors.Add(HsvToRgb(hue, saturation, value));
         }
         
-        // Calculate position along the border perimeter
-        int totalBorderCells = 20; // 7*4 - 4 corners counted once
-        int position;
+        // Calculate position along the border perimeter (for 9x9 grid)
+        double position;
         
         if (y == 0) // Top edge
-            position = x;
-        else if (x == 6) // Right edge
-            position = 6 + y;
-        else if (y == 6) // Bottom edge
-            position = 12 + (6 - x);
-        else // Left edge
-            position = 18 + (6 - y);
-        
-        // Interpolate between colors based on position
-        double t = (double)position / totalBorderCells * (colorCount - 1);
-        int colorIndex = (int)t;
-        double fraction = t - colorIndex;
-        
-        if (colorIndex >= colorCount - 1)
         {
-            return colors[colorCount - 1];
+            position = x / 8.0;
+        }
+        else if (x >= 7) // Right edge (including both right border columns)
+        {
+            position = 1.0 + (y / 8.0);
+        }
+        else if (y == 8) // Bottom edge
+        {
+            position = 2.0 + ((8 - x) / 8.0);
+        }
+        else // Left edge (including both left border columns)
+        {
+            position = 3.0 + ((8 - y) / 8.0);
         }
         
+        // Make the gradient seamless by wrapping around
+        double normalizedPosition = (position % 4.0) / 4.0; // 0.0 to 1.0
+        double t = normalizedPosition * colorCount;
+        
+        int colorIndex = (int)t % colorCount;
+        int nextColorIndex = (colorIndex + 1) % colorCount;
+        double fraction = t - Math.Floor(t);
+        
         var color1 = colors[colorIndex];
-        var color2 = colors[colorIndex + 1];
+        var color2 = colors[nextColorIndex];
         
         int r = (int)(color1.r * (1 - fraction) + color2.r * fraction);
         int g = (int)(color1.g * (1 - fraction) + color2.g * fraction);
