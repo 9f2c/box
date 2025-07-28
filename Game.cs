@@ -58,6 +58,23 @@ public class Game
     {
         return address.Length > 0 ? address.Substring(0, address.Length - 1) : "";
     }
+
+    private bool IsBarrierAtPosition(int x, int y)
+    {
+        var signAtPosition = Signs.FirstOrDefault(s => s.X == x && s.Y == y && 
+            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress && 
+            s.Text == "/barrier");
+        return signAtPosition != null;
+    }
+
+    private bool ShouldIgnoreBarriers()
+    {
+        var ignoreBarrierSign = Signs.FirstOrDefault(s => 
+            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress && 
+            s.Text == "/ignorebarriers");
+        return ignoreBarrierSign != null;
+    }
+
     [JsonIgnore]
     public Sign? CurrentlyEditingSign { get; private set; } = null;
     [JsonIgnore]
@@ -579,8 +596,21 @@ public class Game
             _justTeleported = false;
         }
         
-        Player.X = Math.Clamp(newX, 0, 4);
-        Player.Y = Math.Clamp(newY, 0, 4);
+        // Clamp to bounds first
+        newX = Math.Clamp(newX, 0, 4);
+        newY = Math.Clamp(newY, 0, 4);
+        
+        // Check for barrier collision (only if trying to move to a different position)
+        if ((newX != Player.X || newY != Player.Y) && 
+            IsBarrierAtPosition(newX, newY) && 
+            !ShouldIgnoreBarriers())
+        {
+            // Cannot move into barrier, return early
+            return;
+        }
+        
+        Player.X = newX;
+        Player.Y = newY;
         UpdatePlayerAddress();
         SaveGame();
 

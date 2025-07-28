@@ -25,6 +25,14 @@ public class Sign : Thing
             // Blinking effect when being edited
             Color = (255, 255, 255); // White when editing
         }
+        else if (Text == "/barrier")
+        {
+            Color = (255, 100, 100); // Red for barriers
+        }
+        else if (Text == "/ignorebarriers")
+        {
+            Color = (255, 165, 0); // Orange for ignore barriers
+        }
         else if (Text.StartsWith("@"))
         {
             Color = (100, 255, 100); // Green for room name signs
