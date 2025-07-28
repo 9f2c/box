@@ -2,7 +2,7 @@
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
   "ShowControlsTooltip": false,
-  "PlayerAddress": "a",
+  "PlayerAddress": "ywuuuuwf",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -537,48 +537,6 @@
       "CreatedAt": "2025-07-28T06:10:52.9646219Z"
     },
     {
-      "Text": "Welcome to map 1!",
-      "IsBeingEdited": false,
-      "Address": "ywub",
-      "X": 1,
-      "Y": 0,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-28T06:12:48.6507513Z"
-    },
-    {
-      "Text": "Keep moving right to read more.",
-      "IsBeingEdited": false,
-      "Address": "ywuc",
-      "X": 2,
-      "Y": 0,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-28T06:12:53.6866263Z"
-    },
-    {
-      "Text": "This map is the first map in the main game.",
-      "IsBeingEdited": false,
-      "Address": "ywud",
-      "X": 3,
-      "Y": 0,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-28T06:13:07.5526451Z"
-    },
-    {
       "Text": "Test maps",
       "IsBeingEdited": false,
       "Address": "ywt",
@@ -647,6 +605,104 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-28T06:15:22.3696805Z"
+    },
+    {
+      "Text": "Games",
+      "IsBeingEdited": false,
+      "Address": "ywup",
+      "X": 0,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:18:15.0933404Z"
+    },
+    {
+      "Text": "Mazes",
+      "IsBeingEdited": false,
+      "Address": "ywuup",
+      "X": 0,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:18:20.352451Z"
+    },
+    {
+      "Text": "Maze 1",
+      "IsBeingEdited": false,
+      "Address": "ywuuup",
+      "X": 0,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:18:30.773241Z"
+    },
+    {
+      "Text": "Here, you will respawn if you enter a wrong vortex",
+      "IsBeingEdited": false,
+      "Address": "ywuuuue",
+      "X": 4,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:19:20.3391155Z"
+    },
+    {
+      "Text": "Avoid the vortexes!",
+      "IsBeingEdited": false,
+      "Address": "ywuuuuj",
+      "X": 4,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:19:28.6709325Z"
+    },
+    {
+      "Text": "Read from top down:",
+      "IsBeingEdited": false,
+      "Address": "ywuuuud",
+      "X": 3,
+      "Y": 0,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:19:38.4751059Z"
+    },
+    {
+      "Text": "Good luck! Enter the vortex to begin.",
+      "IsBeingEdited": false,
+      "Address": "ywuuuuo",
+      "X": 4,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:19:45.1331339Z"
     }
   ],
   "Vortexes": [
@@ -923,38 +979,6 @@
       "CreatedAt": "2025-07-28T06:11:09.5661463Z"
     },
     {
-      "TargetAddress": "ywuf",
-      "IsEntry": true,
-      "PairedVortexAddress": "ywuf",
-      "IsOneWay": false,
-      "Address": "ywue",
-      "X": 4,
-      "Y": 0,
-      "Symbol": "@",
-      "Color": {
-        "Item1": 30,
-        "Item2": 144,
-        "Item3": 255
-      },
-      "CreatedAt": "2025-07-28T06:13:29.128681Z"
-    },
-    {
-      "TargetAddress": "ywue",
-      "IsEntry": false,
-      "PairedVortexAddress": "ywue",
-      "IsOneWay": false,
-      "Address": "ywuf",
-      "X": 0,
-      "Y": 0,
-      "Symbol": "@",
-      "Color": {
-        "Item1": 255,
-        "Item2": 165,
-        "Item3": 0
-      },
-      "CreatedAt": "2025-07-28T06:13:29.128682Z"
-    },
-    {
       "TargetAddress": "ywya",
       "IsEntry": true,
       "PairedVortexAddress": "ywya",
@@ -1049,6 +1073,150 @@
         "Item3": 0
       },
       "CreatedAt": "2025-07-28T06:15:21.7713986Z"
+    },
+    {
+      "TargetAddress": "ywuua",
+      "IsEntry": true,
+      "PairedVortexAddress": "ywuua",
+      "IsOneWay": false,
+      "Address": "ywuu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T06:18:17.2371227Z"
+    },
+    {
+      "TargetAddress": "ywuu",
+      "IsEntry": false,
+      "PairedVortexAddress": "ywuu",
+      "IsOneWay": false,
+      "Address": "ywuua",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T06:18:17.2371237Z"
+    },
+    {
+      "TargetAddress": "ywuuua",
+      "IsEntry": true,
+      "PairedVortexAddress": "ywuuua",
+      "IsOneWay": false,
+      "Address": "ywuuu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T06:18:24.8766597Z"
+    },
+    {
+      "TargetAddress": "ywuuu",
+      "IsEntry": false,
+      "PairedVortexAddress": "ywuuu",
+      "IsOneWay": false,
+      "Address": "ywuuua",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T06:18:24.8766605Z"
+    },
+    {
+      "TargetAddress": "ywuuuua",
+      "IsEntry": true,
+      "PairedVortexAddress": "ywuuuua",
+      "IsOneWay": false,
+      "Address": "ywuuuu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T06:18:34.8596835Z"
+    },
+    {
+      "TargetAddress": "ywuuuu",
+      "IsEntry": false,
+      "PairedVortexAddress": "ywuuuu",
+      "IsOneWay": false,
+      "Address": "ywuuuua",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T06:18:34.8596844Z"
+    },
+    {
+      "TargetAddress": "ywuuuuwa",
+      "IsEntry": true,
+      "PairedVortexAddress": "ywuuuuwa",
+      "IsOneWay": false,
+      "Address": "ywuuuuw",
+      "X": 2,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T06:19:58.3599004Z"
+    },
+    {
+      "TargetAddress": "ywuuuuw",
+      "IsEntry": false,
+      "PairedVortexAddress": "ywuuuuw",
+      "IsOneWay": false,
+      "Address": "ywuuuuwa",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T06:19:58.3599017Z"
+    },
+    {
+      "TargetAddress": "ywuuuum",
+      "IsEntry": true,
+      "PairedVortexAddress": "",
+      "IsOneWay": true,
+      "Address": "ywuuuuwf",
+      "X": 0,
+      "Y": 1,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T06:20:54.6695818Z"
     }
   ]
 }
