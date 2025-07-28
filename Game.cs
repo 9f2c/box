@@ -186,7 +186,7 @@ public class Game
                         string cellAddress = Player.BoxAddress + letter;
                         
                         var vortex = Vortexes.FirstOrDefault(v => v.Address == cellAddress);
-                        if (vortex != null)
+                        if (vortex != null && !vortex.IsInvisible)
                         {
                             vortex.Draw();
                         }
