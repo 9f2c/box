@@ -161,27 +161,27 @@ public class Game
         ProcessInvisibilityCommands();
 
         // Draw border with gradient effect
-        for (int y = 0; y < 9; y++)  // Increase from 7 to 9
+        for (int y = 0; y < 7; y++)
         {
-            for (int x = 0; x < 9; x++)  // Increase from 7 to 9
+            for (int x = 0; x < 7; x++)
             {
-                if (y == 0 || y == 8 || x == 0 || x == 1 || x == 7 || x == 8)  // Left/right borders are 2 wide
+                if (y == 0 || y == 6 || x == 0 || x == 6)
                 {
                     // Seeded gradient border
                     var (r, g, b) = GetGradientBorderColor(x, y, Player.BoxAddress);
                     SetRgbColor(r, g, b);
                     Console.Write("█");
                 }
-                else if (x == Player.X + 2 && y == Player.Y + 1)  // Adjust for new border width
+                else if (x == Player.X + 1 && y == Player.Y + 1)
                 {
                     Player.Draw();
                 }
                 else
                 {
                     // Only process cells that are in the game area (not border)
-                    if (x >= 2 && x <= 6 && y >= 1 && y <= 7)
+                    if (x >= 1 && x <= 5 && y >= 1 && y <= 5)
                     {
-                        int cellIndex = (y - 1) * 5 + (x - 2);  // Adjust for new border width
+                        int cellIndex = (y - 1) * 5 + (x - 1);
                         char letter = (char)('a' + cellIndex);
                         string cellAddress = Player.BoxAddress + letter;
                         
@@ -192,7 +192,7 @@ public class Game
                         }
                         else
                         {
-                            var sign = Signs.FirstOrDefault(s => s.X == x - 2 && s.Y == y - 1 && 
+                            var sign = Signs.FirstOrDefault(s => s.X == x - 1 && s.Y == y - 1 && 
                                 GetBoxAddressFromAddress(s.Address) == Player.BoxAddress);
                             if (sign != null)
                             {
@@ -1017,19 +1017,19 @@ public class Game
         
         if (y == 0) // Top edge
         {
-            position = x / 8.0;
+            position = x / 6.0;
         }
-        else if (x >= 7) // Right edge (including both right border columns)
+        else if (x == 6) // Right edge
         {
-            position = 1.0 + (y / 8.0);
+            position = 1.0 + (y / 6.0);
         }
-        else if (y == 8) // Bottom edge
+        else if (y == 6) // Bottom edge
         {
-            position = 2.0 + ((8 - x) / 8.0);
+            position = 2.0 + ((6 - x) / 6.0);
         }
-        else // Left edge (including both left border columns)
+        else // Left edge
         {
-            position = 3.0 + ((8 - y) / 8.0);
+            position = 3.0 + ((6 - y) / 6.0);
         }
         
         // Make the gradient seamless by wrapping around
