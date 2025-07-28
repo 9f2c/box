@@ -2,7 +2,7 @@
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
   "ShowControlsTooltip": false,
-  "PlayerAddress": "a",
+  "PlayerAddress": "yuwup",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -381,34 +381,6 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-28T06:04:16.0323755Z"
-    },
-    {
-      "Text": "Useful locations room: yvc",
-      "IsBeingEdited": false,
-      "Address": "yvk",
-      "X": 0,
-      "Y": 2,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-28T06:04:56.2273822Z"
-    },
-    {
-      "Text": "Spawn: a",
-      "IsBeingEdited": false,
-      "Address": "yvl",
-      "X": 1,
-      "Y": 2,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-28T06:05:48.300487Z"
     },
     {
       "Text": "Tip: Press C to toggle controls visibility.",
@@ -2453,6 +2425,216 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-28T13:21:00.2957546Z"
+    },
+    {
+      "Text": "@Useful address list",
+      "IsBeingEdited": false,
+      "Address": "yvh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:25:36.3456074Z"
+    },
+    {
+      "Text": "Spawn: a",
+      "IsBeingEdited": false,
+      "Address": "yvu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:25:47.3487492Z"
+    },
+    {
+      "Text": "@The Hub: Page 4",
+      "IsBeingEdited": false,
+      "Address": "yyyyh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:26:15.0077983Z"
+    },
+    {
+      "Text": "The Hub: Page 4",
+      "IsBeingEdited": false,
+      "Address": "yyyt",
+      "X": 4,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:26:25.3261377Z"
+    },
+    {
+      "Text": "The Hub: Page 5",
+      "IsBeingEdited": false,
+      "Address": "yyyyt",
+      "X": 4,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:26:47.6894667Z"
+    },
+    {
+      "Text": "@The Hub: Page 5",
+      "IsBeingEdited": false,
+      "Address": "yyyyyh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:26:54.2359069Z"
+    },
+    {
+      "Text": "What is <box>?",
+      "IsBeingEdited": false,
+      "Address": "yur",
+      "X": 2,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:27:24.0770719Z"
+    },
+    {
+      "Text": "What is the hub?",
+      "IsBeingEdited": false,
+      "Address": "yuwp",
+      "X": 0,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:27:42.0495829Z"
+    },
+    {
+      "Text": "@What is <box>?",
+      "IsBeingEdited": false,
+      "Address": "yuwh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:27:50.6399559Z"
+    },
+    {
+      "Text": "@What is the hub?",
+      "IsBeingEdited": false,
+      "Address": "yuwuh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:28:14.0600163Z"
+    },
+    {
+      "Text": "The hub is an infinitely extensible amount of...",
+      "IsBeingEdited": false,
+      "Address": "yuwuu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:28:23.067057Z"
+    },
+    {
+      "Text": "space holding all the vortexes that lead to",
+      "IsBeingEdited": false,
+      "Address": "yuwuv",
+      "X": 1,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:28:42.813504Z"
+    },
+    {
+      "Text": "parts of the game. The reason it's made like this",
+      "IsBeingEdited": false,
+      "Address": "yuwuw",
+      "X": 2,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:29:24.4590173Z"
+    },
+    {
+      "Text": "is to allow for infinite extensibility and no",
+      "IsBeingEdited": false,
+      "Address": "yuwux",
+      "X": 3,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:29:35.4493118Z"
+    },
+    {
+      "Text": "organization issues.",
+      "IsBeingEdited": false,
+      "Address": "yuwuy",
+      "X": 4,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:29:47.6489202Z"
     }
   ],
   "Vortexes": [
@@ -3719,6 +3901,134 @@
         "Item3": 255
       },
       "CreatedAt": "2025-07-28T13:21:36.3274035Z"
+    },
+    {
+      "TargetAddress": "yyyya",
+      "IsEntry": true,
+      "PairedVortexAddress": "yyyya",
+      "IsOneWay": false,
+      "Address": "yyyy",
+      "X": 4,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T13:26:13.2458423Z"
+    },
+    {
+      "TargetAddress": "yyyy",
+      "IsEntry": false,
+      "PairedVortexAddress": "yyyy",
+      "IsOneWay": false,
+      "Address": "yyyya",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T13:26:13.2458434Z"
+    },
+    {
+      "TargetAddress": "yyyyya",
+      "IsEntry": true,
+      "PairedVortexAddress": "yyyyya",
+      "IsOneWay": false,
+      "Address": "yyyyy",
+      "X": 4,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T13:26:45.4188939Z"
+    },
+    {
+      "TargetAddress": "yyyyy",
+      "IsEntry": false,
+      "PairedVortexAddress": "yyyyy",
+      "IsOneWay": false,
+      "Address": "yyyyya",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T13:26:45.4188953Z"
+    },
+    {
+      "TargetAddress": "yuwa",
+      "IsEntry": true,
+      "PairedVortexAddress": "yuwa",
+      "IsOneWay": false,
+      "Address": "yuw",
+      "X": 2,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T13:27:23.6351242Z"
+    },
+    {
+      "TargetAddress": "yuw",
+      "IsEntry": false,
+      "PairedVortexAddress": "yuw",
+      "IsOneWay": false,
+      "Address": "yuwa",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T13:27:23.6351255Z"
+    },
+    {
+      "TargetAddress": "yuwua",
+      "IsEntry": true,
+      "PairedVortexAddress": "yuwua",
+      "IsOneWay": false,
+      "Address": "yuwu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T13:27:49.4323097Z"
+    },
+    {
+      "TargetAddress": "yuwu",
+      "IsEntry": false,
+      "PairedVortexAddress": "yuwu",
+      "IsOneWay": false,
+      "Address": "yuwua",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T13:27:49.4323109Z"
     }
   ]
 }
