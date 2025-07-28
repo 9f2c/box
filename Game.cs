@@ -458,11 +458,6 @@ public class Game
         if (_justTeleported)
         {
             _justTeleported = false;
-            Player.X = Math.Clamp(newX, 0, 4);
-            Player.Y = Math.Clamp(newY, 0, 4);
-            UpdatePlayerAddress();
-            UpdateTooltips();
-            return;
         }
         
         Player.X = Math.Clamp(newX, 0, 4);
