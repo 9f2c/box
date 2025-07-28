@@ -3127,7 +3127,22 @@
       "IsInvisible": false
     },
     {
-      "Text": "Sign",
+      "Text": "Tip: Press C to toggle controls and advanced info.",
+      "IsBeingEdited": false,
+      "Address": "f",
+      "X": 0,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:06:02.6998893Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "This is an invisible sign. Walk right.",
       "IsBeingEdited": false,
       "Address": "ywyyvr",
       "X": 2,
@@ -3142,11 +3157,101 @@
       "IsInvisible": true
     },
     {
-      "Text": "/invisible ywyyvr",
+      "Text": "@Invisibility test",
       "IsBeingEdited": false,
-      "Address": "ywyyvm",
+      "Address": "ywyyvh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T14:16:39.2746768Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "There is an invisible vortex in the bottom right.",
+      "IsBeingEdited": false,
+      "Address": "ywyyvx",
+      "X": 3,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T14:17:12.3035046Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "You found it!",
+      "IsBeingEdited": false,
+      "Address": "ywyyvym",
       "X": 2,
       "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T14:20:01.5204571Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "A gray sign makes things invisible at an address.",
+      "IsBeingEdited": false,
+      "Address": "ywyyvf",
+      "X": 0,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T14:20:26.7006725Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "A gray sign contains \"/invisible <address>\" only.",
+      "IsBeingEdited": false,
+      "Address": "ywyyvk",
+      "X": 0,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T14:20:38.8685049Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "/invisible ywyyvy",
+      "IsBeingEdited": false,
+      "Address": "ywyyvuu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 128,
+        "Item2": 128,
+        "Item3": 128
+      },
+      "CreatedAt": "2025-07-28T14:17:28.5307299Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "/invisible ywyyvr",
+      "IsBeingEdited": false,
+      "Address": "ywyyvuv",
+      "X": 1,
+      "Y": 4,
       "Symbol": "■",
       "Color": {
         "Item1": 128,
@@ -3157,18 +3262,108 @@
       "IsInvisible": false
     },
     {
-      "Text": "Tip: Press C to toggle controls and advanced info.",
+      "Text": "In the box below are the signs that drive this box",
       "IsBeingEdited": false,
-      "Address": "f",
+      "Address": "ywyyvp",
       "X": 0,
-      "Y": 1,
+      "Y": 3,
       "Symbol": "■",
       "Color": {
         "Item1": 200,
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:06:02.6998893Z",
+      "CreatedAt": "2025-07-28T14:21:18.8429364Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "Do you like sUrprises?",
+      "IsBeingEdited": false,
+      "Address": "ywyyvyr",
+      "X": 2,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T14:21:59.249397Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "/invisible ywyyvyu",
+      "IsBeingEdited": false,
+      "Address": "ywyyvuw",
+      "X": 2,
+      "Y": 4,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 128,
+        "Item2": 128,
+        "Item3": 128
+      },
+      "CreatedAt": "2025-07-28T14:22:31.7988637Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "You found another hidden vortex!",
+      "IsBeingEdited": false,
+      "Address": "ywyyvyum",
+      "X": 2,
+      "Y": 2,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T14:25:13.0766055Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "@Another hidden box",
+      "IsBeingEdited": false,
+      "Address": "ywyyvyuh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T14:25:22.2269553Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "@Hidden box",
+      "IsBeingEdited": false,
+      "Address": "ywyyvyh",
+      "X": 2,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 100,
+        "Item2": 255,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T14:25:30.5442147Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "There may or may not be other ones here...",
+      "IsBeingEdited": false,
+      "Address": "ywyyvyur",
+      "X": 2,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T14:25:51.5377165Z",
       "IsInvisible": false
     }
   ],
@@ -4752,6 +4947,108 @@
         "Item3": 0
       },
       "CreatedAt": "2025-07-28T13:57:17.6201599Z",
+      "IsInvisible": false
+    },
+    {
+      "TargetAddress": "ywyyvya",
+      "IsEntry": true,
+      "PairedVortexAddress": "ywyyvya",
+      "IsOneWay": false,
+      "Address": "ywyyvy",
+      "X": 4,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T14:17:35.2944016Z",
+      "IsInvisible": true
+    },
+    {
+      "TargetAddress": "ywyyvy",
+      "IsEntry": false,
+      "PairedVortexAddress": "ywyyvy",
+      "IsOneWay": false,
+      "Address": "ywyyvya",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T14:17:35.2944026Z",
+      "IsInvisible": false
+    },
+    {
+      "TargetAddress": "ywyyvua",
+      "IsEntry": true,
+      "PairedVortexAddress": "ywyyvua",
+      "IsOneWay": false,
+      "Address": "ywyyvu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T14:21:05.9726317Z",
+      "IsInvisible": false
+    },
+    {
+      "TargetAddress": "ywyyvu",
+      "IsEntry": false,
+      "PairedVortexAddress": "ywyyvu",
+      "IsOneWay": false,
+      "Address": "ywyyvua",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T14:21:05.972633Z",
+      "IsInvisible": false
+    },
+    {
+      "TargetAddress": "ywyyvyua",
+      "IsEntry": true,
+      "PairedVortexAddress": "ywyyvyua",
+      "IsOneWay": false,
+      "Address": "ywyyvyu",
+      "X": 0,
+      "Y": 4,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 30,
+        "Item2": 144,
+        "Item3": 255
+      },
+      "CreatedAt": "2025-07-28T14:22:07.9529553Z",
+      "IsInvisible": true
+    },
+    {
+      "TargetAddress": "ywyyvyu",
+      "IsEntry": false,
+      "PairedVortexAddress": "ywyyvyu",
+      "IsOneWay": false,
+      "Address": "ywyyvyua",
+      "X": 0,
+      "Y": 0,
+      "Symbol": "@",
+      "Color": {
+        "Item1": 255,
+        "Item2": 165,
+        "Item3": 0
+      },
+      "CreatedAt": "2025-07-28T14:22:07.9529566Z",
       "IsInvisible": false
     }
   ]
