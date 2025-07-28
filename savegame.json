@@ -4,7 +4,7 @@
   "ShowControlsTooltip": false,
   "IsHoldingSign": false,
   "HeldSign": null,
-  "PlayerAddress": "ywuvwu",
+  "PlayerAddress": "ywyyvr",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -18,7 +18,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:31:09.5775959Z"
+      "CreatedAt": "2025-07-27T21:31:09.5775959Z",
+      "IsInvisible": false
     },
     {
       "Text": "This is a sign. Walk on it to read it.",
@@ -32,7 +33,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:31:18.3304465Z"
+      "CreatedAt": "2025-07-27T21:31:18.3304465Z",
+      "IsInvisible": false
     },
     {
       "Text": "The thing below is a vortex.",
@@ -46,7 +48,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:31:29.7511855Z"
+      "CreatedAt": "2025-07-27T21:31:29.7511855Z",
+      "IsInvisible": false
     },
     {
       "Text": "Walk on it to teleport to another location.",
@@ -60,7 +63,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:31:50.4934004Z"
+      "CreatedAt": "2025-07-27T21:31:50.4934004Z",
+      "IsInvisible": false
     },
     {
       "Text": "@The Hub: Page 1",
@@ -74,7 +78,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:32:36.522711Z"
+      "CreatedAt": "2025-07-27T21:32:36.522711Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Help",
@@ -88,7 +93,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:35:20.0765807Z"
+      "CreatedAt": "2025-07-27T21:35:20.0765807Z",
+      "IsInvisible": false
     },
     {
       "Text": "Help",
@@ -102,7 +108,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:35:30.3909967Z"
+      "CreatedAt": "2025-07-27T21:35:30.3909967Z",
+      "IsInvisible": false
     },
     {
       "Text": "Vortex tutorial",
@@ -116,7 +123,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:35:54.1879258Z"
+      "CreatedAt": "2025-07-27T21:35:54.1879258Z",
+      "IsInvisible": false
     },
     {
       "Text": "A vortex is a portal.",
@@ -130,7 +138,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:36:15.4848102Z"
+      "CreatedAt": "2025-07-27T21:36:15.4848102Z",
+      "IsInvisible": false
     },
     {
       "Text": "It's an @ symbol, either blue or orange.",
@@ -144,7 +153,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:36:25.4610922Z"
+      "CreatedAt": "2025-07-27T21:36:25.4610922Z",
+      "IsInvisible": false
     },
     {
       "Text": "A blue vortex is an enter vortex.",
@@ -158,7 +168,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:36:37.0887848Z"
+      "CreatedAt": "2025-07-27T21:36:37.0887848Z",
+      "IsInvisible": false
     },
     {
       "Text": "An orange vortex is an exit vortex.",
@@ -172,7 +183,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:36:44.831849Z"
+      "CreatedAt": "2025-07-27T21:36:44.831849Z",
+      "IsInvisible": false
     },
     {
       "Text": "You can create a vortex by pressing N, then 1.",
@@ -186,7 +198,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:36:52.7112744Z"
+      "CreatedAt": "2025-07-27T21:36:52.7112744Z",
+      "IsInvisible": false
     },
     {
       "Text": "A vortex can be either one-way, or two-way.",
@@ -200,7 +213,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:37:07.5346664Z"
+      "CreatedAt": "2025-07-27T21:37:07.5346664Z",
+      "IsInvisible": false
     },
     {
       "Text": "A one-way vortex teleports you to an address.",
@@ -214,7 +228,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:38:13.94572Z"
+      "CreatedAt": "2025-07-27T21:38:13.94572Z",
+      "IsInvisible": false
     },
     {
       "Text": "A two-way vortex teleports you to another vortex.",
@@ -228,7 +243,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:38:27.4132051Z"
+      "CreatedAt": "2025-07-27T21:38:27.4132051Z",
+      "IsInvisible": false
     },
     {
       "Text": "That vortex, an exit vortex, can take you back.",
@@ -242,7 +258,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:38:35.6014121Z"
+      "CreatedAt": "2025-07-27T21:38:35.6014121Z",
+      "IsInvisible": false
     },
     {
       "Text": "You can delete a vortex by standing on top of it.",
@@ -256,7 +273,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:38:48.3826431Z"
+      "CreatedAt": "2025-07-27T21:38:48.3826431Z",
+      "IsInvisible": false
     },
     {
       "Text": "Only entry vortexes (blue) can be deleted.",
@@ -270,7 +288,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:39:08.3304051Z"
+      "CreatedAt": "2025-07-27T21:39:08.3304051Z",
+      "IsInvisible": false
     },
     {
       "Text": "If you create a one-way vortex, you can delete it:",
@@ -284,7 +303,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:39:17.0702139Z"
+      "CreatedAt": "2025-07-27T21:39:17.0702139Z",
+      "IsInvisible": false
     },
     {
       "Text": "Create a two-way vortex pointing to its address,..",
@@ -298,7 +318,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:39:31.8651904Z"
+      "CreatedAt": "2025-07-27T21:39:31.8651904Z",
+      "IsInvisible": false
     },
     {
       "Text": "Then teleport to it, delete it, and delete...",
@@ -312,7 +333,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:39:51.3088208Z"
+      "CreatedAt": "2025-07-27T21:39:51.3088208Z",
+      "IsInvisible": false
     },
     {
       "Text": "the helper two-way vortex (the entry vortex).",
@@ -326,7 +348,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:40:01.8603722Z"
+      "CreatedAt": "2025-07-27T21:40:01.8603722Z",
+      "IsInvisible": false
     },
     {
       "Text": "Please read from left to right like a book.",
@@ -340,7 +363,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:42:01.7281318Z"
+      "CreatedAt": "2025-07-27T21:42:01.7281318Z",
+      "IsInvisible": false
     },
     {
       "Text": "Useful address list",
@@ -354,7 +378,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:01:07.7855647Z"
+      "CreatedAt": "2025-07-28T06:01:07.7855647Z",
+      "IsInvisible": false
     },
     {
       "Text": "The Hub: yh",
@@ -368,7 +393,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:04:16.0323755Z"
+      "CreatedAt": "2025-07-28T06:04:16.0323755Z",
+      "IsInvisible": false
     },
     {
       "Text": "Tip: Press C to toggle controls visibility.",
@@ -382,7 +408,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:06:02.6998893Z"
+      "CreatedAt": "2025-07-28T06:06:02.6998893Z",
+      "IsInvisible": false
     },
     {
       "Text": "Maps",
@@ -396,7 +423,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:10:41.5112037Z"
+      "CreatedAt": "2025-07-28T06:10:41.5112037Z",
+      "IsInvisible": false
     },
     {
       "Text": "Map 1",
@@ -410,7 +438,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:10:52.9646219Z"
+      "CreatedAt": "2025-07-28T06:10:52.9646219Z",
+      "IsInvisible": false
     },
     {
       "Text": "Test maps",
@@ -424,7 +453,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:14:04.9856552Z"
+      "CreatedAt": "2025-07-28T06:14:04.9856552Z",
+      "IsInvisible": false
     },
     {
       "Text": "About this map",
@@ -438,7 +468,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:14:21.4025125Z"
+      "CreatedAt": "2025-07-28T06:14:21.4025125Z",
+      "IsInvisible": false
     },
     {
       "Text": "Page 1",
@@ -452,7 +483,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:15:22.3696805Z"
+      "CreatedAt": "2025-07-28T06:15:22.3696805Z",
+      "IsInvisible": false
     },
     {
       "Text": "Games",
@@ -466,7 +498,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:18:15.0933404Z"
+      "CreatedAt": "2025-07-28T06:18:15.0933404Z",
+      "IsInvisible": false
     },
     {
       "Text": "Mazes",
@@ -480,7 +513,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:18:20.352451Z"
+      "CreatedAt": "2025-07-28T06:18:20.352451Z",
+      "IsInvisible": false
     },
     {
       "Text": "Maze 1",
@@ -494,7 +528,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:18:30.773241Z"
+      "CreatedAt": "2025-07-28T06:18:30.773241Z",
+      "IsInvisible": false
     },
     {
       "Text": "Here, you will respawn if you enter a wrong vortex",
@@ -508,7 +543,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:19:20.3391155Z"
+      "CreatedAt": "2025-07-28T06:19:20.3391155Z",
+      "IsInvisible": false
     },
     {
       "Text": "Avoid the vortexes!",
@@ -522,7 +558,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:19:28.6709325Z"
+      "CreatedAt": "2025-07-28T06:19:28.6709325Z",
+      "IsInvisible": false
     },
     {
       "Text": "Read from top down:",
@@ -536,7 +573,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:19:38.4751059Z"
+      "CreatedAt": "2025-07-28T06:19:38.4751059Z",
+      "IsInvisible": false
     },
     {
       "Text": "Good luck! Enter the vortex to begin.",
@@ -550,7 +588,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:19:45.1331339Z"
+      "CreatedAt": "2025-07-28T06:19:45.1331339Z",
+      "IsInvisible": false
     },
     {
       "Text": "After entering, move right.",
@@ -564,7 +603,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:23:15.1473901Z"
+      "CreatedAt": "2025-07-28T06:23:15.1473901Z",
+      "IsInvisible": false
     },
     {
       "Text": "-->",
@@ -578,7 +618,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:28:34.1372602Z"
+      "CreatedAt": "2025-07-28T06:28:34.1372602Z",
+      "IsInvisible": false
     },
     {
       "Text": "Enter the vortex at \"y\" to finish.",
@@ -592,7 +633,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:28:51.8067541Z"
+      "CreatedAt": "2025-07-28T06:28:51.8067541Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Spawn",
@@ -606,7 +648,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:36:09.3597055Z"
+      "CreatedAt": "2025-07-28T06:36:09.3597055Z",
+      "IsInvisible": false
     },
     {
       "Text": "Sign tutorial",
@@ -620,7 +663,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:37:55.2946723Z"
+      "CreatedAt": "2025-07-28T06:37:55.2946723Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Vortex tutorial",
@@ -634,7 +678,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:38:28.3870186Z"
+      "CreatedAt": "2025-07-28T06:38:28.3870186Z",
+      "IsInvisible": false
     },
     {
       "Text": "A sign can be created using T.",
@@ -648,7 +693,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:38:41.9211064Z"
+      "CreatedAt": "2025-07-28T06:38:41.9211064Z",
+      "IsInvisible": false
     },
     {
       "Text": "When standing on a sign, press T to edit it.",
@@ -662,7 +708,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:38:48.5715194Z"
+      "CreatedAt": "2025-07-28T06:38:48.5715194Z",
+      "IsInvisible": false
     },
     {
       "Text": "Once editing, type the text and...",
@@ -676,7 +723,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:38:59.8341856Z"
+      "CreatedAt": "2025-07-28T06:38:59.8341856Z",
+      "IsInvisible": false
     },
     {
       "Text": "Press Enter to confirm or Escape to cancel.",
@@ -690,7 +738,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:39:13.2934503Z"
+      "CreatedAt": "2025-07-28T06:39:13.2934503Z",
+      "IsInvisible": false
     },
     {
       "Text": "Press X to delete a sign.",
@@ -704,7 +753,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:39:22.7905811Z"
+      "CreatedAt": "2025-07-28T06:39:22.7905811Z",
+      "IsInvisible": false
     },
     {
       "Text": "Read from left to right!",
@@ -718,7 +768,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:39:31.3861705Z"
+      "CreatedAt": "2025-07-28T06:39:31.3861705Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Sign tutorial",
@@ -732,7 +783,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:39:37.1859583Z"
+      "CreatedAt": "2025-07-28T06:39:37.1859583Z",
+      "IsInvisible": false
     },
     {
       "Text": "To name an entire box, start your sign with @.",
@@ -746,7 +798,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:39:44.8722202Z"
+      "CreatedAt": "2025-07-28T06:39:44.8722202Z",
+      "IsInvisible": false
     },
     {
       "Text": "The box name will show up across the whole box.",
@@ -760,7 +813,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:40:17.5792486Z"
+      "CreatedAt": "2025-07-28T06:40:17.5792486Z",
+      "IsInvisible": false
     },
     {
       "Text": "The box name sign will be green.",
@@ -774,7 +828,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:40:27.8558308Z"
+      "CreatedAt": "2025-07-28T06:40:27.8558308Z",
+      "IsInvisible": false
     },
     {
       "Text": "Tip: To create long texts, you can use vortexes...",
@@ -788,7 +843,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:40:38.8553787Z"
+      "CreatedAt": "2025-07-28T06:40:38.8553787Z",
+      "IsInvisible": false
     },
     {
       "Text": "at the edge of rooms to make the player only",
@@ -802,7 +858,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:40:52.7746781Z"
+      "CreatedAt": "2025-07-28T06:40:52.7746781Z",
+      "IsInvisible": false
     },
     {
       "Text": "have to move in one direction to read.",
@@ -816,7 +873,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:41:08.9593867Z"
+      "CreatedAt": "2025-07-28T06:41:08.9593867Z",
+      "IsInvisible": false
     },
     {
       "Text": "If a text is too long, just put a vortex",
@@ -830,7 +888,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:41:17.7016944Z"
+      "CreatedAt": "2025-07-28T06:41:17.7016944Z",
+      "IsInvisible": false
     },
     {
       "Text": "at the end of it. Space is unlimited!",
@@ -844,7 +903,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:41:24.1014056Z"
+      "CreatedAt": "2025-07-28T06:41:24.1014056Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Maps",
@@ -858,7 +918,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:45:17.3338694Z"
+      "CreatedAt": "2025-07-28T06:45:17.3338694Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Test maps",
@@ -872,7 +933,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:45:22.8589379Z"
+      "CreatedAt": "2025-07-28T06:45:22.8589379Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Map 1",
@@ -886,7 +948,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:45:29.5606141Z"
+      "CreatedAt": "2025-07-28T06:45:29.5606141Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Map 1: Games",
@@ -900,7 +963,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:45:37.1737586Z"
+      "CreatedAt": "2025-07-28T06:45:37.1737586Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Mazes",
@@ -914,7 +978,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:45:45.8978455Z"
+      "CreatedAt": "2025-07-28T06:45:45.8978455Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Maze 1 Spawn",
@@ -928,7 +993,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:46:00.554127Z"
+      "CreatedAt": "2025-07-28T06:46:00.554127Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Maze 1",
@@ -942,7 +1008,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:46:16.4103943Z"
+      "CreatedAt": "2025-07-28T06:46:16.4103943Z",
+      "IsInvisible": false
     },
     {
       "Text": "The Hub: Page 2",
@@ -956,7 +1023,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:59:47.0487524Z"
+      "CreatedAt": "2025-07-28T06:59:47.0487524Z",
+      "IsInvisible": false
     },
     {
       "Text": "@The Hub: Page 2",
@@ -970,7 +1038,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:59:54.3401419Z"
+      "CreatedAt": "2025-07-28T06:59:54.3401419Z",
+      "IsInvisible": false
     },
     {
       "Text": "The Hub: Page 3",
@@ -984,7 +1053,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T07:00:02.1973312Z"
+      "CreatedAt": "2025-07-28T07:00:02.1973312Z",
+      "IsInvisible": false
     },
     {
       "Text": "@The Hub: Page 3",
@@ -998,7 +1068,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T07:00:07.7246621Z"
+      "CreatedAt": "2025-07-28T07:00:07.7246621Z",
+      "IsInvisible": false
     },
     {
       "Text": "To get to a page of the hub, (yyy...n times)h",
@@ -1012,7 +1083,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T07:00:44.9512451Z"
+      "CreatedAt": "2025-07-28T07:00:44.9512451Z",
+      "IsInvisible": false
     },
     {
       "Text": "Random fun",
@@ -1026,7 +1098,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:09:24.1527016Z"
+      "CreatedAt": "2025-07-28T13:09:24.1527016Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Map 1: Random fun",
@@ -1040,7 +1113,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:09:52.4611112Z"
+      "CreatedAt": "2025-07-28T13:09:52.4611112Z",
+      "IsInvisible": false
     },
     {
       "Text": "Directional trips",
@@ -1054,7 +1128,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:10:20.4287233Z"
+      "CreatedAt": "2025-07-28T13:10:20.4287233Z",
+      "IsInvisible": false
     },
     {
       "Text": "Loops",
@@ -1068,7 +1143,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:10:24.8711659Z"
+      "CreatedAt": "2025-07-28T13:10:24.8711659Z",
+      "IsInvisible": false
     },
     {
       "Text": "Info",
@@ -1082,7 +1158,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:11:04.5280885Z"
+      "CreatedAt": "2025-07-28T13:11:04.5280885Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Directional trips",
@@ -1096,7 +1173,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:11:08.6518366Z"
+      "CreatedAt": "2025-07-28T13:11:08.6518366Z",
+      "IsInvisible": false
     },
     {
       "Text": "1",
@@ -1110,7 +1188,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:11:21.3210941Z"
+      "CreatedAt": "2025-07-28T13:11:21.3210941Z",
+      "IsInvisible": false
     },
     {
       "Text": "A directional trip is like a rollercoaster.",
@@ -1124,7 +1203,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:11:48.9988078Z"
+      "CreatedAt": "2025-07-28T13:11:48.9988078Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Directional trips info",
@@ -1138,7 +1218,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:11:56.3827195Z"
+      "CreatedAt": "2025-07-28T13:11:56.3827195Z",
+      "IsInvisible": false
     },
     {
       "Text": "You hold down one key, and it takes you through a",
@@ -1152,7 +1233,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:12:16.6631991Z"
+      "CreatedAt": "2025-07-28T13:12:16.6631991Z",
+      "IsInvisible": false
     },
     {
       "Text": "series of experiences.",
@@ -1166,7 +1248,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:12:34.5735545Z"
+      "CreatedAt": "2025-07-28T13:12:34.5735545Z",
+      "IsInvisible": false
     },
     {
       "Text": "Enter a vortex, follow the instructions and",
@@ -1180,7 +1263,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:12:47.6303059Z"
+      "CreatedAt": "2025-07-28T13:12:47.6303059Z",
+      "IsInvisible": false
     },
     {
       "Text": "enjoy!",
@@ -1194,7 +1278,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:12:56.7385913Z"
+      "CreatedAt": "2025-07-28T13:12:56.7385913Z",
+      "IsInvisible": false
     },
     {
       "Text": "Page 2",
@@ -1208,7 +1293,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:13:36.7471842Z"
+      "CreatedAt": "2025-07-28T13:13:36.7471842Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Directional trips: Page 2",
@@ -1222,7 +1308,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:13:40.8922886Z"
+      "CreatedAt": "2025-07-28T13:13:40.8922886Z",
+      "IsInvisible": false
     },
     {
       "Text": "Enter the vortex and hold right until you stop!",
@@ -1236,7 +1323,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:14:00.3039726Z"
+      "CreatedAt": "2025-07-28T13:14:00.3039726Z",
+      "IsInvisible": false
     },
     {
       "Text": "Then read the sign and follow it.",
@@ -1250,7 +1338,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:14:15.864426Z"
+      "CreatedAt": "2025-07-28T13:14:15.864426Z",
+      "IsInvisible": false
     },
     {
       "Text": "Entrance -->",
@@ -1264,7 +1353,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:14:30.8236096Z"
+      "CreatedAt": "2025-07-28T13:14:30.8236096Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1278,7 +1368,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:14:49.06681Z"
+      "CreatedAt": "2025-07-28T13:14:49.06681Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1292,7 +1383,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:14:49.909831Z"
+      "CreatedAt": "2025-07-28T13:14:49.909831Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1306,7 +1398,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:14:50.5501973Z"
+      "CreatedAt": "2025-07-28T13:14:50.5501973Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1320,7 +1413,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:14:52.649806Z"
+      "CreatedAt": "2025-07-28T13:14:52.649806Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1334,7 +1428,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:14:53.822332Z"
+      "CreatedAt": "2025-07-28T13:14:53.822332Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1348,7 +1443,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:14:54.7703091Z"
+      "CreatedAt": "2025-07-28T13:14:54.7703091Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1362,7 +1458,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:11.2766081Z"
+      "CreatedAt": "2025-07-28T13:15:11.2766081Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1376,7 +1473,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:13.3015303Z"
+      "CreatedAt": "2025-07-28T13:15:13.3015303Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1390,7 +1488,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:14.0971613Z"
+      "CreatedAt": "2025-07-28T13:15:14.0971613Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1404,7 +1503,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:14.8489083Z"
+      "CreatedAt": "2025-07-28T13:15:14.8489083Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1418,7 +1518,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:16.4344882Z"
+      "CreatedAt": "2025-07-28T13:15:16.4344882Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1432,7 +1533,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:22.3999137Z"
+      "CreatedAt": "2025-07-28T13:15:22.3999137Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1446,7 +1548,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:23.2142149Z"
+      "CreatedAt": "2025-07-28T13:15:23.2142149Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1460,7 +1563,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:24.2806619Z"
+      "CreatedAt": "2025-07-28T13:15:24.2806619Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1474,7 +1578,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:25.813933Z"
+      "CreatedAt": "2025-07-28T13:15:25.813933Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1488,7 +1593,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:30.7879903Z"
+      "CreatedAt": "2025-07-28T13:15:30.7879903Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1502,7 +1608,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:40.3741584Z"
+      "CreatedAt": "2025-07-28T13:15:40.3741584Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1516,7 +1623,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:41.2806252Z"
+      "CreatedAt": "2025-07-28T13:15:41.2806252Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1530,7 +1638,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:50.3540645Z"
+      "CreatedAt": "2025-07-28T13:15:50.3540645Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1544,7 +1653,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:15:51.6553661Z"
+      "CreatedAt": "2025-07-28T13:15:51.6553661Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1558,7 +1668,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:16:05.1591838Z"
+      "CreatedAt": "2025-07-28T13:16:05.1591838Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 1: 6",
@@ -1572,7 +1683,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:16:21.9374026Z"
+      "CreatedAt": "2025-07-28T13:16:21.9374026Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 2: 5",
@@ -1586,7 +1698,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:16:39.8041448Z"
+      "CreatedAt": "2025-07-28T13:16:39.8041448Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 3: 4",
@@ -1600,7 +1713,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:16:49.0663277Z"
+      "CreatedAt": "2025-07-28T13:16:49.0663277Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 4: 3",
@@ -1614,7 +1728,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:16:56.463325Z"
+      "CreatedAt": "2025-07-28T13:16:56.463325Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 5: 2",
@@ -1628,7 +1743,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:17:04.8201243Z"
+      "CreatedAt": "2025-07-28T13:17:04.8201243Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 6: 1",
@@ -1642,7 +1758,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:17:14.1537562Z"
+      "CreatedAt": "2025-07-28T13:17:14.1537562Z",
+      "IsInvisible": false
     },
     {
       "Text": "You will emerge here at the end. Complete!",
@@ -1656,7 +1773,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:17:54.8967061Z"
+      "CreatedAt": "2025-07-28T13:17:54.8967061Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1670,7 +1788,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:18.3688643Z"
+      "CreatedAt": "2025-07-28T13:18:18.3688643Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1684,7 +1803,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:18.9187061Z"
+      "CreatedAt": "2025-07-28T13:18:18.9187061Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1698,7 +1818,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:23.6816804Z"
+      "CreatedAt": "2025-07-28T13:18:23.6816804Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1712,7 +1833,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:25.2159528Z"
+      "CreatedAt": "2025-07-28T13:18:25.2159528Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1726,7 +1848,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:26.2826358Z"
+      "CreatedAt": "2025-07-28T13:18:26.2826358Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1740,7 +1863,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:26.9309526Z"
+      "CreatedAt": "2025-07-28T13:18:26.9309526Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1754,7 +1878,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:27.8683247Z"
+      "CreatedAt": "2025-07-28T13:18:27.8683247Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1768,7 +1893,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:28.3897927Z"
+      "CreatedAt": "2025-07-28T13:18:28.3897927Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1782,7 +1908,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:29.2444044Z"
+      "CreatedAt": "2025-07-28T13:18:29.2444044Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1796,7 +1923,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:30.3295372Z"
+      "CreatedAt": "2025-07-28T13:18:30.3295372Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1810,7 +1938,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:30.986964Z"
+      "CreatedAt": "2025-07-28T13:18:30.986964Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1824,7 +1953,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:31.5444878Z"
+      "CreatedAt": "2025-07-28T13:18:31.5444878Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1838,7 +1968,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:31.8950789Z"
+      "CreatedAt": "2025-07-28T13:18:31.8950789Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1852,7 +1983,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:32.3184507Z"
+      "CreatedAt": "2025-07-28T13:18:32.3184507Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1866,7 +1998,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:32.7297264Z"
+      "CreatedAt": "2025-07-28T13:18:32.7297264Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1880,7 +2013,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:34.9329169Z"
+      "CreatedAt": "2025-07-28T13:18:34.9329169Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1894,7 +2028,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:35.6383981Z"
+      "CreatedAt": "2025-07-28T13:18:35.6383981Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1908,7 +2043,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:36.3164734Z"
+      "CreatedAt": "2025-07-28T13:18:36.3164734Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1922,7 +2058,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:36.8003186Z"
+      "CreatedAt": "2025-07-28T13:18:36.8003186Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 7: Full",
@@ -1936,7 +2073,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:18:40.9264964Z"
+      "CreatedAt": "2025-07-28T13:18:40.9264964Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1950,7 +2088,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:18.2685843Z"
+      "CreatedAt": "2025-07-28T13:19:18.2685843Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1964,7 +2103,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:19.5929692Z"
+      "CreatedAt": "2025-07-28T13:19:19.5929692Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1978,7 +2118,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:20.6106004Z"
+      "CreatedAt": "2025-07-28T13:19:20.6106004Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -1992,7 +2133,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:21.2861876Z"
+      "CreatedAt": "2025-07-28T13:19:21.2861876Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2006,7 +2148,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:21.6619781Z"
+      "CreatedAt": "2025-07-28T13:19:21.6619781Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2020,7 +2163,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:23.2250165Z"
+      "CreatedAt": "2025-07-28T13:19:23.2250165Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2034,7 +2178,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:23.7168084Z"
+      "CreatedAt": "2025-07-28T13:19:23.7168084Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2048,7 +2193,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:24.0512627Z"
+      "CreatedAt": "2025-07-28T13:19:24.0512627Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2062,7 +2208,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:24.3926175Z"
+      "CreatedAt": "2025-07-28T13:19:24.3926175Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2076,7 +2223,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:25.0354636Z"
+      "CreatedAt": "2025-07-28T13:19:25.0354636Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2090,7 +2238,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:25.6791896Z"
+      "CreatedAt": "2025-07-28T13:19:25.6791896Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2104,7 +2253,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:26.0333006Z"
+      "CreatedAt": "2025-07-28T13:19:26.0333006Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2118,7 +2268,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:26.9069969Z"
+      "CreatedAt": "2025-07-28T13:19:26.9069969Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2132,7 +2283,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:27.289714Z"
+      "CreatedAt": "2025-07-28T13:19:27.289714Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 8: 3/4 Full",
@@ -2146,7 +2298,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:28.3721068Z"
+      "CreatedAt": "2025-07-28T13:19:28.3721068Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2160,7 +2313,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:49.9375032Z"
+      "CreatedAt": "2025-07-28T13:19:49.9375032Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2174,7 +2328,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:50.6569903Z"
+      "CreatedAt": "2025-07-28T13:19:50.6569903Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2188,7 +2343,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:51.3959559Z"
+      "CreatedAt": "2025-07-28T13:19:51.3959559Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2202,7 +2358,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:51.8415446Z"
+      "CreatedAt": "2025-07-28T13:19:51.8415446Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2216,7 +2373,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:52.2459152Z"
+      "CreatedAt": "2025-07-28T13:19:52.2459152Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2230,7 +2388,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:53.0782603Z"
+      "CreatedAt": "2025-07-28T13:19:53.0782603Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2244,7 +2403,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:53.5163008Z"
+      "CreatedAt": "2025-07-28T13:19:53.5163008Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2258,7 +2418,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:54.1676674Z"
+      "CreatedAt": "2025-07-28T13:19:54.1676674Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2272,7 +2433,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:54.5481853Z"
+      "CreatedAt": "2025-07-28T13:19:54.5481853Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 9: Half full",
@@ -2286,7 +2448,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:19:55.9861095Z"
+      "CreatedAt": "2025-07-28T13:19:55.9861095Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2300,7 +2463,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:20:23.2248712Z"
+      "CreatedAt": "2025-07-28T13:20:23.2248712Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2314,7 +2478,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:20:23.8601279Z"
+      "CreatedAt": "2025-07-28T13:20:23.8601279Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 10: 1/4 Full",
@@ -2328,7 +2493,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:20:24.3219423Z"
+      "CreatedAt": "2025-07-28T13:20:24.3219423Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2342,7 +2508,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:20:24.7352778Z"
+      "CreatedAt": "2025-07-28T13:20:24.7352778Z",
+      "IsInvisible": false
     },
     {
       "Text": "",
@@ -2356,7 +2523,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:20:25.2546462Z"
+      "CreatedAt": "2025-07-28T13:20:25.2546462Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Frame 11: Empty",
@@ -2370,7 +2538,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:20:36.3337087Z"
+      "CreatedAt": "2025-07-28T13:20:36.3337087Z",
+      "IsInvisible": false
     },
     {
       "Text": "Tip: Go back to play in reverse!",
@@ -2384,7 +2553,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:21:00.2957546Z"
+      "CreatedAt": "2025-07-28T13:21:00.2957546Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Useful address list",
@@ -2398,7 +2568,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:25:36.3456074Z"
+      "CreatedAt": "2025-07-28T13:25:36.3456074Z",
+      "IsInvisible": false
     },
     {
       "Text": "Spawn: a",
@@ -2412,7 +2583,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:25:47.3487492Z"
+      "CreatedAt": "2025-07-28T13:25:47.3487492Z",
+      "IsInvisible": false
     },
     {
       "Text": "@The Hub: Page 4",
@@ -2426,7 +2598,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:26:15.0077983Z"
+      "CreatedAt": "2025-07-28T13:26:15.0077983Z",
+      "IsInvisible": false
     },
     {
       "Text": "The Hub: Page 4",
@@ -2440,7 +2613,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:26:25.3261377Z"
+      "CreatedAt": "2025-07-28T13:26:25.3261377Z",
+      "IsInvisible": false
     },
     {
       "Text": "The Hub: Page 5",
@@ -2454,7 +2628,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:26:47.6894667Z"
+      "CreatedAt": "2025-07-28T13:26:47.6894667Z",
+      "IsInvisible": false
     },
     {
       "Text": "@The Hub: Page 5",
@@ -2468,7 +2643,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:26:54.2359069Z"
+      "CreatedAt": "2025-07-28T13:26:54.2359069Z",
+      "IsInvisible": false
     },
     {
       "Text": "What is <box>?",
@@ -2482,7 +2658,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:27:24.0770719Z"
+      "CreatedAt": "2025-07-28T13:27:24.0770719Z",
+      "IsInvisible": false
     },
     {
       "Text": "@What is <box>?",
@@ -2496,7 +2673,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:27:50.6399559Z"
+      "CreatedAt": "2025-07-28T13:27:50.6399559Z",
+      "IsInvisible": false
     },
     {
       "Text": "@What is the hub?",
@@ -2510,7 +2688,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:28:14.0600163Z"
+      "CreatedAt": "2025-07-28T13:28:14.0600163Z",
+      "IsInvisible": false
     },
     {
       "Text": "What is the hub?",
@@ -2524,7 +2703,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:27:42.0495829Z"
+      "CreatedAt": "2025-07-28T13:27:42.0495829Z",
+      "IsInvisible": false
     },
     {
       "Text": "The hub is an infinitely extensible amount of...",
@@ -2538,7 +2718,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:28:23.067057Z"
+      "CreatedAt": "2025-07-28T13:28:23.067057Z",
+      "IsInvisible": false
     },
     {
       "Text": "space holding all the vortexes that lead to",
@@ -2552,7 +2733,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:28:42.813504Z"
+      "CreatedAt": "2025-07-28T13:28:42.813504Z",
+      "IsInvisible": false
     },
     {
       "Text": "parts of the game. The reason it's made like this",
@@ -2566,7 +2748,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:29:24.4590173Z"
+      "CreatedAt": "2025-07-28T13:29:24.4590173Z",
+      "IsInvisible": false
     },
     {
       "Text": "is to allow for infinite extensibility and no",
@@ -2580,7 +2763,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:29:35.4493118Z"
+      "CreatedAt": "2025-07-28T13:29:35.4493118Z",
+      "IsInvisible": false
     },
     {
       "Text": "organization issues.",
@@ -2594,7 +2778,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:33:44.9607388Z"
+      "CreatedAt": "2025-07-28T13:33:44.9607388Z",
+      "IsInvisible": false
     },
     {
       "Text": "The \"y\" vortex on each page of the hub is a vortex",
@@ -2608,7 +2793,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:37:40.364513Z"
+      "CreatedAt": "2025-07-28T13:37:40.364513Z",
+      "IsInvisible": false
     },
     {
       "Text": "pointing to the next page of the hub.",
@@ -2622,7 +2808,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:38:00.7880711Z"
+      "CreatedAt": "2025-07-28T13:38:00.7880711Z",
+      "IsInvisible": false
     },
     {
       "Text": "This is a collection of maps used to test game",
@@ -2636,7 +2823,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:14:28.909242Z"
+      "CreatedAt": "2025-07-28T06:14:28.909242Z",
+      "IsInvisible": false
     },
     {
       "Text": "features and mechanics.",
@@ -2650,7 +2838,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T06:14:40.4456929Z"
+      "CreatedAt": "2025-07-28T06:14:40.4456929Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Test maps: Page 1",
@@ -2664,7 +2853,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:39:11.8324625Z"
+      "CreatedAt": "2025-07-28T13:39:11.8324625Z",
+      "IsInvisible": false
     },
     {
       "Text": "Barriers",
@@ -2678,7 +2868,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:39:18.8189121Z"
+      "CreatedAt": "2025-07-28T13:39:18.8189121Z",
+      "IsInvisible": false
     },
     {
       "Text": "@Barriers test map",
@@ -2692,7 +2883,8 @@
         "Item2": 255,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:39:31.098895Z"
+      "CreatedAt": "2025-07-28T13:39:31.098895Z",
+      "IsInvisible": false
     },
     {
       "Text": "/barrier",
@@ -2706,7 +2898,8 @@
         "Item2": 100,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:39:36.8495957Z"
+      "CreatedAt": "2025-07-28T13:39:36.8495957Z",
+      "IsInvisible": false
     },
     {
       "Text": "/barrier",
@@ -2720,7 +2913,8 @@
         "Item2": 100,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:39:48.5859786Z"
+      "CreatedAt": "2025-07-28T13:39:48.5859786Z",
+      "IsInvisible": false
     },
     {
       "Text": "/barrier",
@@ -2734,7 +2928,8 @@
         "Item2": 100,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:40:27.5202104Z"
+      "CreatedAt": "2025-07-28T13:40:27.5202104Z",
+      "IsInvisible": false
     },
     {
       "Text": "/ignorebarriers",
@@ -2748,7 +2943,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:39:52.6995479Z"
+      "CreatedAt": "2025-07-28T13:39:52.6995479Z",
+      "IsInvisible": false
     },
     {
       "Text": "/barrier",
@@ -2762,7 +2958,8 @@
         "Item2": 100,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:42:25.0802841Z"
+      "CreatedAt": "2025-07-28T13:42:25.0802841Z",
+      "IsInvisible": false
     },
     {
       "Text": "/barrier",
@@ -2776,7 +2973,8 @@
         "Item2": 100,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:42:22.799386Z"
+      "CreatedAt": "2025-07-28T13:42:22.799386Z",
+      "IsInvisible": false
     },
     {
       "Text": "/barrier",
@@ -2790,7 +2988,8 @@
         "Item2": 100,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:42:19.1468783Z"
+      "CreatedAt": "2025-07-28T13:42:19.1468783Z",
+      "IsInvisible": false
     },
     {
       "Text": "/barrier",
@@ -2804,7 +3003,8 @@
         "Item2": 100,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:42:12.5280071Z"
+      "CreatedAt": "2025-07-28T13:42:12.5280071Z",
+      "IsInvisible": false
     },
     {
       "Text": "If a sign contains /ignorebarriers it disables",
@@ -2818,7 +3018,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:40:42.5050644Z"
+      "CreatedAt": "2025-07-28T13:40:42.5050644Z",
+      "IsInvisible": false
     },
     {
       "Text": "all barriers in the current box.",
@@ -2832,7 +3033,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:40:57.0516264Z"
+      "CreatedAt": "2025-07-28T13:40:57.0516264Z",
+      "IsInvisible": false
     },
     {
       "Text": "/barrier",
@@ -2846,7 +3048,8 @@
         "Item2": 100,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:42:17.4228553Z"
+      "CreatedAt": "2025-07-28T13:42:17.4228553Z",
+      "IsInvisible": false
     },
     {
       "Text": "Useful if you want to delete or move them.",
@@ -2860,7 +3063,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:42:57.9262967Z"
+      "CreatedAt": "2025-07-28T13:42:57.9262967Z",
+      "IsInvisible": false
     },
     {
       "Text": "It will become orange (\"/ignorebarriers\" signs).",
@@ -2874,7 +3078,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:43:19.4236492Z"
+      "CreatedAt": "2025-07-28T13:43:19.4236492Z",
+      "IsInvisible": false
     },
     {
       "Text": "A sign with \"/barrier\" means you can't",
@@ -2888,7 +3093,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:41:17.7596431Z"
+      "CreatedAt": "2025-07-28T13:41:17.7596431Z",
+      "IsInvisible": false
     },
     {
       "Text": "go on top of it.",
@@ -2902,7 +3108,8 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:43:47.257255Z"
+      "CreatedAt": "2025-07-28T13:43:47.257255Z",
+      "IsInvisible": false
     },
     {
       "Text": "The Hub",
@@ -2916,12 +3123,28 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-27T21:42:54.5829729Z"
+      "CreatedAt": "2025-07-27T21:42:54.5829729Z",
+      "IsInvisible": false
     },
     {
-      "Text": "Strange boxes",
+      "Text": "Invisibility",
       "IsBeingEdited": false,
-      "Address": "ywuvr",
+      "Address": "ywyyq",
+      "X": 1,
+      "Y": 3,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T13:57:12.9254386Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "Sign",
+      "IsBeingEdited": false,
+      "Address": "ywyyvr",
       "X": 2,
       "Y": 3,
       "Symbol": "■",
@@ -2930,35 +3153,23 @@
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:49:55.157995Z"
+      "CreatedAt": "2025-07-28T13:57:21.4516445Z",
+      "IsInvisible": false
     },
     {
-      "Text": "Box with two dimensions",
+      "Text": "/invisible ywyyvr",
       "IsBeingEdited": false,
-      "Address": "ywuvwp",
-      "X": 0,
-      "Y": 3,
+      "Address": "ywyyvm",
+      "X": 2,
+      "Y": 2,
       "Symbol": "■",
       "Color": {
         "Item1": 200,
         "Item2": 200,
         "Item3": 100
       },
-      "CreatedAt": "2025-07-28T13:50:01.5429294Z"
-    },
-    {
-      "Text": "@Strange boxes",
-      "IsBeingEdited": false,
-      "Address": "ywuvwh",
-      "X": 2,
-      "Y": 1,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 100,
-        "Item2": 255,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-28T13:50:17.1740987Z"
+      "CreatedAt": "2025-07-28T13:57:25.8243464Z",
+      "IsInvisible": false
     }
   ],
   "Vortexes": [
@@ -2976,7 +3187,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-27T21:26:44.7906697Z"
+      "CreatedAt": "2025-07-27T21:26:44.7906697Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "y",
@@ -2992,7 +3204,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-27T21:26:44.7907781Z"
+      "CreatedAt": "2025-07-27T21:26:44.7907781Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yua",
@@ -3008,7 +3221,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-27T21:35:15.0778037Z"
+      "CreatedAt": "2025-07-27T21:35:15.0778037Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yu",
@@ -3024,7 +3238,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-27T21:35:15.0778049Z"
+      "CreatedAt": "2025-07-27T21:35:15.0778049Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yuua",
@@ -3040,7 +3255,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-27T21:35:43.4555462Z"
+      "CreatedAt": "2025-07-27T21:35:43.4555462Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yuu",
@@ -3056,7 +3272,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-27T21:35:43.4555476Z"
+      "CreatedAt": "2025-07-27T21:35:43.4555476Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yva",
@@ -3072,7 +3289,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:01:06.4024008Z"
+      "CreatedAt": "2025-07-28T06:01:06.4024008Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yv",
@@ -3088,7 +3306,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:01:06.4024018Z"
+      "CreatedAt": "2025-07-28T06:01:06.4024018Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywa",
@@ -3104,7 +3323,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:10:40.8104607Z"
+      "CreatedAt": "2025-07-28T06:10:40.8104607Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yw",
@@ -3120,7 +3340,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:10:40.8104616Z"
+      "CreatedAt": "2025-07-28T06:10:40.8104616Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywua",
@@ -3136,7 +3357,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:11:09.5661449Z"
+      "CreatedAt": "2025-07-28T06:11:09.5661449Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywu",
@@ -3152,7 +3374,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:11:09.5661463Z"
+      "CreatedAt": "2025-07-28T06:11:09.5661463Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywya",
@@ -3168,7 +3391,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:14:10.7116525Z"
+      "CreatedAt": "2025-07-28T06:14:10.7116525Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywy",
@@ -3184,7 +3408,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:14:10.7116536Z"
+      "CreatedAt": "2025-07-28T06:14:10.7116536Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywyua",
@@ -3200,7 +3425,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:14:20.5736282Z"
+      "CreatedAt": "2025-07-28T06:14:20.5736282Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywyu",
@@ -3216,7 +3442,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:14:20.5736291Z"
+      "CreatedAt": "2025-07-28T06:14:20.5736291Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywyya",
@@ -3232,7 +3459,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:15:21.7713978Z"
+      "CreatedAt": "2025-07-28T06:15:21.7713978Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywyy",
@@ -3248,7 +3476,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:15:21.7713986Z"
+      "CreatedAt": "2025-07-28T06:15:21.7713986Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuua",
@@ -3264,7 +3493,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:18:17.2371227Z"
+      "CreatedAt": "2025-07-28T06:18:17.2371227Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuu",
@@ -3280,7 +3510,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:18:17.2371237Z"
+      "CreatedAt": "2025-07-28T06:18:17.2371237Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuua",
@@ -3296,7 +3527,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:18:24.8766597Z"
+      "CreatedAt": "2025-07-28T06:18:24.8766597Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuu",
@@ -3312,7 +3544,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:18:24.8766605Z"
+      "CreatedAt": "2025-07-28T06:18:24.8766605Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuua",
@@ -3328,7 +3561,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:18:34.8596835Z"
+      "CreatedAt": "2025-07-28T06:18:34.8596835Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuu",
@@ -3344,7 +3578,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:18:34.8596844Z"
+      "CreatedAt": "2025-07-28T06:18:34.8596844Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuuwa",
@@ -3360,7 +3595,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:19:58.3599004Z"
+      "CreatedAt": "2025-07-28T06:19:58.3599004Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuuw",
@@ -3376,7 +3612,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:19:58.3599017Z"
+      "CreatedAt": "2025-07-28T06:19:58.3599017Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuum",
@@ -3392,7 +3629,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:20:54.6695818Z"
+      "CreatedAt": "2025-07-28T06:20:54.6695818Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuum",
@@ -3408,7 +3646,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:24:42.6594742Z"
+      "CreatedAt": "2025-07-28T06:24:42.6594742Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuum",
@@ -3424,7 +3663,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:27:44.1644312Z"
+      "CreatedAt": "2025-07-28T06:27:44.1644312Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuum",
@@ -3440,7 +3680,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:27:54.9026493Z"
+      "CreatedAt": "2025-07-28T06:27:54.9026493Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuum",
@@ -3456,7 +3697,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:28:07.686447Z"
+      "CreatedAt": "2025-07-28T06:28:07.686447Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuum",
@@ -3472,7 +3714,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:28:11.7944286Z"
+      "CreatedAt": "2025-07-28T06:28:11.7944286Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuum",
@@ -3488,7 +3731,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:28:16.0153757Z"
+      "CreatedAt": "2025-07-28T06:28:16.0153757Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuum",
@@ -3504,7 +3748,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:28:19.9779801Z"
+      "CreatedAt": "2025-07-28T06:28:19.9779801Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuuwya",
@@ -3520,7 +3765,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:28:30.3991055Z"
+      "CreatedAt": "2025-07-28T06:28:30.3991055Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuuuuwy",
@@ -3536,7 +3782,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:28:30.3991065Z"
+      "CreatedAt": "2025-07-28T06:28:30.3991065Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yuva",
@@ -3552,7 +3799,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:37:54.5950552Z"
+      "CreatedAt": "2025-07-28T06:37:54.5950552Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yuv",
@@ -3568,7 +3816,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:37:54.5950564Z"
+      "CreatedAt": "2025-07-28T06:37:54.5950564Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yya",
@@ -3584,7 +3833,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T06:59:46.1926359Z"
+      "CreatedAt": "2025-07-28T06:59:46.1926359Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yy",
@@ -3600,7 +3850,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T06:59:46.1926368Z"
+      "CreatedAt": "2025-07-28T06:59:46.1926368Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yyya",
@@ -3616,7 +3867,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T07:00:01.6229709Z"
+      "CreatedAt": "2025-07-28T07:00:01.6229709Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yyy",
@@ -3632,7 +3884,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T07:00:01.6229718Z"
+      "CreatedAt": "2025-07-28T07:00:01.6229718Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuva",
@@ -3648,7 +3901,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:09:23.1183794Z"
+      "CreatedAt": "2025-07-28T13:09:23.1183794Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuv",
@@ -3664,7 +3918,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:09:23.1183806Z"
+      "CreatedAt": "2025-07-28T13:09:23.1183806Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvua",
@@ -3680,7 +3935,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:10:37.2779053Z"
+      "CreatedAt": "2025-07-28T13:10:37.2779053Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvu",
@@ -3696,7 +3952,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:10:37.2779063Z"
+      "CreatedAt": "2025-07-28T13:10:37.2779063Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvva",
@@ -3712,7 +3969,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:10:55.7731091Z"
+      "CreatedAt": "2025-07-28T13:10:55.7731091Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvv",
@@ -3728,7 +3986,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:10:55.7731101Z"
+      "CreatedAt": "2025-07-28T13:10:55.7731101Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuya",
@@ -3744,7 +4003,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:11:03.7842805Z"
+      "CreatedAt": "2025-07-28T13:11:03.7842805Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuy",
@@ -3760,7 +4020,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:11:03.7842819Z"
+      "CreatedAt": "2025-07-28T13:11:03.7842819Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuua",
@@ -3776,7 +4037,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:13:31.2784999Z"
+      "CreatedAt": "2025-07-28T13:13:31.2784999Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuu",
@@ -3792,7 +4054,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:13:31.2785072Z"
+      "CreatedAt": "2025-07-28T13:13:31.2785072Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuxa",
@@ -3808,7 +4071,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:13:35.9707136Z"
+      "CreatedAt": "2025-07-28T13:13:35.9707136Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvux",
@@ -3824,7 +4088,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:13:35.9707145Z"
+      "CreatedAt": "2025-07-28T13:13:35.9707145Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuya",
@@ -3840,7 +4105,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:14:40.101095Z"
+      "CreatedAt": "2025-07-28T13:14:40.101095Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuy",
@@ -3856,7 +4122,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:14:40.1010962Z"
+      "CreatedAt": "2025-07-28T13:14:40.1010962Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyea",
@@ -3872,7 +4139,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:15:01.8271793Z"
+      "CreatedAt": "2025-07-28T13:15:01.8271793Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuye",
@@ -3888,7 +4156,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:15:01.8271807Z"
+      "CreatedAt": "2025-07-28T13:15:01.8271807Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeea",
@@ -3904,7 +4173,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:15:19.0464555Z"
+      "CreatedAt": "2025-07-28T13:15:19.0464555Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyee",
@@ -3920,7 +4190,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:15:19.0464565Z"
+      "CreatedAt": "2025-07-28T13:15:19.0464565Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeea",
@@ -3936,7 +4207,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:15:27.8802375Z"
+      "CreatedAt": "2025-07-28T13:15:27.8802375Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeee",
@@ -3952,7 +4224,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:15:27.8802387Z"
+      "CreatedAt": "2025-07-28T13:15:27.8802387Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeea",
@@ -3968,7 +4241,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:15:43.6945313Z"
+      "CreatedAt": "2025-07-28T13:15:43.6945313Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeee",
@@ -3984,7 +4258,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:15:43.6945327Z"
+      "CreatedAt": "2025-07-28T13:15:43.6945327Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeea",
@@ -4000,7 +4275,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:15:53.2759279Z"
+      "CreatedAt": "2025-07-28T13:15:53.2759279Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeee",
@@ -4016,7 +4292,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:15:53.2759297Z"
+      "CreatedAt": "2025-07-28T13:15:53.2759297Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeea",
@@ -4032,7 +4309,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:18:12.6187177Z"
+      "CreatedAt": "2025-07-28T13:18:12.6187177Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeee",
@@ -4048,7 +4326,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:18:12.6187188Z"
+      "CreatedAt": "2025-07-28T13:18:12.6187188Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeeea",
@@ -4064,7 +4343,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:18:52.2422465Z"
+      "CreatedAt": "2025-07-28T13:18:52.2422465Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeee",
@@ -4080,7 +4360,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:18:52.2422473Z"
+      "CreatedAt": "2025-07-28T13:18:52.2422473Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeeeea",
@@ -4096,7 +4377,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:19:44.1750091Z"
+      "CreatedAt": "2025-07-28T13:19:44.1750091Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeeee",
@@ -4112,7 +4394,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:19:44.1750101Z"
+      "CreatedAt": "2025-07-28T13:19:44.1750101Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeeeeea",
@@ -4128,7 +4411,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:20:09.3245665Z"
+      "CreatedAt": "2025-07-28T13:20:09.3245665Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeeeee",
@@ -4144,7 +4428,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:20:09.3245674Z"
+      "CreatedAt": "2025-07-28T13:20:09.3245674Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeeeeeea",
@@ -4160,7 +4445,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:20:34.1677644Z"
+      "CreatedAt": "2025-07-28T13:20:34.1677644Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeeeeee",
@@ -4176,7 +4462,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:20:34.1677654Z"
+      "CreatedAt": "2025-07-28T13:20:34.1677654Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeeeeeeea",
@@ -4192,7 +4479,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:20:47.2280561Z"
+      "CreatedAt": "2025-07-28T13:20:47.2280561Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuuyeeeeeeeeeee",
@@ -4208,7 +4496,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:20:47.228057Z"
+      "CreatedAt": "2025-07-28T13:20:47.228057Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywuvuue",
@@ -4224,7 +4513,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:21:36.3274035Z"
+      "CreatedAt": "2025-07-28T13:21:36.3274035Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yyyya",
@@ -4240,7 +4530,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:26:13.2458423Z"
+      "CreatedAt": "2025-07-28T13:26:13.2458423Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yyyy",
@@ -4256,7 +4547,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:26:13.2458434Z"
+      "CreatedAt": "2025-07-28T13:26:13.2458434Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yyyyya",
@@ -4272,7 +4564,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:26:45.4188939Z"
+      "CreatedAt": "2025-07-28T13:26:45.4188939Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yyyyy",
@@ -4288,7 +4581,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:26:45.4188953Z"
+      "CreatedAt": "2025-07-28T13:26:45.4188953Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yuwa",
@@ -4304,7 +4598,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:27:23.6351242Z"
+      "CreatedAt": "2025-07-28T13:27:23.6351242Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yuw",
@@ -4320,7 +4615,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:27:23.6351255Z"
+      "CreatedAt": "2025-07-28T13:27:23.6351255Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yuwua",
@@ -4336,7 +4632,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:27:49.4323097Z"
+      "CreatedAt": "2025-07-28T13:27:49.4323097Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "yuwu",
@@ -4352,7 +4649,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:27:49.4323109Z"
+      "CreatedAt": "2025-07-28T13:27:49.4323109Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywyyua",
@@ -4368,7 +4666,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:39:18.2744739Z"
+      "CreatedAt": "2025-07-28T13:39:18.2744739Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywyyu",
@@ -4384,7 +4683,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:39:18.2744749Z"
+      "CreatedAt": "2025-07-28T13:39:18.2744749Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywyyuya",
@@ -4400,7 +4700,8 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:42:05.8430004Z"
+      "CreatedAt": "2025-07-28T13:42:05.8430004Z",
+      "IsInvisible": false
     },
     {
       "TargetAddress": "ywyyuy",
@@ -4416,15 +4717,16 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:42:05.8430016Z"
+      "CreatedAt": "2025-07-28T13:42:05.8430016Z",
+      "IsInvisible": false
     },
     {
-      "TargetAddress": "ywuvwa",
+      "TargetAddress": "ywyyva",
       "IsEntry": true,
-      "PairedVortexAddress": "ywuvwa",
+      "PairedVortexAddress": "ywyyva",
       "IsOneWay": false,
-      "Address": "ywuvw",
-      "X": 2,
+      "Address": "ywyyv",
+      "X": 1,
       "Y": 4,
       "Symbol": "@",
       "Color": {
@@ -4432,14 +4734,15 @@
         "Item2": 144,
         "Item3": 255
       },
-      "CreatedAt": "2025-07-28T13:49:54.4634557Z"
+      "CreatedAt": "2025-07-28T13:57:17.6201588Z",
+      "IsInvisible": false
     },
     {
-      "TargetAddress": "ywuvw",
+      "TargetAddress": "ywyyv",
       "IsEntry": false,
-      "PairedVortexAddress": "ywuvw",
+      "PairedVortexAddress": "ywyyv",
       "IsOneWay": false,
-      "Address": "ywuvwa",
+      "Address": "ywyyva",
       "X": 0,
       "Y": 0,
       "Symbol": "@",
@@ -4448,7 +4751,8 @@
         "Item2": 165,
         "Item3": 0
       },
-      "CreatedAt": "2025-07-28T13:49:54.4634566Z"
+      "CreatedAt": "2025-07-28T13:57:17.6201599Z",
+      "IsInvisible": false
     }
   ]
 }
