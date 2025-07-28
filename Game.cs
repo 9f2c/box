@@ -274,7 +274,7 @@ public class Game
     {
         if (!IsInTeleportMode) return;
         
-        if (IsValidTeleportTarget(_teleportBuffer))
+        if (IsValidAddressFormat(_teleportBuffer))
         {
             Player.SetFromAddress(_teleportBuffer);
             _justTeleported = true; // Set this to true so the next move doesn't change the box
@@ -424,49 +424,11 @@ public class Game
         }
     }
 
-    private bool IsValidTeleportTarget(string address)
+    private bool IsValidAddressFormat(string address)
     {
-        // Valid if it's a single letter (origin box)
-        if (address.Length == 1) return true;
-        
-        // Check if there's a vortex path leading to this address
-        return HasVortexPathTo(address);
+        // Valid if it contains only letters a-y and is not empty
+        return !string.IsNullOrEmpty(address) && address.All(c => c >= 'a' && c <= 'y');
     }
-
-    private bool HasVortexPathTo(string targetAddress)
-    {
-        // Use BFS to find if there's a path from any origin box position to the target
-        var visited = new HashSet<string>();
-        var queue = new Queue<string>();
-        
-        // Start from all positions in origin box
-        for (char c = 'a'; c <= 'y'; c++)
-        {
-            queue.Enqueue(c.ToString());
-            visited.Add(c.ToString());
-        }
-        
-        while (queue.Count > 0)
-        {
-            var current = queue.Dequeue();
-            
-            if (current == targetAddress)
-                return true;
-            
-            // Find vortexes that have an endpoint at this address
-            foreach (var vortex in Vortexes.Where(v => v.Address == current))
-            {
-                if (!string.IsNullOrEmpty(vortex.TargetAddress) && !visited.Contains(vortex.TargetAddress))
-                {
-                    visited.Add(vortex.TargetAddress);
-                    queue.Enqueue(vortex.TargetAddress);
-                }
-            }
-        }
-        
-        return false;
-    }
-
 
     private static (int r, int g, int b) HsvToRgb(double h, double s, double v)
     {
