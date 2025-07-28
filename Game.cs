@@ -156,6 +156,8 @@ public class Game
         Console.Clear();
         Console.SetCursorPosition(0, 0);
         
+        ProcessInvisibilityCommands();
+
         // Draw border with gradient effect
         for (int y = 0; y < 7; y++)
         {
@@ -658,7 +660,7 @@ public class Game
             _signTooltipText = "";
         }
 
-        var thingAtPosition = allThings.FirstOrDefault(t => t.Address == Player.Address && t != Player);
+        var thingAtPosition = allThings.FirstOrDefault(t => t.Address == Player.Address && t != Player && !t.IsInvisible);
         if (thingAtPosition != null)
         {
             _showThingTooltip = true;
@@ -909,6 +911,33 @@ public class Game
         }
         
         return null;
+    }
+
+    private void ProcessInvisibilityCommands()
+    {
+        // Reset all things' invisibility state first
+        foreach (var thing in allThings)
+        {
+            thing.IsInvisible = false;
+        }
+
+        // Process signs with /invisible command
+        foreach (var sign in Signs)
+        {
+            if (sign.Text.StartsWith("/invisible "))
+            {
+                var parts = sign.Text.Split(' ', 2);
+                if (parts.Length == 2)
+                {
+                    string targetAddress = parts[1].Trim();
+                    var targetThing = allThings.FirstOrDefault(t => t.Address == targetAddress);
+                    if (targetThing != null)
+                    {
+                        targetThing.IsInvisible = true;
+                    }
+                }
+            }
+        }
     }
 
 
