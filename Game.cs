@@ -433,6 +433,7 @@ public class Game
                     }
                 }
                 SaveGame();
+                UpdateTooltips(); // Refresh tooltips after deletion
             }
         }
 
@@ -821,6 +822,7 @@ public class Game
             }
             
             SaveGame();
+            UpdateTooltips(); // Refresh tooltips after deletion
         }
     }
 
