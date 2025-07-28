@@ -4,7 +4,7 @@
   "ShowAdvancedInfo": false,
   "IsHoldingSign": false,
   "HeldSign": null,
-  "PlayerAddress": "yv",
+  "PlayerAddress": "p",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -394,21 +394,6 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-28T06:04:16.0323755Z",
-      "IsInvisible": false
-    },
-    {
-      "Text": "Tip: Press C to toggle controls visibility.",
-      "IsBeingEdited": false,
-      "Address": "m",
-      "X": 2,
-      "Y": 2,
-      "Symbol": "■",
-      "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
-      },
-      "CreatedAt": "2025-07-28T06:06:02.6998893Z",
       "IsInvisible": false
     },
     {
@@ -3169,6 +3154,21 @@
         "Item3": 128
       },
       "CreatedAt": "2025-07-28T13:57:25.8243464Z",
+      "IsInvisible": false
+    },
+    {
+      "Text": "Tip: Press C to toggle controls and advanced info.",
+      "IsBeingEdited": false,
+      "Address": "f",
+      "X": 0,
+      "Y": 1,
+      "Symbol": "■",
+      "Color": {
+        "Item1": 200,
+        "Item2": 200,
+        "Item3": 100
+      },
+      "CreatedAt": "2025-07-28T06:06:02.6998893Z",
       "IsInvisible": false
     }
   ],
