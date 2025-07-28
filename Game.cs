@@ -298,6 +298,7 @@ public class Game
         if (IsValidAddressFormat(_teleportBuffer))
         {
             Player.SetFromAddress(_teleportBuffer);
+            UpdatePlayerAddress(); // Add this line to ensure PlayerAddress property is updated
             _justTeleported = true; // Set this to true so the next move doesn't change the box
             SaveGame();
         }
