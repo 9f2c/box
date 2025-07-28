@@ -123,7 +123,7 @@ class Program
                     else
                     {
                         // When not editing, teleporting, or creating, handle normal game controls
-                        HandleGameControls(game, key, ki.KeyChar);
+                        HandleGameControls(game, ki);
                     }
                     break;
             }
@@ -131,8 +131,16 @@ class Program
         }
     }
 
-    private static void HandleGameControls(Game game, ConsoleKey key, char keyChar)
+    private static void HandleGameControls(Game game, ConsoleKeyInfo ki)
     {
+        var key = ki.Key;
+        
+        if (key == ConsoleKey.X && (ki.Modifiers & ConsoleModifiers.Shift) != 0)
+        {
+            game.StartDeleteByAddress();
+            return;
+        }
+        
         switch (key)
         {
             case ConsoleKey.A: case ConsoleKey.H: game.MoveLeft(); break;
@@ -143,8 +151,7 @@ class Program
             case ConsoleKey.G: game.ToggleAddresses(); break;
             case ConsoleKey.C: game.ToggleControlsTooltip(); break;
             case ConsoleKey.X:
-                // Note: We can't check modifiers in HandleGameControls since we don't have ConsoleKeyInfo
-                // For now, just handle the basic delete functionality
+                // Regular X (without shift) - delete thing at player
                 game.DeleteThingAtPlayer();
                 break;
             case ConsoleKey.F: game.StartTeleportMode(); break;
