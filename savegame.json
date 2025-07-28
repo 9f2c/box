@@ -1,10 +1,10 @@
 {
   "ShowAddressesInCurrentBox": false,
   "Seed": "",
-  "ShowControlsTooltip": false,
+  "ShowAdvancedInfo": false,
   "IsHoldingSign": false,
   "HeldSign": null,
-  "PlayerAddress": "ywyyvr",
+  "PlayerAddress": "yv",
   "Signs": [
     {
       "Text": "Hello, and welcome.",
@@ -3154,7 +3154,7 @@
         "Item3": 100
       },
       "CreatedAt": "2025-07-28T13:57:21.4516445Z",
-      "IsInvisible": false
+      "IsInvisible": true
     },
     {
       "Text": "/invisible ywyyvr",
@@ -3164,9 +3164,9 @@
       "Y": 2,
       "Symbol": "■",
       "Color": {
-        "Item1": 200,
-        "Item2": 200,
-        "Item3": 100
+        "Item1": 128,
+        "Item2": 128,
+        "Item3": 128
       },
       "CreatedAt": "2025-07-28T13:57:25.8243464Z",
       "IsInvisible": false
