@@ -125,6 +125,7 @@ class Program
             case ConsoleKey.Delete: game.DeleteThingAtPlayer(); break;
             case ConsoleKey.F: game.StartTeleportMode(); break;
             case ConsoleKey.N: game.StartCreationMode(); break;
+            case ConsoleKey.V: game.CreateQuickVortex(); break;
             case ConsoleKey.Q: game.End(); return;
         }
     }

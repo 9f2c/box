@@ -211,6 +211,7 @@ public class Game
                 C - toggle controls
                 N - create thing
                 F - teleport to accessible address
+                V - quick vortex (to current address + 'a')
                 """
             );
         }
@@ -639,6 +640,26 @@ public class Game
         {
             EditBuffer = EditBuffer.Substring(0, EditBuffer.Length - 1);
         }
+    }
+
+    public void CreateQuickVortex()
+    {
+        // Check if there's already any thing here (except player)
+        if (allThings.Any(t => t.Address == Player.Address && t != Player))
+            return;
+            
+        string targetAddress = Player.Address + "a";
+        
+        var (entry, exit) = Vortex.CreatePair(Player.Address, targetAddress);
+        entry.X = Player.X;
+        entry.Y = Player.Y;
+        
+        Vortexes.Add(entry);
+        Vortexes.Add(exit);
+        allThings.Add(entry);
+        allThings.Add(exit);
+        
+        SaveGame();
     }
 
     public Vortex? GetVortexByAddress(string address)
