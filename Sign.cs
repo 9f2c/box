@@ -25,6 +25,10 @@ public class Sign : Thing
             // Blinking effect when being edited
             Color = (255, 255, 255); // White when editing
         }
+        else if (Text.StartsWith("@"))
+        {
+            Color = (100, 255, 100); // Green for room name signs
+        }
         else
         {
             Color = (200, 200, 100); // Normal yellow

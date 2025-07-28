@@ -188,7 +188,15 @@ public class Game
         SetRgbColor(100, 255, 100); // Bright green
         Console.WriteLine($"Address: {Player.Address}");
         SetRgbColor(150, 150, 255); // Light blue
-        Console.WriteLine($"Box: {Player.BoxAddress}");
+        var roomName = GetRoomNameForCurrentBox();
+        if (roomName != null)
+        {
+            Console.WriteLine($"Box: {Player.BoxAddress} ({roomName})");
+        }
+        else
+        {
+            Console.WriteLine($"Box: {Player.BoxAddress}");
+        }
         SetRgbColor(255, 200, 100); // Orange
         Console.WriteLine($"Position: ({Player.X}, {Player.Y})");
         ResetColor();
@@ -685,6 +693,20 @@ public class Game
         if (string.IsNullOrEmpty(vortex.PairedVortexAddress))
             return null;
         return GetVortexByAddress(vortex.PairedVortexAddress);
+    }
+
+    private string? GetRoomNameForCurrentBox()
+    {
+        var roomNameSign = Signs.FirstOrDefault(s => 
+            GetBoxAddressFromAddress(s.Address) == Player.BoxAddress && 
+            s.Text.StartsWith("@"));
+        
+        if (roomNameSign != null && roomNameSign.Text.Length > 1)
+        {
+            return roomNameSign.Text.Substring(1).Trim();
+        }
+        
+        return null;
     }
 
 
