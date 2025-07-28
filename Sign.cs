@@ -33,6 +33,10 @@ public class Sign : Thing
         {
             Color = (255, 165, 0); // Orange for ignore barriers
         }
+        else if (Text.StartsWith("/invisible "))
+        {
+            Color = (128, 128, 128); // Gray for invisible command signs
+        }
         else if (Text.StartsWith("@"))
         {
             Color = (100, 255, 100); // Green for room name signs
