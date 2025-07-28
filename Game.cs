@@ -248,7 +248,7 @@ public class Game
             SetRgbColor(200, 200, 200); // Light gray
             Console.WriteLine("Enter valid address (a-y letters), Enter to teleport, Escape to cancel");
         }
-        else if (_isInDeleteByAddressMode)
+        else if (IsInDeleteByAddressMode)
         {
             SetRgbColor(255, 100, 100); // Bright red
             Console.WriteLine($"Delete at address: {_deleteAddressBuffer}_");
