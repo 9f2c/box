@@ -15,6 +15,8 @@ public class Game
     private bool _showThingTooltip = false;
     [JsonIgnore]
     private string _thingTooltipText = "";
+    [JsonIgnore]
+    private (int r, int g, int b) _signTooltipColor = (255, 255, 150);
 
     [JsonIgnore]
     public bool IsInTeleportMode { get; private set; } = false;
@@ -255,7 +257,7 @@ public class Game
 
         if (_showSignTooltip && !IsEditingSign)
         {
-            SetRgbColor(255, 255, 150); // Light yellow
+            SetRgbColor(_signTooltipColor.r, _signTooltipColor.g, _signTooltipColor.b);
             Console.WriteLine($"Sign: {_signTooltipText}");
         }
 
@@ -569,6 +571,30 @@ public class Game
         return !string.IsNullOrEmpty(address) && address.All(c => c >= 'a' && c <= 'y');
     }
 
+    private (int r, int g, int b) GetSignColor(Sign sign)
+    {
+        if (sign.Text == "/barrier")
+        {
+            return (255, 100, 100); // Red for barriers
+        }
+        else if (sign.Text == "/ignorebarriers")
+        {
+            return (255, 165, 0); // Orange for ignore barriers
+        }
+        else if (sign.Text.StartsWith("/invisible "))
+        {
+            return (128, 128, 128); // Gray for invisible command signs
+        }
+        else if (sign.Text.StartsWith("@"))
+        {
+            return (100, 255, 100); // Green for room name signs
+        }
+        else
+        {
+            return (200, 200, 100); // Normal yellow
+        }
+    }
+
     private static (int r, int g, int b) HsvToRgb(double h, double s, double v)
     {
         int i = (int)(h / 60) % 6;
@@ -653,6 +679,7 @@ public class Game
         {
             _showSignTooltip = true;
             _signTooltipText = signAtPosition.Text;
+            _signTooltipColor = GetSignColor(signAtPosition);
         }
         else
         {
