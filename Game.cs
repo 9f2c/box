@@ -695,6 +695,7 @@ public class Game
                 
                 ResolveDuplicateAddresses();
                 SaveGame(); // Save after resolving duplicates
+                UpdateTooltips(); // Initialize tooltips after loading
             }
         }
         catch (Exception)
