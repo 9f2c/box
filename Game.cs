@@ -198,14 +198,23 @@ public class Game
                             {
                                 sign.Draw();
                             }
-                            else if (ShowAddressesInCurrentBox)
-                            {
-                                SetRgbColor(100, 100, 100);
-                                Console.Write(letter);
-                            }
                             else
                             {
-                                Console.Write(" ");
+                                // Check if there's an invisible thing at this position
+                                var invisibleThing = allThings.FirstOrDefault(t => t.Address == cellAddress && t.IsInvisible && t != Player);
+                                if (invisibleThing != null)
+                                {
+                                    Console.Write(" ");
+                                }
+                                else if (ShowAddressesInCurrentBox)
+                                {
+                                    SetRgbColor(100, 100, 100);
+                                    Console.Write(letter);
+                                }
+                                else
+                                {
+                                    Console.Write(" ");
+                                }
                             }
                         }
                     }
