@@ -26,4 +26,10 @@ public class Vortex : Thing
             
         return (entry, exit);
     }
+
+    public override void Draw()
+    {
+        if (IsInvisible) return;
+        base.Draw();
+    }
 }
