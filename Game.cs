@@ -22,7 +22,7 @@ public class Game
     private string _teleportBuffer = "";
 
     [JsonIgnore]
-    private bool _isInDeleteByAddressMode = false;
+    public bool IsInDeleteByAddressMode { get; private set; } = false;
     [JsonIgnore]
     private string _deleteAddressBuffer = "";
 
@@ -316,19 +316,19 @@ public class Game
 
     public void StartDeleteByAddress()
     {
-        _isInDeleteByAddressMode = true;
+        IsInDeleteByAddressMode = true;
         _deleteAddressBuffer = "";
     }
 
     public void CancelDeleteByAddress()
     {
-        _isInDeleteByAddressMode = false;
+        IsInDeleteByAddressMode = false;
         _deleteAddressBuffer = "";
     }
 
     public void AddCharToDeleteAddressBuffer(char c)
     {
-        if (_isInDeleteByAddressMode && c >= 'a' && c <= 'y')
+        if (IsInDeleteByAddressMode && c >= 'a' && c <= 'y')
         {
             _deleteAddressBuffer += c;
         }
@@ -336,7 +336,7 @@ public class Game
 
     public void RemoveCharFromDeleteAddressBuffer()
     {
-        if (_isInDeleteByAddressMode && _deleteAddressBuffer.Length > 0)
+        if (IsInDeleteByAddressMode && _deleteAddressBuffer.Length > 0)
         {
             _deleteAddressBuffer = _deleteAddressBuffer.Substring(0, _deleteAddressBuffer.Length - 1);
         }
@@ -344,7 +344,7 @@ public class Game
 
     public void ExecuteDeleteByAddress()
     {
-        if (!_isInDeleteByAddressMode) return;
+        if (!IsInDeleteByAddressMode) return;
 
         if (IsValidAddressFormat(_deleteAddressBuffer))
         {
@@ -361,7 +361,7 @@ public class Game
                         // Cannot delete orange (exit) vortexes directly
                         // They are removed when their paired entry vortex is deleted
                         // For now, just return without deleting
-                        _isInDeleteByAddressMode = false;
+                        IsInDeleteByAddressMode = false;
                         _deleteAddressBuffer = "";
                         return;
                     }
@@ -395,7 +395,7 @@ public class Game
             }
         }
 
-        _isInDeleteByAddressMode = false;
+        IsInDeleteByAddressMode = false;
         _deleteAddressBuffer = "";
     }
 

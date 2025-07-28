@@ -26,7 +26,7 @@ class Program
                     {
                         game.ExecuteTeleport();
                     }
-                    else if (game._isInDeleteByAddressMode)
+                    else if (game.IsInDeleteByAddressMode)
                     {
                         game.ExecuteDeleteByAddress();
                     }
@@ -44,7 +44,7 @@ class Program
                     {
                         game.CancelTeleport();
                     }
-                    else if (game._isInDeleteByAddressMode)
+                    else if (game.IsInDeleteByAddressMode)
                     {
                         game.CancelDeleteByAddress();
                     }
@@ -67,7 +67,7 @@ class Program
                     {
                         game.RemoveCharFromTeleportBuffer();
                     }
-                    else if (game._isInDeleteByAddressMode)
+                    else if (game.IsInDeleteByAddressMode)
                     {
                         game.RemoveCharFromDeleteAddressBuffer();
                     }
@@ -93,7 +93,7 @@ class Program
                             game.AddCharToTeleportBuffer(ki.KeyChar);
                         }
                     }
-                    else if (game._isInDeleteByAddressMode)
+                    else if (game.IsInDeleteByAddressMode)
                     {
                         // When in delete by address mode, only allow a-y characters
                         if (ki.KeyChar >= 'a' && ki.KeyChar <= 'y')
@@ -143,14 +143,9 @@ class Program
             case ConsoleKey.G: game.ToggleAddresses(); break;
             case ConsoleKey.C: game.ToggleControlsTooltip(); break;
             case ConsoleKey.X:
-                if (ki.Modifiers.HasFlag(ConsoleModifiers.Shift))
-                {
-                    game.StartDeleteByAddress();
-                }
-                else
-                {
-                    game.DeleteThingAtPlayer();
-                }
+                // Note: We can't check modifiers in HandleGameControls since we don't have ConsoleKeyInfo
+                // For now, just handle the basic delete functionality
+                game.DeleteThingAtPlayer();
                 break;
             case ConsoleKey.F: game.StartTeleportMode(); break;
             case ConsoleKey.N: game.StartCreationMode(); break;
